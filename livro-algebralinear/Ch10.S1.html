@@ -1,0 +1,523 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>10.1 Projeção ortogonais sobre subespaços ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch10.S2.html" title="10.2 Distância a subespaços e a melhor aproximação ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch10.S2.html" title="10.2 Distância a subespaços e a melhor aproximação ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch10.S3.html" title="10.3 O Processo de ortogonalização de Gram–Schmidt ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch10.S4.html" title="10.4 Fatoração QR e matrizes ortogonais ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch10.S5.html" title="10.5 Matrizes Ortogonais preservam comprimento e ângulo ‣ Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="10.1" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active"><a href="" title="In Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10.1 </span></b>Projeção ortogonais sobre subespaços</a></li>
+<li data-level="10.2" data-path="Ch10.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch10.S2.html" title="In Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10.2 </span></b>Distância a subespaços e a melhor aproximação</a></li>
+<li data-level="10.3" data-path="Ch10.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch10.S3.html" title="In Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10.3 </span></b>O Processo de ortogonalização de Gram–Schmidt</a></li>
+<li data-level="10.4" data-path="Ch10.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch10.S4.html" title="In Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10.4 </span></b>Fatoração QR e matrizes ortogonais</a></li>
+<li data-level="10.5" data-path="Ch10.S5.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch10.S5.html" title="In Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10.5 </span></b>Matrizes Ortogonais preservam comprimento e ângulo</a></li>
+</ol>
+</li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Projeção ortogonais sobre subespaços</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">10.1</span> Projeção ortogonais sobre subespaços</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">No último capítulo, estudamos projeções ortogonais e vimos que a projeção ortogonal de <math id="p1.m1" class="ltx_Math" alttext="\vec{y}" display="inline"><semantics><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{y}</annotation></semantics></math> na direção de um vetor <math id="p1.m2" class="ltx_Math" alttext="\vec{w}" display="inline"><semantics><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{w}</annotation></semantics></math> pode ser calculada por</p>
+<div id="Ch10.E1" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E1.m1" class="ltx_Math" alttext="\operatorname{proj}_{\vec{w}}\vec{y}=\frac{\vec{y}\cdot\vec{w}}{\vec{w}\cdot%
+\vec{w}}\ \vec{w}" display="block"><semantics><mrow><mrow><msub><mi>proj</mi><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow></mfrac><mo lspace="0.600em">⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\operatorname{proj}_{\vec{w}}\vec{y}=\frac{\vec{y}\cdot\vec{w}}{\vec{w}\cdot%
+\vec{w}}\ \vec{w}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.1)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Gostaríamos de endereçar agora a seguinte questão: como obter a projeção de um vetor <math id="p1.m3" class="ltx_Math" alttext="\vec{y}\in\mathbb{R}^{3}" display="inline"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\vec{y}\in\mathbb{R}^{3}</annotation></semantics></math> sobre um plano <math id="p1.m4" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>?</p>
+</div>
+<figure id="fig1" class="ltx_figure"><div class="bml-overflow-wrapper"><img src="Semana12/semana12-proj.png" id="g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="538" height="253" alt="[Uncaptioned image]"></div>
+</figure>
+<div id="p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Vamos trabalhar geometricamente: suponhamos que o plano</p>
+<div id="Ch10.E2" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E2.m1" class="ltx_Math" alttext="W=\operatorname{Span}\{\vec{w}_{1},\vec{w}_{2}\}" display="block"><semantics><mrow><mi>W</mi><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">W=\operatorname{Span}\{\vec{w}_{1},\vec{w}_{2}\}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.2)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">e que os vetores <math id="p2.m1" class="ltx_Math" alttext="\vec{w}_{1}" display="inline"><semantics><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><annotation encoding="application/x-tex">\vec{w}_{1}</annotation></semantics></math> e <math id="p2.m2" class="ltx_Math" alttext="\vec{w}_{2}" display="inline"><semantics><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><annotation encoding="application/x-tex">\vec{w}_{2}</annotation></semantics></math> são ortogonais. Em outras palavras, <math id="p2.m3" class="ltx_Math" alttext="\{\vec{w}_{1},\vec{w}_{2}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{w}_{1},\vec{w}_{2}\}</annotation></semantics></math> é uma base ortogonal de <math id="p2.m4" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>. Como veremos abaixo, o Processo de Gram-Schmidt fornece um algoritmo para obter uma base ortogonal de um espaço vetorial a partir de uma outra base qualquer de modo que sempre é possível considerar uma base ortogonal e, então, conseguimos calcular projeções.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_bold">projeção ortogonal sobre o subespaço <math id="p3.m1" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math></span>, denotada por <math id="p3.m2" class="ltx_Math" alttext="\operatorname{proj}_{W}\vec{y}" display="inline"><semantics><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\operatorname{proj}_{W}\vec{y}</annotation></semantics></math>, é definida como</p>
+<div id="Ch10.E3" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E3.m1" class="ltx_Math" alttext="\operatorname{proj}_{W}\vec{y}=\operatorname{proj}_{\vec{w}_{1}}\vec{y}+%
+\operatorname{proj}_{\vec{w}_{2}}\vec{y}=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w%
+}_{1}\cdot\vec{w}_{1}}\ \vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}%
+\cdot\vec{w}_{2}}\ \vec{w}_{2}." display="block"><semantics><mrow><mrow><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\operatorname{proj}_{W}\vec{y}=\operatorname{proj}_{\vec{w}_{1}}\vec{y}+%
+\operatorname{proj}_{\vec{w}_{2}}\vec{y}=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w%
+}_{1}\cdot\vec{w}_{1}}\ \vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}%
+\cdot\vec{w}_{2}}\ \vec{w}_{2}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.3)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Notamos que este vetor pertence a <math id="p3.m3" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>, já que é uma combinação linear dos elementos de uma base de <math id="p3.m4" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>. Mas mais fundamental é o fato de a projeção ser feita em uma direção ortogonal ao plano: passamos a verificar que</p>
+<div id="Ch10.E4" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E4.m1" class="ltx_Math" alttext="\vec{y}-\operatorname{proj}_{W}\vec{y}\ \text{ \'{e} ortogonal a }W." display="block"><semantics><mrow><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>−</mo><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mtext> é ortogonal a </mtext><mo>⁢</mo><mi>W</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{y}-\operatorname{proj}_{W}\vec{y}\ \text{ \'{e} ortogonal a }W.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.4)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Qualquer vetor de <math id="p3.m5" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> pode ser escrito como</p>
+<div id="Ch10.E5" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E5.m1" class="ltx_Math" alttext="\vec{w}=\frac{\vec{w}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ \vec{w}_{%
+1}+\frac{\vec{w}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{w}_{2}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mfrac><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{w}=\frac{\vec{w}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ \vec{w}_{%
+1}+\frac{\vec{w}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{w}_{2}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.5)</span>
+            
+            
+          
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<span class="ltx_ERROR undefined">{Exercise}</span>
+<p class="ltx_p">Utilize as propriedades do produto escalar e a ortogonalidade da base <math id="p4.m1" class="ltx_Math" alttext="\{\vec{w}_{1},\vec{w}_{2}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{w}_{1},\vec{w}_{2}\}</annotation></semantics></math> para verificar que</p>
+<div id="Ch10.E6" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E6.m1" class="ltx_Math" alttext="\vec{w}\cdot\big{(}\vec{y}-\operatorname{proj}_{W}\vec{y}\big{)}=0." display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>−</mo><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{w}\cdot\big{(}\vec{y}-\operatorname{proj}_{W}\vec{y}\big{)}=0.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.6)</span>
+            
+            
+          
+</div>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 10.1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Vamos calcular a projeção do vetor</p>
+<div id="Ch10.E7" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E7.m1" class="ltx_Math" alttext="\vec{y}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix}" display="block"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{y}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.7)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">sobre o plano gerado pelos vetores</p>
+<div id="Ch10.E8" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E8.m1" class="ltx_Math" alttext="\vec{w}_{1}=\begin{bmatrix}4\\
+2\\
+-7\end{bmatrix}\quad\text{e}\quad\vec{w}_{2}=\begin{bmatrix}1\\
+5\\
+2\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{w}_{1}=\begin{bmatrix}4\\
+2\\
+-7\end{bmatrix}\quad\text{e}\quad\vec{w}_{2}=\begin{bmatrix}1\\
+5\\
+2\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.8)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Observamos inicialemente que <span class="ltx_text ltx_font_italic">somos permitidos</span> de usar a fórmula acima, já que os vetores <math id="Thmex1.p1.m1" class="ltx_Math" alttext="\vec{w}_{1}" display="inline"><semantics><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><annotation encoding="application/x-tex">\vec{w}_{1}</annotation></semantics></math> e <math id="Thmex1.p1.m2" class="ltx_Math" alttext="\vec{w}_{2}" display="inline"><semantics><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><annotation encoding="application/x-tex">\vec{w}_{2}</annotation></semantics></math> formam uma base ortogonal de <math id="Thmex1.p1.m3" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>:</p>
+<div id="Ch10.E9" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E9.m1" class="ltx_Math" alttext="\vec{w}_{1}\cdot\vec{w}_{2}=4+10-14=0." display="block"><semantics><mrow><mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo>+</mo><mn>10</mn></mrow><mo>−</mo><mn>14</mn></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{w}_{1}\cdot\vec{w}_{2}=4+10-14=0.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.9)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Calculamos</p>
+<div class="bml-overflow-wrapper">
+<table id="Ch12.S4.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch10.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch10.Ex1.m1" class="ltx_Math" alttext="\displaystyle\operatorname{proj}_{W}\vec{y}" display="inline"><semantics><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\displaystyle\operatorname{proj}_{W}\vec{y}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch10.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ %
+\vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{%
+w}_{2}=\frac{4+2-7}{16+4+49}\ \vec{w}_{1}+\frac{1+5+2}{1+25+4}\ \vec{w}_{2}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>4</mn><mo>+</mo><mn>2</mn></mrow><mo>−</mo><mn>7</mn></mrow><mrow><mn>16</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>49</mn></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>+</mo><mn>5</mn><mo>+</mo><mn>2</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>25</mn><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ %
+\vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{%
+w}_{2}=\frac{4+2-7}{16+4+49}\ \vec{w}_{1}+\frac{1+5+2}{1+25+4}\ \vec{w}_{2}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch10.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch10.Ex2.m1" class="ltx_Math" alttext="\displaystyle=-\frac{1}{69}\begin{bmatrix}4\\
+2\\
+-7\end{bmatrix}+\frac{4}{15}\begin{bmatrix}1\\
+5\\
+2\end{bmatrix}=\begin{bmatrix}24/115\\
+30/23\\
+73/115\end{bmatrix}.\ \lhd" display="inline"><semantics><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>69</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>15</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mrow><mn>24</mn><mo>/</mo><mn>115</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>30</mn><mo>/</mo><mn>23</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>73</mn><mo>/</mo><mn>115</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\displaystyle=-\frac{1}{69}\begin{bmatrix}4\\
+2\\
+-7\end{bmatrix}+\frac{4}{15}\begin{bmatrix}1\\
+5\\
+2\end{bmatrix}=\begin{bmatrix}24/115\\
+30/23\\
+73/115\end{bmatrix}.\ \lhd</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço <math id="p5.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math> de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Seja <math id="p6.m1" class="ltx_Math" alttext="W\subset\mathbb{R}^{n}" display="inline"><semantics><mrow><mi>W</mi><mo>⊂</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">W\subset\mathbb{R}^{n}</annotation></semantics></math> um subespaço vetorial de dimensão <math id="p6.m2" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> e <math id="p6.m3" class="ltx_Math" alttext="\{\vec{w}_{1},\vec{w}_{2},\dots,\vec{w}_{k}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{w}_{1},\vec{w}_{2},\dots,\vec{w}_{k}\}</annotation></semantics></math> uma base ortogonal de <math id="p6.m4" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>. Dado um vetor <math id="p6.m5" class="ltx_Math" alttext="\vec{y}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{y}\in\mathbb{R}^{n}</annotation></semantics></math> qualquer, definimos a <span class="ltx_text ltx_font_bold">projeção ortogonal de <math id="p6.m6" class="ltx_Math" alttext="\vec{y}" display="inline"><semantics><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{y}</annotation></semantics></math> sobre <math id="p6.m7" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math></span> como</p>
+<div id="Ch10.E10" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E10.m1" class="ltx_Math" alttext="\operatorname{proj}_{W}\vec{y}=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot%
+\vec{w}_{1}}\ \vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{%
+w}_{2}}\ \vec{w}_{2}+\cdots+\frac{\vec{y}\cdot\vec{w}_{k}}{\vec{w}_{k}\cdot%
+\vec{w}_{k}}\ \vec{w}_{k}" display="block"><semantics><mrow><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mfrac><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mi>k</mi></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\operatorname{proj}_{W}\vec{y}=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot%
+\vec{w}_{1}}\ \vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{%
+w}_{2}}\ \vec{w}_{2}+\cdots+\frac{\vec{y}\cdot\vec{w}_{k}}{\vec{w}_{k}\cdot%
+\vec{w}_{k}}\ \vec{w}_{k}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.10)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Pode-se verificar, como no Exercício <span class="ltx_ref ltx_ref_self"><span class="ltx_text ltx_ref_tag">10.1</span></span> acima, que</p>
+<div id="Ch10.E11" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E11.m1" class="ltx_Math" alttext="\vec{w}\cdot\big{(}\vec{y}-\operatorname{proj}_{W}\vec{y}\big{)}=0,\ \text{%
+para qualquer }\vec{w}\in W," display="block"><semantics><mrow><mrow><mrow><mrow><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>−</mo><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="0.767em">,</mo><mrow><mrow><mtext>para qualquer </mtext><mo>⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mi>W</mi></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\vec{w}\cdot\big{(}\vec{y}-\operatorname{proj}_{W}\vec{y}\big{)}=0,\ \text{%
+para qualquer }\vec{w}\in W,</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.11)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">isto é, a projeção <math id="p6.m8" class="ltx_Math" alttext="\operatorname{proj}_{W}\vec{y}" display="inline"><semantics><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\operatorname{proj}_{W}\vec{y}</annotation></semantics></math> pertence a <math id="p6.m9" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> e <math id="p6.m10" class="ltx_Math" alttext="\vec{y}-\operatorname{proj}_{W}\vec{y}" display="inline"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>−</mo><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\vec{y}-\operatorname{proj}_{W}\vec{y}</annotation></semantics></math> é ortogonal a todo elemento de <math id="p6.m11" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>, assim como nossa intuição esperaria.</p>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 10.1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">Calcular a projeção do vetor</p>
+<div id="Ch10.E12" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E12.m1" class="ltx_Math" alttext="\vec{y}=\begin{bmatrix}1\\
+0\\
+-1\\
+-3\\
+2\end{bmatrix}" display="block"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{y}=\begin{bmatrix}1\\
+0\\
+-1\\
+-3\\
+2\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.12)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">sobre o espaço tridimensional <math id="Thmex2.p1.m1" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> gerado pelos vetores</p>
+<div id="Ch10.E13" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch10.E13.m1" class="ltx_Math" alttext="\vec{w}_{1}=\begin{bmatrix}0\\
+4\\
+0\\
+6\\
+0\end{bmatrix},\quad\vec{w}_{2}=\begin{bmatrix}1\\
+0\\
+2\\
+0\\
+-1\end{bmatrix}\quad\text{e}\quad\vec{w}_{3}=\begin{bmatrix}2\\
+-3\\
+0\\
+-2\\
+2\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="1.367em">,</mo><mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{w}_{1}=\begin{bmatrix}0\\
+4\\
+0\\
+6\\
+0\end{bmatrix},\quad\vec{w}_{2}=\begin{bmatrix}1\\
+0\\
+2\\
+0\\
+-1\end{bmatrix}\quad\text{e}\quad\vec{w}_{3}=\begin{bmatrix}2\\
+-3\\
+0\\
+-2\\
+2\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(10.13)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Observar que a base <math id="Thmex2.p1.m2" class="ltx_Math" alttext="\{\vec{w}_{1},\vec{w}_{2},\vec{w}_{3}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{w}_{1},\vec{w}_{2},\vec{w}_{3}\}</annotation></semantics></math> de <math id="Thmex2.p1.m3" class="ltx_Math" alttext="W" display="inline"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math> é ortogonal! Devemos então calcular</p>
+<div class="bml-overflow-wrapper">
+<table id="Ch12.S4.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch10.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch10.Ex3.m1" class="ltx_Math" alttext="\displaystyle\operatorname{proj}_{W}\vec{y}" display="inline"><semantics><mrow><msub><mi>proj</mi><mi>W</mi></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\displaystyle\operatorname{proj}_{W}\vec{y}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch10.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ %
+\vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{%
+w}_{2}+\frac{\vec{y}\cdot\vec{w}_{3}}{\vec{w}_{3}\cdot\vec{w}_{3}}\ \vec{w}_{3}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow><mrow><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\frac{\vec{y}\cdot\vec{w}_{1}}{\vec{w}_{1}\cdot\vec{w}_{1}}\ %
+\vec{w}_{1}+\frac{\vec{y}\cdot\vec{w}_{2}}{\vec{w}_{2}\cdot\vec{w}_{2}}\ \vec{%
+w}_{2}+\frac{\vec{y}\cdot\vec{w}_{3}}{\vec{w}_{3}\cdot\vec{w}_{3}}\ \vec{w}_{3}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch10.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch10.Ex4.m1" class="ltx_Math" alttext="\displaystyle=\frac{-18}{16+36}\ \vec{w}_{1}+\frac{1-2-2}{1+4+1}\ \vec{w}_{2}+%
+\frac{2+6+4}{4+9+4+4}\ \vec{w}_{3}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>−</mo><mn>18</mn></mrow><mrow><mn>16</mn><mo>+</mo><mn>36</mn></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>1</mn><mo>−</mo><mn>2</mn><mo>−</mo><mn>2</mn></mrow><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>1</mn></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>+</mo><mn>6</mn><mo>+</mo><mn>4</mn></mrow><mrow><mn>4</mn><mo>+</mo><mn>9</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>4</mn></mrow></mfrac></mstyle><mo lspace="0.600em">⁢</mo><msub><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\frac{-18}{16+36}\ \vec{w}_{1}+\frac{1-2-2}{1+4+1}\ \vec{w}_{2}+%
+\frac{2+6+4}{4+9+4+4}\ \vec{w}_{3}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch10.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch10.Ex5.m1" class="ltx_Math" alttext="\displaystyle=-\frac{9}{26}\begin{bmatrix}0\\
+4\\
+0\\
+6\\
+0\end{bmatrix}-\frac{1}{2}\begin{bmatrix}1\\
+0\\
+2\\
+0\\
+-1\end{bmatrix}+\frac{4}{7}\begin{bmatrix}2\\
+-3\\
+0\\
+-2\\
+2\end{bmatrix}=\begin{bmatrix}9/14\\
+-282/91\\
+-1\\
+-293/91\\
+23/14\end{bmatrix}." display="inline"><semantics><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>9</mn><mn>26</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>−</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mn>4</mn><mn>7</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mrow><mn>9</mn><mo>/</mo><mn>14</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>282</mn><mo>/</mo><mn>91</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>293</mn><mo>/</mo><mn>91</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>23</mn><mo>/</mo><mn>14</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\displaystyle=-\frac{9}{26}\begin{bmatrix}0\\
+4\\
+0\\
+6\\
+0\end{bmatrix}-\frac{1}{2}\begin{bmatrix}1\\
+0\\
+2\\
+0\\
+-1\end{bmatrix}+\frac{4}{7}\begin{bmatrix}2\\
+-3\\
+0\\
+-2\\
+2\end{bmatrix}=\begin{bmatrix}9/14\\
+-282/91\\
+-1\\
+-293/91\\
+23/14\end{bmatrix}.</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)</p>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch10.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch10.S2.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

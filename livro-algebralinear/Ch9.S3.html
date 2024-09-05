@@ -1,0 +1,598 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>9.3 Bases ortogonais e ortonormais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch9.S2.html" title="9.2 Ortogonalidade ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch9.S4.html" title="9.4 Exercícios finais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch9.S1.html" title="9.1 Comprimento, ângulos e o produto escalar ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch9.S2.html" title="9.2 Ortogonalidade ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch9.S4.html" title="9.4 Exercícios finais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="9.1" data-path="Ch9.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch9.S1.html" title="In Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9.1 </span></b>Comprimento, ângulos e o produto escalar</a></li>
+<li data-level="9.2" data-path="Ch9.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch9.S2.html" title="In Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9.2 </span></b>Ortogonalidade</a></li>
+<li data-level="9.3" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active"><a href="" title="In Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9.3 </span></b>Bases ortogonais e ortonormais</a></li>
+<li data-level="9.4" data-path="Ch9.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch9.S4.html" title="In Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9.4 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Bases ortogonais e ortonormais</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">9.3</span> Bases ortogonais e ortonormais</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Vimos que uma das importâncias do produto escalar é estender o conceito de ortogonalidade para espaços vetoriais mais gerais. A ortogonalidade traz consigo a noção de projeção ortogonal. Agora vamos ver algumas vantagens em se considerar bases de espaços vetoriais que são também conjuntos ortogonais; estas são conhecidas como <span class="ltx_text ltx_font_bold">bases ortogonais</span>.</p>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 9.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">A base canônica de <math id="Thmex1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> forma um conjunto ortogonal e é, portanto, uma base ortogonal. Assim como no Exemplo <a href="Ch9.S2.html#Thmex4" title="Exemplo 9.2.4. ‣ 9.2 Ortogonalidade ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.2.4</span></a>, é possível representar qualquer vetor <math id="Thmex1.p1.m2" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> como</p>
+<div id="Ch9.E42" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E42.m1" class="ltx_Math" alttext="\vec{v}=\big{(}\vec{v}\cdot\vec{e}_{1}\big{)}\vec{e}_{1}+\big{(}\vec{v}\cdot%
+\vec{e}_{2}\big{)}\vec{e}_{2}+\cdots+\big{(}\vec{v}\cdot\vec{e}_{n}\big{)}\vec%
+{e}_{n}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}=\big{(}\vec{v}\cdot\vec{e}_{1}\big{)}\vec{e}_{1}+\big{(}\vec{v}\cdot%
+\vec{e}_{2}\big{)}\vec{e}_{2}+\cdots+\big{(}\vec{v}\cdot\vec{e}_{n}\big{)}\vec%
+{e}_{n}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.42)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Vejamos que esta propriedade da base canônica é, na realidade, uma propriedade de todas as bases ortogonais:</p>
+</div>
+<div id="Thmteo1" class="ltx_theorem ltx_theorem_teo">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Teorema 9.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmteo1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Seja <math id="Thmteo1.p1.m1" class="ltx_Math" alttext="\mathcal{B}=\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}" display="inline"><semantics><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{B}=\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}</annotation></semantics></math> uma base ortogonal de <math id="Thmteo1.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. Então qualquer vetor <math id="Thmteo1.p1.m3" class="ltx_Math" alttext="\vec{v}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{v}\in\mathbb{R}^{n}</annotation></semantics></math> pode ser representado como</span></p>
+<div id="Ch9.E43" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E43.m1" class="ltx_Math" alttext="\vec{v}=\frac{\vec{v}\cdot\vec{v}_{1}}{\vec{v}_{1}\cdot\vec{v}_{1}}\,\vec{v}_{%
+1}+\frac{\vec{v}\cdot\vec{v}_{2}}{\vec{v}_{2}\cdot\vec{v}_{2}}\,\vec{v}_{2}+%
+\cdots+\frac{\vec{v}\cdot\vec{v}_{n}}{\vec{v}_{n}\cdot\vec{v}_{n}}\,\vec{v}_{n}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mfrac><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow></mfrac><mo lspace="0.170em">⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac><mo lspace="0.170em">⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mfrac><mo lspace="0.170em">⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}=\frac{\vec{v}\cdot\vec{v}_{1}}{\vec{v}_{1}\cdot\vec{v}_{1}}\,\vec{v}_{%
+1}+\frac{\vec{v}\cdot\vec{v}_{2}}{\vec{v}_{2}\cdot\vec{v}_{2}}\,\vec{v}_{2}+%
+\cdots+\frac{\vec{v}\cdot\vec{v}_{n}}{\vec{v}_{n}\cdot\vec{v}_{n}}\,\vec{v}_{n}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.43)</span>
+              
+              
+            
+</div>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Podemos escrever, de outra maneira, que</span></p>
+<div id="Ch9.E44" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E44.m1" class="ltx_Math" alttext="\vec{v}=\operatorname{proj}_{\vec{v}_{1}}\vec{v}+\operatorname{proj}_{\vec{v}_%
+{2}}\vec{v}+\cdots+\operatorname{proj}_{\vec{v}_{n}}\vec{v}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}=\operatorname{proj}_{\vec{v}_{1}}\vec{v}+\operatorname{proj}_{\vec{v}_%
+{2}}\vec{v}+\cdots+\operatorname{proj}_{\vec{v}_{n}}\vec{v}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.44)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Este resultado mostra que bases ortogonais são especiais e boas de trabalhar. Lembra que anteriormente, para encontrar os coeficientes de um vetor em uma base, tínhamos que encontrar <math id="p3.m1" class="ltx_Math" alttext="c_{1},c_{2},\cdots,c_{n}" display="inline"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>,</mo><msub><mi>c</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mi>c</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">c_{1},c_{2},\cdots,c_{n}</annotation></semantics></math> resolvendo o sistema linear cuja forma vetorial é</p>
+<div id="Ch9.E45" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E45.m1" class="ltx_Math" alttext="c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}\vec{v}_{n}=\vec{v}." display="block"><semantics><mrow><mrow><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow><mo>=</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}\vec{v}_{n}=\vec{v}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.45)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">O teorema acima afirma, em outras palavras, quando a base é ortogonal, os coeficientes do vetor <math id="p3.m2" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> na base <math id="p3.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><semantics><mi class="ltx_font_mathcaligraphic">ℬ</mi><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math> são os números</p>
+<div id="Ch9.E46" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E46.m1" class="ltx_Math" alttext="c_{j}=\frac{\vec{v}\cdot\vec{v}_{j}}{\vec{v}_{j}\cdot\vec{v}_{j}}." display="block"><semantics><mrow><mrow><msub><mi>c</mi><mi>j</mi></msub><mo>=</mo><mfrac><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow></mfrac></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">c_{j}=\frac{\vec{v}\cdot\vec{v}_{j}}{\vec{v}_{j}\cdot\vec{v}_{j}}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.46)</span>
+            
+            
+          
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Justificativa do Teorema <a href="#Thmteo1" title="Teorema 9.3.1. ‣ 9.3 Bases ortogonais e ortonormais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3.1</span></a>.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Se a representação do vetor <math id="p4.m1" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> na base <math id="p4.m2" class="ltx_Math" alttext="\mathcal{B}" display="inline"><semantics><mi class="ltx_font_mathcaligraphic">ℬ</mi><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math> for</p>
+<div id="Ch9.E47" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E47.m1" class="ltx_Math" alttext="\vec{v}=c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}\vec{v}_{n}," display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\vec{v}=c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}\vec{v}_{n},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.47)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">então, fazendo o produto escalar desta expressão com <math id="p4.m3" class="ltx_Math" alttext="\vec{v}_{j}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><annotation encoding="application/x-tex">\vec{v}_{j}</annotation></semantics></math> e utilizando as propriedades de ortogonalidade, concluímos que</p>
+<div id="Ch9.E48" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E48.m1" class="ltx_Math" alttext="\vec{v}\cdot\vec{v}_{j}=\big{(}c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}%
+\vec{v}_{n}\big{)}\cdot\vec{v}_{j}=c_{1}(\vec{v}_{1}\cdot\vec{v}_{j})+c_{2}(%
+\vec{v}_{2}\cdot\vec{v}_{j})+\cdots+c_{n}(\vec{v}_{n}\cdot\vec{v}_{j})=c_{j}%
+\big{(}\vec{v}_{j}\cdot\vec{v}_{j}\big{)}," display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo>=</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow><mo maxsize="120%" minsize="120%" rspace="0.055em">)</mo></mrow><mo rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>c</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>c</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\vec{v}\cdot\vec{v}_{j}=\big{(}c_{1}\vec{v}_{1}+c_{2}\vec{v}_{2}+\cdots+c_{n}%
+\vec{v}_{n}\big{)}\cdot\vec{v}_{j}=c_{1}(\vec{v}_{1}\cdot\vec{v}_{j})+c_{2}(%
+\vec{v}_{2}\cdot\vec{v}_{j})+\cdots+c_{n}(\vec{v}_{n}\cdot\vec{v}_{j})=c_{j}%
+\big{(}\vec{v}_{j}\cdot\vec{v}_{j}\big{)},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.48)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">pois <math id="p4.m4" class="ltx_Math" alttext="\vec{v}_{i}\cdot\vec{v}_{j}=0" display="inline"><semantics><mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>i</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\vec{v}_{i}\cdot\vec{v}_{j}=0</annotation></semantics></math> sempre que <math id="p4.m5" class="ltx_Math" alttext="i\neq j" display="inline"><semantics><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i\neq j</annotation></semantics></math>. Daí, concluímos, como queríamos, que os coeficientes devem satisfazer</p>
+<div id="Ch9.E49" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E49.m1" class="ltx_Math" alttext="c_{j}=\frac{\vec{v}\cdot\vec{v}_{j}}{\vec{v}_{j}\cdot\vec{v}_{j}}.\qed" display="block"><semantics><mrow><mrow><msub><mi>c</mi><mi>j</mi></msub><mo>=</mo><mfrac><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub></mrow></mfrac></mrow><mo lspace="0em" rspace="0.0835em">.</mo><mo class="ltx_mathvariant_italic" lspace="0.0835em" mathvariant="italic" separator="true">∎</mo></mrow><annotation encoding="application/x-tex">c_{j}=\frac{\vec{v}\cdot\vec{v}_{j}}{\vec{v}_{j}\cdot\vec{v}_{j}}.\qed</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.49)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 9.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">Vamos justificar que os vetores</p>
+<div id="Ch9.E50" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E50.m1" class="ltx_Math" alttext="\vec{u}=\begin{bmatrix}4\\
+2\end{bmatrix}\ \ \text{ e }\ \ \vec{v}=\begin{bmatrix}-1\\
+2\end{bmatrix}" display="block"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext> e </mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{u}=\begin{bmatrix}4\\
+2\end{bmatrix}\ \ \text{ e }\ \ \vec{v}=\begin{bmatrix}-1\\
+2\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.50)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">formam uma base ortogonal para <math id="Thmex2.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex2.p2" class="ltx_para">
+<p class="ltx_p">Em primeiro lugar, formam uma base, pois são vetores linearmente independentes e são dois (que é a dimensão de <math id="Thmex2.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>). Agora, calculamos</p>
+<div id="Ch9.E51" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E51.m1" class="ltx_Math" alttext="\vec{u}\cdot\vec{v}=4\cdot(-1)+2\cdot 2=0." display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mn>4</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>2</mn></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{u}\cdot\vec{v}=4\cdot(-1)+2\cdot 2=0.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.51)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Segue que <math id="Thmex2.p2.m2" class="ltx_Math" alttext="\vec{u}" display="inline"><semantics><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{u}</annotation></semantics></math> e <math id="Thmex2.p2.m3" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> são também ortogonais e, logo, formam uma base ortogonal de <math id="Thmex2.p2.m4" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex2.p3" class="ltx_para">
+<p class="ltx_p">Para escrever um vetor <math id="Thmex2.p3.m1" class="ltx_Math" alttext="\vec{x}=\begin{bmatrix}2\\
+-7\end{bmatrix}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=\begin{bmatrix}2\\
+-7\end{bmatrix}</annotation></semantics></math> nesta base, podemos calcular as projeções nos elementos da base (isto apenas vale se os elementos da base são ortogonais!):</p>
+<div id="Ch9.E52" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E52.m1" class="ltx_Math" alttext="\vec{x}=\frac{\vec{x}\cdot\vec{u}}{\vec{u}\cdot\vec{u}}\,\vec{u}+\frac{\vec{x}%
+\cdot\vec{v}}{\vec{v}\cdot\vec{v}}\,\vec{v}=\frac{-6}{20}\,\vec{u}+\frac{-16}{%
+5}\,\vec{v}=-0.3\,\vec{u}-3.2\,\vec{v}.\ \lhd" display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mfrac><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mfrac><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mfrac><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mfrac><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mrow><mo>−</mo><mn>6</mn></mrow><mn>20</mn></mfrac><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mfrac><mrow><mo>−</mo><mn>16</mn></mrow><mn>5</mn></mfrac><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mn>0.3</mn><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>−</mo><mrow><mn>3.2</mn><mo lspace="0.170em">⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\vec{x}=\frac{\vec{x}\cdot\vec{u}}{\vec{u}\cdot\vec{u}}\,\vec{u}+\frac{\vec{x}%
+\cdot\vec{v}}{\vec{v}\cdot\vec{v}}\,\vec{v}=\frac{-6}{20}\,\vec{u}+\frac{-16}{%
+5}\,\vec{v}=-0.3\,\vec{u}-3.2\,\vec{v}.\ \lhd</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.52)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Observe no exemplo acima que é muito mais fácil obter as componentes por ortogonalidade do que resolver sistemas lineares. Isto mesmo em dimensão baixa! Imagine se fosse um sistema <math id="p5.m1" class="ltx_Math" alttext="5\times 5" display="inline"><semantics><mrow><mn>5</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">5\times 5</annotation></semantics></math> ou ainda maior.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Note que a base canônica, como no Exemplo <a href="#Thmex1" title="Exemplo 9.3.1. ‣ 9.3 Bases ortogonais e ortonormais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3.1</span></a>, tem a propriedade adicional que <math id="p6.m1" class="ltx_Math" alttext="\left\lVert\vec{e}_{j}\right\rVert=1" display="inline"><semantics><mrow><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo fence="true" lspace="0em" rspace="0.1389em" stretchy="true">∥</mo></mrow><mo lspace="0.1389em">=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\left\lVert\vec{e}_{j}\right\rVert=1</annotation></semantics></math> para todo índice <math id="p6.m2" class="ltx_Math" alttext="j" display="inline"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>. Isto fez com que a representação de vetores do Teorema <a href="#Thmteo1" title="Teorema 9.3.1. ‣ 9.3 Bases ortogonais e ortonormais ‣ Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9.3.1</span></a> assumisse um formato ainda mais simples. Estas bases ortogonais que tem por elementos vetores unitários são conhecidas como <span class="ltx_text ltx_font_bold">bases ortonormais</span>. Mais explicitamente, uma base ortonormal é uma base <math id="p6.m3" class="ltx_Math" alttext="\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}</annotation></semantics></math> de um espaço vetorial que adicionalmente satisfaz</p>
+<div id="Ch9.E53" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E53.m1" class="ltx_math_unparsed" alttext="\vec{v}_{i}\cdot\vec{v}_{j}=0\text{ para }i\neq j\text{ e tamb\'{e}m }\left%
+\lVert\vec{v}_{j}\right\rVert=1\text{ para todo }j\ \ \big{(}\iff\vec{v}_{j}%
+\cdot\vec{v}_{j}=1\big{)}" display="block"><semantics><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>i</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo>=</mo><mn>0</mn><mtext> para </mtext><mi>i</mi><mo>≠</mo><mi>j</mi><mtext> e também </mtext><mrow><mo fence="true" lspace="0em" rspace="0em" stretchy="true">∥</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo fence="true" lspace="0em" rspace="0.1389em" stretchy="true">∥</mo></mrow><mo lspace="0.1389em">=</mo><mn>1</mn><mtext> para todo </mtext><mi>j</mi><mspace width="1.2em"></mspace><mrow><mo maxsize="120%" minsize="120%">(</mo><mo lspace="0em" stretchy="false">⇔</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>j</mi></msub><mo>=</mo><mn>1</mn><mo maxsize="120%" minsize="120%">)</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{v}_{i}\cdot\vec{v}_{j}=0\text{ para }i\neq j\text{ e tamb\'{e}m }\left%
+\lVert\vec{v}_{j}\right\rVert=1\text{ para todo }j\ \ \big{(}\iff\vec{v}_{j}%
+\cdot\vec{v}_{j}=1\big{)}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.53)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Uma consequência imediata é que, sendo <math id="p6.m4" class="ltx_Math" alttext="\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{v}_{1},\vec{v}_{2},\cdots,\vec{v}_{n}\}</annotation></semantics></math> uma base ortonormal de <math id="p6.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>, podemos escrever</p>
+<div id="Ch9.E54" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E54.m1" class="ltx_Math" alttext="\vec{v}=\big{(}\vec{v}\cdot\vec{v}_{1}\big{)}\vec{v}_{1}+\big{(}\vec{v}\cdot%
+\vec{v}_{2}\big{)}\vec{v}_{2}+\cdots+\big{(}\vec{v}\cdot\vec{v}_{n}\big{)}\vec%
+{v}_{n}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}=\big{(}\vec{v}\cdot\vec{v}_{1}\big{)}\vec{v}_{1}+\big{(}\vec{v}\cdot%
+\vec{v}_{2}\big{)}\vec{v}_{2}+\cdots+\big{(}\vec{v}\cdot\vec{v}_{n}\big{)}\vec%
+{v}_{n}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.54)</span>
+            
+            
+          
+</div>
+</div>
+<div id="Thmex3" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 9.3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex3.p1" class="ltx_para">
+<p class="ltx_p">Os vetores</p>
+<div id="Ch9.E55" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E55.m1" class="ltx_Math" alttext="\vec{u}=\begin{bmatrix}1\\
+0\\
+0\end{bmatrix},\ \vec{v}=\begin{bmatrix}0\\
+\sqrt{2}/2\\
+\sqrt{2}/2\end{bmatrix},\ \text{e }\vec{w}=\begin{bmatrix}0\\
+\sqrt{2}/2\\
+-\sqrt{2}/2\end{bmatrix}" display="block"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="0.767em">,</mo><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="0.767em">,</mo><mrow><mrow><mtext>e </mtext><mo>⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{u}=\begin{bmatrix}1\\
+0\\
+0\end{bmatrix},\ \vec{v}=\begin{bmatrix}0\\
+\sqrt{2}/2\\
+\sqrt{2}/2\end{bmatrix},\ \text{e }\vec{w}=\begin{bmatrix}0\\
+\sqrt{2}/2\\
+-\sqrt{2}/2\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.55)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">formam uma base ortonormal de <math id="Thmex3.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>: verifique! Qualquer vetor <math id="Thmex3.p1.m2" class="ltx_Math" alttext="\vec{x}\in\mathbb{R}^{3}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\vec{x}\in\mathbb{R}^{3}</annotation></semantics></math> pode ser escrito como</p>
+<div id="Ch9.E56" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E56.m1" class="ltx_Math" alttext="\vec{x}=\big{(}\vec{x}\cdot\vec{u}\big{)}\vec{u}+\big{(}\vec{x}\cdot\vec{v}%
+\big{)}\vec{v}+\big{(}\vec{x}\cdot\vec{w}\big{)}\vec{w}" display="block"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=\big{(}\vec{x}\cdot\vec{u}\big{)}\vec{u}+\big{(}\vec{x}\cdot\vec{v}%
+\big{)}\vec{v}+\big{(}\vec{x}\cdot\vec{w}\big{)}\vec{w}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.56)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Por exemplo,</p>
+<div id="Ch9.E57" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E57.m1" class="ltx_Math" alttext="\vec{x}=\begin{bmatrix}2\\
+-1\\
+1\end{bmatrix}=2\vec{u}+0\vec{v}-\sqrt{2}\vec{w}=2\begin{bmatrix}1\\
+0\\
+0\end{bmatrix}+\sqrt{2}\begin{bmatrix}0\\
+\sqrt{2}/2\\
+-\sqrt{2}/2\end{bmatrix}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>−</mo><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><msqrt><mn>2</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}=\begin{bmatrix}2\\
+-1\\
+1\end{bmatrix}=2\vec{u}+0\vec{v}-\sqrt{2}\vec{w}=2\begin{bmatrix}1\\
+0\\
+0\end{bmatrix}+\sqrt{2}\begin{bmatrix}0\\
+\sqrt{2}/2\\
+-\sqrt{2}/2\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.57)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">Observamos finalmente que bases ortogonais podem ser facilmente transformadas em bases ortonormais pelo processo de normalização.</p>
+</div>
+<div id="Thmex4" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 9.3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex4.p1" class="ltx_para">
+<p class="ltx_p">Os vetores</p>
+<div id="Ch9.E58" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E58.m1" class="ltx_Math" alttext="\vec{u}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\ \vec{v}=\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}\ \text{e }\vec{w}=\begin{bmatrix}1\\
+-2\\
+1\end{bmatrix}" display="block"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="0.767em">,</mo><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mtext>e </mtext><mo>⁢</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{u}=\begin{bmatrix}1\\
+1\\
+1\end{bmatrix},\ \vec{v}=\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}\ \text{e }\vec{w}=\begin{bmatrix}1\\
+-2\\
+1\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.58)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">formam uma base ortogonal de <math id="Thmex4.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>. Normalizando cada um dos vetores, podemos obter uma base ortonormal de <math id="Thmex4.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>:</p>
+<div id="Ch9.E59" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E59.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{ll}\left\lVert\vec{u}\right\rVert=\sqrt{1+1+1}=\sqrt{3}%
+\\
+\left\lVert\vec{v}\right\rVert=\sqrt{1+1}=\sqrt{2}\\
+\left\lVert\vec{w}\right\rVert=\sqrt{1+4+1}=\sqrt{6}\\
+\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" rspace="0.1389em" stretchy="true">∥</mo></mrow><mo lspace="0.1389em">=</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mn>1</mn><mo>+</mo><mn>1</mn></mrow></msqrt><mo>=</mo><msqrt><mn>3</mn></msqrt></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" rspace="0.1389em" stretchy="true">∥</mo></mrow><mo lspace="0.1389em">=</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mn>1</mn></mrow></msqrt><mo>=</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" rspace="0.1389em" stretchy="true">∥</mo></mrow><mo lspace="0.1389em">=</mo><msqrt><mrow><mn>1</mn><mo>+</mo><mn>4</mn><mo>+</mo><mn>1</mn></mrow></msqrt><mo>=</mo><msqrt><mn>6</mn></msqrt></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{ll}\left\lVert\vec{u}\right\rVert=\sqrt{1+1+1}=\sqrt{3}%
+\\
+\left\lVert\vec{v}\right\rVert=\sqrt{1+1}=\sqrt{2}\\
+\left\lVert\vec{w}\right\rVert=\sqrt{1+4+1}=\sqrt{6}\\
+\end{array}\right.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.59)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Isto implica que os vetores</p>
+<div id="Ch9.E60" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch9.E60.m1" class="ltx_Math" alttext="\frac{\vec{u}}{\left\lVert\vec{u}\right\rVert}=\frac{1}{\sqrt{3}}\begin{%
+bmatrix}1\\
+1\\
+1\end{bmatrix}=\begin{bmatrix}1/\sqrt{3}\\
+1/\sqrt{3}\\
+1/\sqrt{3}\end{bmatrix},\ \frac{\vec{v}}{\left\lVert\vec{v}\right\rVert}=\frac%
+{1}{\sqrt{2}}\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}=\begin{bmatrix}1/\sqrt{2}\\
+0\\
+-1/\sqrt{2}\end{bmatrix}\ \text{e }\frac{\vec{w}}{\left\lVert\vec{w}\right%
+\rVert}=\frac{1}{\sqrt{6}}\begin{bmatrix}1\\
+-2\\
+1\end{bmatrix}=\begin{bmatrix}1/\sqrt{6}\\
+-2/\sqrt{6}\\
+1/\sqrt{6}\end{bmatrix}" display="block"><semantics><mrow><mrow><mfrac><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" stretchy="true">∥</mo></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mn>3</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>3</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>3</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>3</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="0.767em">,</mo><mrow><mfrac><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" stretchy="true">∥</mo></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mtext>e </mtext><mo>⁢</mo><mfrac><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mrow><mo fence="true" rspace="0em" stretchy="true">∥</mo><mover accent="true"><mi>w</mi><mo stretchy="false">→</mo></mover><mo fence="true" lspace="0em" stretchy="true">∥</mo></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><msqrt><mn>6</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>6</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>6</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>6</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\frac{\vec{u}}{\left\lVert\vec{u}\right\rVert}=\frac{1}{\sqrt{3}}\begin{%
+bmatrix}1\\
+1\\
+1\end{bmatrix}=\begin{bmatrix}1/\sqrt{3}\\
+1/\sqrt{3}\\
+1/\sqrt{3}\end{bmatrix},\ \frac{\vec{v}}{\left\lVert\vec{v}\right\rVert}=\frac%
+{1}{\sqrt{2}}\begin{bmatrix}1\\
+0\\
+-1\end{bmatrix}=\begin{bmatrix}1/\sqrt{2}\\
+0\\
+-1/\sqrt{2}\end{bmatrix}\ \text{e }\frac{\vec{w}}{\left\lVert\vec{w}\right%
+\rVert}=\frac{1}{\sqrt{6}}\begin{bmatrix}1\\
+-2\\
+1\end{bmatrix}=\begin{bmatrix}1/\sqrt{6}\\
+-2/\sqrt{6}\\
+1/\sqrt{6}\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(9.60)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">formam um base ortonormal de <math id="Thmex4.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{3}.\ \lhd" display="inline"><semantics><mrow><msup><mi>ℝ</mi><mn>3</mn></msup><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^{3}.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch9.S2.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch9.S4.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

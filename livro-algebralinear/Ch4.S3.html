@@ -1,0 +1,1041 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch4.S2.html" title="4.2 Matriz transposta ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch4.S4.html" title="4.4 Exercícios finais ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch4.S1.html" title="4.1 Produto de matrizes ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch4.S2.html" title="4.2 Matriz transposta ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch4.S4.html" title="4.4 Exercícios finais ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="Ch4.html#S0.SSx1" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Exercícios resolvidos</a></li>
+<li data-level="" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="Ch4.html#S0.SSx2" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Exercícios</a></li>
+<li data-level="4.1" data-path="Ch4.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch4.S1.html" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.1 </span></b>Produto de matrizes</a></li>
+<li data-level="4.2" data-path="Ch4.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch4.S2.html" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.2 </span></b>Matriz transposta</a></li>
+<li data-level="4.3" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active">
+<a href="" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.3 </span></b>Matriz inversa</a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li data-level="4.3.1" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS1" title="In 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.3.1 </span></b>Caso <math class="ltx_Math" alttext="2\times 2" display="inline"><semantics><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math></a></li>
+<li data-level="4.3.2" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS2" title="In 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.3.2 </span></b>Algoritmo para ordem maior</a></li>
+<li data-level="4.3.3" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS3" title="In 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.3.3 </span></b>Aplicação na resolução de sistemas lineares</a></li>
+<li data-level="4.3.4" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS4" title="In 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.3.4 </span></b>Uma primeira caracterização de matrizes invertíveis</a></li>
+</ol>
+</li>
+<li data-level="4.4" data-path="Ch4.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch4.S4.html" title="In Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4.4 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Matriz inversa</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">4.3</span> Matriz inversa</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Agora que temos definido um produto de matrizes, é natural de nos perguntarmos quais das propriedades usuais do produto entre números reais se mantém válidas.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Por exemplo, a <span class="ltx_text ltx_font_bold">matriz identidade</span> <math id="p2.m1" class="ltx_Math" alttext="I_{n}" display="inline"><semantics><msub><mi>I</mi><mi>n</mi></msub><annotation encoding="application/x-tex">I_{n}</annotation></semantics></math> é a matriz quadrada de ordem <math id="p2.m2" class="ltx_Math" alttext="n\times n" display="inline"><semantics><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math> que tem <math id="p2.m3" class="ltx_Math" alttext="1" display="inline"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math> na diagonal principal e <math id="p2.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> nas demais posições. No caso <math id="p2.m5" class="ltx_Math" alttext="3\times 3" display="inline"><semantics><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math>, temos</p>
+<div id="Ch4.E16" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E16.m1" class="ltx_Math" alttext="I_{3}=\left[\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><msub><mi>I</mi><mn>3</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">I_{3}=\left[\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right].</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.16)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Esta matriz satisfaz <math id="p2.m6" class="ltx_Math" alttext="AI_{n}=A" display="inline"><semantics><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>I</mi><mi>n</mi></msub></mrow><mo>=</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">AI_{n}=A</annotation></semantics></math> para qualquer matriz <math id="p2.m7" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> de ordem <math id="p2.m8" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>. Da mesma forma, temos <math id="p2.m9" class="ltx_Math" alttext="I_{n}B=B" display="inline"><semantics><mrow><mrow><msub><mi>I</mi><mi>n</mi></msub><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">I_{n}B=B</annotation></semantics></math> para qualquer matriz <math id="p2.m10" class="ltx_Math" alttext="B" display="inline"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math> de ordem <math id="p2.m11" class="ltx_Math" alttext="n\times m" display="inline"><semantics><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n\times m</annotation></semantics></math> (observe atentamente os índices!). O nome identidade vem desta propriedade, que é parecida com a propriedade da unidade nos números reais: <math id="p2.m12" class="ltx_Math" alttext="1\cdot x=x=x\cdot 1" display="inline"><semantics><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>x</mi></mrow><mo>=</mo><mi>x</mi><mo>=</mo><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow><annotation encoding="application/x-tex">1\cdot x=x=x\cdot 1</annotation></semantics></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Existindo a matriz identidade, outra pergunta natural é se existe um inverso multiplicativo. Para números reais, qualquer número não nulo possui:</p>
+<div id="Ch4.E17" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E17.m1" class="ltx_Math" alttext="x\in\mathbb{R},x\neq 0\implies x^{-1}=\frac{1}{x}\ \text{\'{e} um inverso %
+multiplicativo,}" display="block"><semantics><mrow><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>,</mo><mrow><mi>x</mi><mo>≠</mo><mn>0</mn><mo stretchy="false">⟹</mo><msup><mi>x</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mi>x</mi></mfrac><mo lspace="0.600em">⁢</mo><mtext>é um inverso multiplicativo,</mtext></mrow></mrow></mrow><annotation encoding="application/x-tex">x\in\mathbb{R},x\neq 0\implies x^{-1}=\frac{1}{x}\ \text{\'{e} um inverso %
+multiplicativo,}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.17)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">isto é, satisfaz <math id="p3.m1" class="ltx_Math" alttext="x\cdot x^{-1}=1" display="inline"><semantics><mrow><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mi>x</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x\cdot x^{-1}=1</annotation></semantics></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Vamos procurar por <span class="ltx_text ltx_font_bold">matrizes inversas</span>: dada uma matriz <math id="p4.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, queremos encontrar uma matriz <math id="p4.m2" class="ltx_Math" alttext="A^{-1}" display="inline"><semantics><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> de modo que</p>
+<div id="Ch4.E18" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E18.m1" class="ltx_Math" alttext="AA^{-1}=I_{n}=A^{-1}A." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">AA^{-1}=I_{n}=A^{-1}A.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.18)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Escrevemos de duas formas diferentes acima, pois o produto de matrizes não é comutativo. A matriz <math id="p4.m3" class="ltx_Math" alttext="A^{-1}" display="inline"><semantics><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> é chamada a <span class="ltx_text ltx_font_bold">matriz inversa</span> de <math id="p4.m4" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>. Observe que <math id="p4.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math><span class="ltx_text ltx_font_bold"> deve ser quadrada</span> (por quê?).</p>
+</div>
+<section id="SS1" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">4.3.1</span> Caso <math id="SS1.m1" class="ltx_Math" alttext="2\times 2" display="inline"><semantics><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math>
+</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Vamos procurar pela inversa de</p>
+<div id="Ch4.E19" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E19.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cc}a&amp;b\\
+c&amp;d\end{array}\right]." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cc}a&amp;b\\
+c&amp;d\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.19)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Escrevemos</p>
+<div id="Ch4.E20" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E20.m1" class="ltx_Math" alttext="A^{-1}=\left[\begin{array}[]{cc}x_{1}&amp;y_{1}\\
+x_{2}&amp;y_{2}\end{array}\right]" display="block"><semantics><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">A^{-1}=\left[\begin{array}[]{cc}x_{1}&amp;y_{1}\\
+x_{2}&amp;y_{2}\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.20)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e queremos descobrir os valores <math id="SS1.p1.m1" class="ltx_Math" alttext="x_{1},x_{2},y_{1},y_{2}" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_{1},x_{2},y_{1},y_{2}</annotation></semantics></math> que satisfazem</p>
+<div id="Ch4.E21" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E21.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc}a&amp;b\\
+c&amp;d\end{array}\right]\left[\begin{array}[]{cc}x_{1}&amp;y_{1}\\
+x_{2}&amp;y_{2}\end{array}\right]=\left[\begin{array}[]{cc}1&amp;0\\
+0&amp;1\end{array}\right]" display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc}a&amp;b\\
+c&amp;d\end{array}\right]\left[\begin{array}[]{cc}x_{1}&amp;y_{1}\\
+x_{2}&amp;y_{2}\end{array}\right]=\left[\begin{array}[]{cc}1&amp;0\\
+0&amp;1\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.21)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Pela interpretação que demos anteriormente ao produto de matrizes, encontrar</p>
+<div id="Ch4.E22" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E22.m1" class="ltx_Math" alttext="\vec{x}=\left[\begin{array}[]{c}x_{1}\\
+x_{2}\end{array}\right]\quad\text{e}\quad\vec{y}=\left[\begin{array}[]{c}y_{1}%
+\\
+y_{2}\end{array}\right]" display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=\left[\begin{array}[]{c}x_{1}\\
+x_{2}\end{array}\right]\quad\text{e}\quad\vec{y}=\left[\begin{array}[]{c}y_{1}%
+\\
+y_{2}\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.22)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">é equivalente a resolver ao mesmo tempo os dois sistemas</p>
+<div id="Ch4.E23" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E23.m1" class="ltx_Math" alttext="A\vec{x}=\left[\begin{array}[]{c}1\\
+0\end{array}\right]=\vec{e}_{1}\quad\text{e}\quad A\vec{y}=\left[\begin{array}%
+[]{c}0\\
+1\end{array}\right]=\vec{e}_{2}." display="block"><semantics><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mspace width="1.2em"></mspace><mrow><mrow><mtext>e</mtext><mspace width="1.2em"></mspace><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A\vec{x}=\left[\begin{array}[]{c}1\\
+0\end{array}\right]=\vec{e}_{1}\quad\text{e}\quad A\vec{y}=\left[\begin{array}%
+[]{c}0\\
+1\end{array}\right]=\vec{e}_{2}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.23)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">A ideia é então resolver por escalonamento os sistemas cuja matriz aumentada associada é:</p>
+<div id="Ch4.E24" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E24.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|cc}a&amp;b&amp;1&amp;0\\
+c&amp;d&amp;0&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>a</mi></mtd><mtd class="ltx_border_r"><mi>b</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd class="ltx_border_r"><mi>d</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|cc}a&amp;b&amp;1&amp;0\\
+c&amp;d&amp;0&amp;1\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.24)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Tem-se</p>
+<div id="Ch4.E25" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E25.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|cc}a&amp;b&amp;1&amp;0\\
+c&amp;d&amp;0&amp;1\end{array}\right]\xrightarrow{c\cdot\ell_{1}\text{ e }a\cdot\ell_{2}}%
+\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+ac&amp;ad&amp;0&amp;a\end{array}\right]\xrightarrow{-\ell_{1}+\ell_{2}\text{ em }\ell_{2}}%
+\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+0&amp;ad-bc&amp;-c&amp;a\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>a</mi></mtd><mtd class="ltx_border_r"><mi>b</mi></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd class="ltx_border_r"><mi>d</mi></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mrow><mi>c</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>⁢</mo><mtext> e </mtext><mo>⁢</mo><mi>a</mi></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd class="ltx_border_r"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd><mi>c</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd class="ltx_border_r"><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mo>−</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd class="ltx_border_r"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd><mi>c</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mi>c</mi></mrow></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|cc}a&amp;b&amp;1&amp;0\\
+c&amp;d&amp;0&amp;1\end{array}\right]\xrightarrow{c\cdot\ell_{1}\text{ e }a\cdot\ell_{2}}%
+\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+ac&amp;ad&amp;0&amp;a\end{array}\right]\xrightarrow{-\ell_{1}+\ell_{2}\text{ em }\ell_{2}}%
+\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+0&amp;ad-bc&amp;-c&amp;a\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.25)</span>
+              
+              
+            
+</div>
+<div id="Ch4.E26" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E26.m1" class="ltx_Math" alttext="\xrightarrow{\ell_{2}\div(ad-bc)}\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right]\xrightarrow{-bc\ell_{2}%
++\ell_{1}\text{ em }\ell_{1}}\left[\begin{array}[]{cc|cc}ac&amp;0&amp;\frac{acd}{ad-bc%
+}&amp;\frac{-abc}{ad-bc}\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right]" display="block"><semantics><mrow><mi></mi><mover accent="true"><mo stretchy="false">→</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub><mo>÷</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd class="ltx_border_r"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd><mi>c</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mo>−</mo><mi>c</mi></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd><mtd><mstyle displaystyle="false"><mfrac><mi>a</mi><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi></mrow></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mi>a</mi><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>d</mi></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mo>−</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mo>−</mo><mi>c</mi></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd><mtd><mstyle displaystyle="false"><mfrac><mi>a</mi><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\xrightarrow{\ell_{2}\div(ad-bc)}\left[\begin{array}[]{cc|cc}ac&amp;bc&amp;c&amp;0\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right]\xrightarrow{-bc\ell_{2}%
++\ell_{1}\text{ em }\ell_{1}}\left[\begin{array}[]{cc|cc}ac&amp;0&amp;\frac{acd}{ad-bc%
+}&amp;\frac{-abc}{ad-bc}\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.26)</span>
+              
+              
+            
+</div>
+<div id="Ch4.E27" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E27.m1" class="ltx_Math" alttext="\xrightarrow{\ell_{1}\div ac}\left[\begin{array}[]{cc|cc}1&amp;0&amp;\frac{d}{ad-bc}&amp;%
+\frac{-b}{ad-bc}\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right]." display="block"><semantics><mrow><mrow><mi></mi><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub><mo>÷</mo><mi>a</mi></mrow><mo>⁢</mo><mi>c</mi></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mi>d</mi><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mo>−</mo><mi>b</mi></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mrow><mo>−</mo><mi>c</mi></mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd><mtd><mstyle displaystyle="false"><mfrac><mi>a</mi><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac></mstyle></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\xrightarrow{\ell_{1}\div ac}\left[\begin{array}[]{cc|cc}1&amp;0&amp;\frac{d}{ad-bc}&amp;%
+\frac{-b}{ad-bc}\\
+0&amp;1&amp;\frac{-c}{ad-bc}&amp;\frac{a}{ad-bc}\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.27)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Daí concluímos (depois colocar em evidência o fator <math id="SS1.p1.m2" class="ltx_Math" alttext="ad-bc" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><annotation encoding="application/x-tex">ad-bc</annotation></semantics></math> que está dividindo) que:</p>
+<div id="Ch4.E28" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E28.m1" class="ltx_math_unparsed" alttext="\boxed{A^{-1}=\frac{1}{ad-bc}\left[\begin{array}[]{cc}d&amp;-b\\
+-c&amp;a\end{array}\right]=\frac{1}{\det A}\left[\begin{array}[]{cc}d&amp;-b\\
+-c&amp;a\end{array}\right].}" display="block"><semantics><menclose notation="box"><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mfrac><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>d</mi></mtd><mtd><mrow><mo>−</mo><mi>b</mi></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mi>c</mi></mrow></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mo rspace="0.167em">det</mo><mi>A</mi></mrow></mfrac><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>d</mi></mtd><mtd><mrow><mo>−</mo><mi>b</mi></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mi>c</mi></mrow></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow></menclose><annotation encoding="application/x-tex">\boxed{A^{-1}=\frac{1}{ad-bc}\left[\begin{array}[]{cc}d&amp;-b\\
+-c&amp;a\end{array}\right]=\frac{1}{\det A}\left[\begin{array}[]{cc}d&amp;-b\\
+-c&amp;a\end{array}\right].}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.28)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Nesta última expressão, definimos o <span class="ltx_text ltx_font_bold">determinante</span> de uma matriz de ordem <math id="SS1.p1.m3" class="ltx_Math" alttext="2\times 2" display="inline"><semantics><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math>:</p>
+<div id="Ch4.E29" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E29.m1" class="ltx_Math" alttext="\det A=ad-bc" display="block"><semantics><mrow><mrow><mo movablelimits="false" rspace="0.167em">det</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>d</mi></mrow><mo>−</mo><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow></mrow><annotation encoding="application/x-tex">\det A=ad-bc</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.29)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e, como foi necessário dividir por este valor, concluímos que:</p>
+<div id="Ch4.E30" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E30.m1" class="ltx_Math" alttext="\boxed{\text{s\'{o} existe a matriz inversa de $A$ caso $\det A\neq 0$.}}" display="block"><semantics><menclose notation="box"><mrow><mtext>só existe a matriz inversa de </mtext><mi>A</mi><mtext> caso </mtext><mrow><mrow><mo lspace="0.167em" rspace="0.167em">det</mo><mi>A</mi></mrow><mo>≠</mo><mn>0</mn></mrow><mtext>.</mtext></mrow></menclose><annotation encoding="application/x-tex">\boxed{\text{s\'{o} existe a matriz inversa de $A$ caso $\det A\neq 0$.}}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.30)</span>
+              
+              
+            
+</div>
+</div>
+<div id="Thmobs1" class="ltx_theorem ltx_theorem_obs">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Observação 4.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmobs1.p1" class="ltx_para">
+<p class="ltx_p">Veremos na seção seguinte que o processo que utilizamos para inverter a matriz <math id="Thmobs1.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> funciona para matrizes de qualquer ordem, mas é trabalhoso. No caso de uma matriz <math id="Thmobs1.p1.m2" class="ltx_Math" alttext="2\times 2" display="inline"><semantics><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math>, talvez seja interessante memorizar a fórmula, já que não é tão complicada. Podemos pensar da seguinte maneira:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i1.p1" class="ltx_para">​<p class="ltx_p">Calculamos <math id="I1.i1.p1.m1" class="ltx_Math" alttext="\det A" display="inline"><semantics><mrow><mo rspace="0.167em">det</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\det A</annotation></semantics></math>. Se for diferente de zero, existe a inversa. Nós partimos de <math id="I1.i1.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> e dividimos pelo determinante.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i2.p1" class="ltx_para">​<p class="ltx_p">Em seguida, trocamos de lugar os elementos da diagonal principal (<math id="I1.i2.p1.m1" class="ltx_Math" alttext="a" display="inline"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math> e <math id="I1.i2.p1.m2" class="ltx_Math" alttext="d" display="inline"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>).</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i3.p1" class="ltx_para">​<p class="ltx_p">Finalmente, trocamos o sinal dos elementos da outra diagonal.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Atenção!</span> Este método apenas funciona para matrizes quadradas de ordem <math id="Thmobs1.p1.m3" class="ltx_Math" alttext="2\times 2" display="inline"><semantics><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">2\times 2</annotation></semantics></math>!</p>
+</div>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 4.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Sejam as matrizes</p>
+<div id="Ch4.E31" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E31.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cc}1&amp;1\\
+-1&amp;3\end{array}\right],\quad B=\left[\begin{array}[]{cc}1&amp;0\\
+1&amp;1\end{array}\right],\quad C=\left[\begin{array}[]{cc}-1&amp;-1\\
+2&amp;2\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mi>B</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="1.367em">,</mo><mrow><mi>C</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cc}1&amp;1\\
+-1&amp;3\end{array}\right],\quad B=\left[\begin{array}[]{cc}1&amp;0\\
+1&amp;1\end{array}\right],\quad C=\left[\begin{array}[]{cc}-1&amp;-1\\
+2&amp;2\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.31)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Calculamos</p>
+<div id="Ch4.E32" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E32.m1" class="ltx_Math" alttext="\det A=1\cdot 3-(-1)\cdot 1=4\neq 0." display="block"><semantics><mrow><mrow><mrow><mo movablelimits="false" rspace="0.167em">det</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>3</mn></mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mn>1</mn></mrow></mrow><mo>=</mo><mn>4</mn><mo>≠</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\det A=1\cdot 3-(-1)\cdot 1=4\neq 0.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.32)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Logo, <math id="Thmex1.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> possui inversa e temos</p>
+<div id="Ch4.E33" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E33.m1" class="ltx_Math" alttext="A^{-1}=\frac{1}{4}\left[\begin{array}[]{cc}3&amp;-1\\
+1&amp;1\end{array}\right]=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right]." display="block"><semantics><mrow><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>4</mn></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{-1}=\frac{1}{4}\left[\begin{array}[]{cc}3&amp;-1\\
+1&amp;1\end{array}\right]=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.33)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">(trocamos de lugar os elementos da diagonal principal e de sinal os elementos da outra diagonal).</p>
+</div>
+<div id="Thmex1.p2" class="ltx_para">
+<p class="ltx_p">Façamos o mesmo para a matriz <math id="Thmex1.p2.m1" class="ltx_Math" alttext="B" display="inline"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>:</p>
+<div id="Ch4.E34" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E34.m1" class="ltx_Math" alttext="\det B=1\cdot 1-1\cdot 0=1\neq 0." display="block"><semantics><mrow><mrow><mrow><mo movablelimits="false" rspace="0.167em">det</mo><mi>B</mi></mrow><mo>=</mo><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>1</mn></mrow><mo>−</mo><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn></mrow></mrow><mo>=</mo><mn>1</mn><mo>≠</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\det B=1\cdot 1-1\cdot 0=1\neq 0.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.34)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Logo,</p>
+<div id="Ch4.E35" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E35.m1" class="ltx_Math" alttext="B^{-1}=\frac{1}{1}\left[\begin{array}[]{cc}1&amp;-1\\
+1&amp;1\end{array}\right]=\left[\begin{array}[]{cc}1&amp;0\\
+-1&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><msup><mi>B</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>1</mn></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">B^{-1}=\frac{1}{1}\left[\begin{array}[]{cc}1&amp;-1\\
+1&amp;1\end{array}\right]=\left[\begin{array}[]{cc}1&amp;0\\
+-1&amp;1\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.35)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">(trocamos de lugar os elementos da diagonal principal – neste caso eram iguais – e de sinal dos elementos da outra diagonal).</p>
+</div>
+<div id="Thmex1.p3" class="ltx_para">
+<p class="ltx_p">Já para a matriz <math id="Thmex1.p3.m1" class="ltx_Math" alttext="C" display="inline"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>, temos</p>
+<div id="Ch4.E36" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E36.m1" class="ltx_Math" alttext="\det C=(-1)\cdot 2-2\cdot(-1)=0" display="block"><semantics><mrow><mrow><mo movablelimits="false" rspace="0.167em">det</mo><mi>C</mi></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mn>2</mn></mrow><mo>−</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\det C=(-1)\cdot 2-2\cdot(-1)=0</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.36)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">e portanto <math id="Thmex1.p3.m2" class="ltx_Math" alttext="C" display="inline"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math> não é invertível (isto é, não existe a matriz inversa <math id="Thmex1.p3.m3" class="ltx_Math" alttext="C^{-1}" display="inline"><semantics><msup><mi>C</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">C^{-1}</annotation></semantics></math>)<math id="Thmex1.p3.m4" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+</div>
+</section>
+<section id="SS2" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">4.3.2</span> Algoritmo para ordem maior</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Considere uma matriz de ordem <math id="SS2.p1.m1" class="ltx_Math" alttext="n\times n" display="inline"><semantics><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math>:</p>
+<div id="Ch4.E37" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E37.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{array}\right]." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.37)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Para obter a matriz inversa, devemos ter:</p>
+<div id="Ch4.E38" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E38.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{array}\right]\left[\begin{array}[]{cccc}x_{11}%
+&amp;x_{12}&amp;\cdots&amp;x_{1n}\\
+x_{21}&amp;x_{22}&amp;\cdots&amp;x_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+x_{n1}&amp;x_{n2}&amp;\cdots&amp;x_{nn}\end{array}\right]=\left[\begin{array}[]{cccc}1&amp;0&amp;%
+\cdots&amp;0\\
+0&amp;1&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>11</mn></msub></mtd><mtd><msub><mi>x</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>x</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>21</mn></msub></mtd><mtd><msub><mi>x</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>x</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>x</mi><mrow><mi>n</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>x</mi><mrow><mi>n</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>x</mi><mrow><mi>n</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{n1}&amp;a_{n2}&amp;\cdots&amp;a_{nn}\end{array}\right]\left[\begin{array}[]{cccc}x_{11}%
+&amp;x_{12}&amp;\cdots&amp;x_{1n}\\
+x_{21}&amp;x_{22}&amp;\cdots&amp;x_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+x_{n1}&amp;x_{n2}&amp;\cdots&amp;x_{nn}\end{array}\right]=\left[\begin{array}[]{cccc}1&amp;0&amp;%
+\cdots&amp;0\\
+0&amp;1&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;1\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.38)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Da mesma forma que na seção anterior, isto é equivalente a resolver simultaneamente os sistemas:</p>
+<div id="Ch4.E39" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E39.m1" class="ltx_Math" alttext="A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\dots,A\vec{x}_{n}=%
+\vec{e}_{n}," display="block"><semantics><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\dots,A\vec{x}_{n}=%
+\vec{e}_{n},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.39)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde <math id="SS2.p1.m2" class="ltx_Math" alttext="\vec{x}_{1},\vec{x}_{2},\dots,\vec{x}_{n}" display="inline"><semantics><mrow><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\vec{x}_{1},\vec{x}_{2},\dots,\vec{x}_{n}</annotation></semantics></math> são as colunas da matriz inversa <math id="SS2.p1.m3" class="ltx_Math" alttext="A^{-1}" display="inline"><semantics><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math>. Assim, devemos escrever a matriz aumentada associada a estes sistemas lineares:</p>
+<div id="Ch4.E40" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E40.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cccc|cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}&amp;1&amp;0&amp;\cdots&amp;0\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}&amp;0&amp;1&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}&amp;0&amp;0&amp;\cdots&amp;1\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd class="ltx_border_r"><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd class="ltx_border_r"><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd class="ltx_border_r"><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd class="ltx_border_r"><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cccc|cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}&amp;1&amp;0&amp;\cdots&amp;0\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}&amp;0&amp;1&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;&amp;\vdots&amp;\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}&amp;0&amp;0&amp;\cdots&amp;1\end{array}\right]</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.40)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">ou, de forma mais sucinta,</p>
+<div id="Ch4.E41" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E41.m1" class="ltx_Math" alttext="\big{[}\,A\ |\ I\ \big{]}." display="block"><semantics><mrow><mrow><mo maxsize="120%" minsize="120%" rspace="0.170em">[</mo><mrow><mi>A</mi><mo fence="false" lspace="0.878em" rspace="0.878em">|</mo><mi>I</mi></mrow><mo lspace="0.600em" maxsize="120%" minsize="120%">]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\big{[}\,A\ |\ I\ \big{]}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.41)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">E este é o algoritmo de resolução: Deixar a matriz <math id="SS2.p1.m4" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> em forma escalonada reduzida (até chegar na matriz identidade) de modo que as soluções obtidas já serão a matriz inversa de <math id="SS2.p1.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>:</p>
+<div id="Ch4.E42" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E42.m1" class="ltx_Math" alttext="\big{[}\,I\ |\ A^{-1}\ \big{]}." display="block"><semantics><mrow><mrow><mo maxsize="120%" minsize="120%" rspace="0.170em">[</mo><mrow><mi>I</mi><mo fence="false" lspace="0.878em" rspace="0.878em">|</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\big{[}\,I\ |\ A^{-1}\ \big{]}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.42)</span>
+              
+              
+            
+</div>
+</div>
+<div id="Thmobs2" class="ltx_theorem ltx_theorem_obs">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Observação 4.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmobs2.p1" class="ltx_para">
+<p class="ltx_p">Para que seja possível encontrar as soluções, como indicado acima, a forma escalonada da matriz <math id="Thmobs2.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> deve possuir <math id="Thmobs2.p1.m2" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> posições de pivô (caso contrário, algum dos sistemas acima seria impossível), de modo que todas as colunas de <math id="Thmobs2.p1.m3" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> são colunas pivô.</p>
+</div>
+<div id="Thmobs2.p2" class="ltx_para">
+<p class="ltx_p">Se <math id="Thmobs2.p2.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> possuir alguma coluna sem posição de pivô, podemos parar imediatamente o algoritmo, pois isto significa que a matriz não é invertível.</p>
+</div>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 4.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">Vamos decidir se a matriz abaixo é invertível e, em caso afirmativo, determinar a inversa:</p>
+<div id="Ch4.E43" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E43.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cccc}2&amp;1&amp;1&amp;0\\
+4&amp;3&amp;3&amp;1\\
+8&amp;7&amp;9&amp;5\\
+6&amp;7&amp;9&amp;8\end{array}\right]." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd><mtd><mn>8</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cccc}2&amp;1&amp;1&amp;0\\
+4&amp;3&amp;3&amp;1\\
+8&amp;7&amp;9&amp;5\\
+6&amp;7&amp;9&amp;8\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.43)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">De acordo com o algoritmo, devemos escalonar</p>
+<div id="Ch4.E44" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E44.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+4&amp;3&amp;3&amp;1&amp;0&amp;1&amp;0&amp;0\\
+8&amp;7&amp;9&amp;5&amp;0&amp;0&amp;1&amp;0\\
+6&amp;7&amp;9&amp;8&amp;0&amp;0&amp;0&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>3</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd><mtd class="ltx_border_r"><mn>5</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>9</mn></mtd><mtd class="ltx_border_r"><mn>8</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+4&amp;3&amp;3&amp;1&amp;0&amp;1&amp;0&amp;0\\
+8&amp;7&amp;9&amp;5&amp;0&amp;0&amp;1&amp;0\\
+6&amp;7&amp;9&amp;8&amp;0&amp;0&amp;0&amp;1\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.44)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Caso a matriz seja invertível, conseguiremos deixar a matriz identidade do lado esquerdo desta matriz aumentada. Começamos eliminando os termos da primeira coluna (abaixo do <math id="Thmex2.p1.m1" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> que está na posição de pivô):</p>
+<div id="Ch4.E45" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E45.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;3&amp;5&amp;5&amp;-4&amp;0&amp;1&amp;0\\
+0&amp;4&amp;6&amp;8&amp;-3&amp;0&amp;0&amp;1\end{array}\right]\xrightarrow{\text{segunda coluna}}\left[%
+\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;0&amp;2&amp;2&amp;2&amp;-3&amp;1&amp;0\\
+0&amp;0&amp;2&amp;4&amp;5&amp;-4&amp;0&amp;1\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>5</mn></mtd><mtd class="ltx_border_r"><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>6</mn></mtd><mtd class="ltx_border_r"><mn>8</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mtext>segunda coluna</mtext></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>4</mn></mtd><mtd><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;3&amp;5&amp;5&amp;-4&amp;0&amp;1&amp;0\\
+0&amp;4&amp;6&amp;8&amp;-3&amp;0&amp;0&amp;1\end{array}\right]\xrightarrow{\text{segunda coluna}}\left[%
+\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;0&amp;2&amp;2&amp;2&amp;-3&amp;1&amp;0\\
+0&amp;0&amp;2&amp;4&amp;5&amp;-4&amp;0&amp;1\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.45)</span>
+                
+                
+              
+</div>
+<div id="Ch4.E46" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E46.m1" class="ltx_Math" alttext="\xrightarrow{\text{terceira}}\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;0&amp;2&amp;2&amp;2&amp;-3&amp;1&amp;0\\
+0&amp;0&amp;0&amp;2&amp;3&amp;-1&amp;-1&amp;1\end{array}\right]\xrightarrow{\text{reduzida -- }4^{a}}\left%
+[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;0&amp;-7/2&amp;3/2&amp;1/2&amp;-1/2\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;2&amp;3&amp;-1&amp;-1&amp;1\end{array}\right]" display="block"><semantics><mrow><mi></mi><mover accent="true"><mo stretchy="false">→</mo><mtext>terceira</mtext></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mtext>reduzida – </mtext><mo>⁢</mo><msup><mn>4</mn><mi>a</mi></msup></mrow></mover><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>7</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\xrightarrow{\text{terceira}}\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;1&amp;-2&amp;1&amp;0&amp;0\\
+0&amp;0&amp;2&amp;2&amp;2&amp;-3&amp;1&amp;0\\
+0&amp;0&amp;0&amp;2&amp;3&amp;-1&amp;-1&amp;1\end{array}\right]\xrightarrow{\text{reduzida -- }4^{a}}\left%
+[\begin{array}[]{cccc|cccc}2&amp;1&amp;1&amp;0&amp;1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;1&amp;0&amp;-7/2&amp;3/2&amp;1/2&amp;-1/2\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;2&amp;3&amp;-1&amp;-1&amp;1\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.46)</span>
+                
+                
+              
+</div>
+<div id="Ch4.E47" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E47.m1" class="ltx_Math" alttext="\to\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;0&amp;0&amp;3/2&amp;1&amp;-1&amp;1/2\\
+0&amp;1&amp;0&amp;0&amp;-3&amp;5/2&amp;-1/2&amp;0\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;1&amp;3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right]\to\left[\begin{array}[]{cccc|cccc}%
+1&amp;0&amp;0&amp;0&amp;9/4&amp;-3/4&amp;-1/4&amp;1/4\\
+0&amp;1&amp;0&amp;0&amp;-3&amp;5/2&amp;-1/2&amp;0\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;1&amp;3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right]." display="block"><semantics><mrow><mrow><mi></mi><mo stretchy="false">→</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">→</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mn>9</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\to\left[\begin{array}[]{cccc|cccc}2&amp;1&amp;0&amp;0&amp;3/2&amp;1&amp;-1&amp;1/2\\
+0&amp;1&amp;0&amp;0&amp;-3&amp;5/2&amp;-1/2&amp;0\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;1&amp;3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right]\to\left[\begin{array}[]{cccc|cccc}%
+1&amp;0&amp;0&amp;0&amp;9/4&amp;-3/4&amp;-1/4&amp;1/4\\
+0&amp;1&amp;0&amp;0&amp;-3&amp;5/2&amp;-1/2&amp;0\\
+0&amp;0&amp;1&amp;0&amp;-1/2&amp;-1&amp;1&amp;-1/2\\
+0&amp;0&amp;0&amp;1&amp;3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.47)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Concluímos que</p>
+<div id="Ch4.E48" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E48.m1" class="ltx_Math" alttext="A^{-1}=\left[\begin{array}[]{cccc}9/4&amp;-3/4&amp;-1/4&amp;1/4\\
+-3&amp;5/2&amp;-1/2&amp;0\\
+-1/2&amp;-1&amp;1&amp;-1/2\\
+3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right]." display="block"><semantics><mrow><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>9</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{-1}=\left[\begin{array}[]{cccc}9/4&amp;-3/4&amp;-1/4&amp;1/4\\
+-3&amp;5/2&amp;-1/2&amp;0\\
+-1/2&amp;-1&amp;1&amp;-1/2\\
+3/2&amp;-1/2&amp;-1/2&amp;1/2\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.48)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Verifique como exercício que esta matriz é de fato a matriz inversa de <math id="Thmex2.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, isto é, calcule o produto <math id="Thmex2.p1.m3" class="ltx_Math" alttext="A\cdot A^{-1}" display="inline"><semantics><mrow><mi>A</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">A\cdot A^{-1}</annotation></semantics></math> e verifique que resulta em <math id="Thmex2.p1.m4" class="ltx_Math" alttext="I_{4}" display="inline"><semantics><msub><mi>I</mi><mn>4</mn></msub><annotation encoding="application/x-tex">I_{4}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex2.p2" class="ltx_para">
+<p class="ltx_p">Notamos que, caso nosso único interesse fosse decidir se <math id="Thmex2.p2.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é invertível, sem necessariamente calcular sua inversa, poderíamos ter feito o escalonamento de <math id="Thmex2.p2.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> (nem precisa ser da matriz aumentada <math id="Thmex2.p2.m3" class="ltx_Math" alttext="\big{[}\,I\ |\ A^{-1}\ \big{]}" display="inline"><semantics><mrow><mo maxsize="120%" minsize="120%" rspace="0.170em">[</mo><mrow><mi>I</mi><mo fence="false" lspace="0.878em" rspace="0.878em">|</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><mo maxsize="120%" minsize="120%">]</mo></mrow><annotation encoding="application/x-tex">\big{[}\,I\ |\ A^{-1}\ \big{]}</annotation></semantics></math>) e parado o processo quando chegamos em</p>
+<div id="Ch4.E49" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E49.m1" class="ltx_Math" alttext="A\sim\left[\begin{array}[]{cccc}2&amp;1&amp;1&amp;0\\
+0&amp;1&amp;1&amp;1\\
+0&amp;0&amp;2&amp;2\\
+0&amp;0&amp;0&amp;2\end{array}\right]," display="block"><semantics><mrow><mrow><mi>A</mi><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">A\sim\left[\begin{array}[]{cccc}2&amp;1&amp;1&amp;0\\
+0&amp;1&amp;1&amp;1\\
+0&amp;0&amp;2&amp;2\\
+0&amp;0&amp;0&amp;2\end{array}\right],</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.49)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">pois já está claro que todas as colunas possuem posição de pivô. <math id="Thmex2.p2.m4" class="ltx_Math" alttext="\ \lhd" display="inline"><semantics><mo>⊲</mo><annotation encoding="application/x-tex">\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<div id="Thmex3" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 4.3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex3.p1" class="ltx_para">
+<p class="ltx_p">Vamos decidir se a matriz abaixo é invertível e, em caso afirmativo, determinar a inversa:</p>
+<div id="Ch4.E50" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E50.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cccc}1&amp;1&amp;1\\
+1&amp;3&amp;-3\\
+-3&amp;-9&amp;9\end{array}\right]." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>9</mn></mrow></mtd><mtd><mn>9</mn></mtd><mtd></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cccc}1&amp;1&amp;1\\
+1&amp;3&amp;-3\\
+-3&amp;-9&amp;9\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.50)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">De acordo com o algoritmo, devemos escalonar</p>
+<div id="Ch4.E51" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E51.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+1&amp;3&amp;-3&amp;0&amp;1&amp;0\\
+-3&amp;-9&amp;9&amp;0&amp;0&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>9</mn></mrow></mtd><mtd class="ltx_border_r"><mn>9</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+1&amp;3&amp;-3&amp;0&amp;1&amp;0\\
+-3&amp;-9&amp;9&amp;0&amp;0&amp;1\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.51)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Temos</p>
+<div id="Ch4.E52" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E52.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+0&amp;2&amp;-4&amp;-1&amp;1&amp;0\\
+0&amp;-6&amp;12&amp;3&amp;0&amp;1\end{array}\right]\to\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+0&amp;2&amp;-4&amp;-1&amp;1&amp;0\\
+0&amp;0&amp;0&amp;0&amp;3&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>6</mn></mrow></mtd><mtd class="ltx_border_r"><mn>12</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">→</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+0&amp;2&amp;-4&amp;-1&amp;1&amp;0\\
+0&amp;-6&amp;12&amp;3&amp;0&amp;1\end{array}\right]\to\left[\begin{array}[]{ccc|ccc}1&amp;1&amp;1&amp;1&amp;0&amp;0\\
+0&amp;2&amp;-4&amp;-1&amp;1&amp;0\\
+0&amp;0&amp;0&amp;0&amp;3&amp;1\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.52)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Portanto, a terceira coluna não possui posição de pivô e a matriz <math id="Thmex3.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> não possui inversa.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="SS3" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">4.3.3</span> Aplicação na resolução de sistemas lineares</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Sistemas lineares de ordem <math id="SS3.p1.m1" class="ltx_Math" alttext="n\times n" display="inline"><semantics><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math></p>
+<div id="Ch4.E53" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E53.m1" class="ltx_Math" alttext="A\vec{x}=\vec{b}," display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">A\vec{x}=\vec{b},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.53)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">cuja matriz associada <math id="SS3.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é invertível, são sistemas que possuem exatamente uma solução, para qualquer vetor <math id="SS3.p1.m3" class="ltx_Math" alttext="\vec{b}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{b}\in\mathbb{R}^{n}</annotation></semantics></math> (ver Subseção <a href="#SS4" title="4.3.4 Uma primeira caracterização de matrizes invertíveis ‣ 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3.4</span></a>).</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">A existência da matriz inversa <math id="SS3.p2.m1" class="ltx_Math" alttext="A^{-1}" display="inline"><semantics><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> permite-nos multiplicar ambos os lados do sistema por <math id="SS3.p2.m2" class="ltx_Math" alttext="A^{-1}" display="inline"><semantics><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">A^{-1}</annotation></semantics></math> para obter <math id="SS3.p2.m3" class="ltx_Math" alttext="\vec{x}=A^{-1}\cdot A=A^{-1}\vec{b}." display="inline"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>A</mi></mrow><mo>=</mo><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}=A^{-1}\cdot A=A^{-1}\vec{b}.</annotation></semantics></math> Logo,</p>
+<div id="Ch4.E54" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E54.m1" class="ltx_math_unparsed" alttext="\boxed{\vec{x}=A^{-1}\vec{b}.}" display="block"><semantics><menclose notation="box"><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo lspace="0em">.</mo></mrow></menclose><annotation encoding="application/x-tex">\boxed{\vec{x}=A^{-1}\vec{b}.}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.54)</span>
+              
+              
+            
+</div>
+</div>
+<div id="Thmex4" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 4.3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex4.p1" class="ltx_para">
+<p class="ltx_p">Resolver o sistema</p>
+<div id="Ch4.E55" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E55.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cc}1&amp;1\\
+-1&amp;3\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\end{array}\right]=\left[\begin{array}[]{c}1\\
+2\end{array}\right]." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cc}1&amp;1\\
+-1&amp;3\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\end{array}\right]=\left[\begin{array}[]{c}1\\
+2\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.55)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Já calculamos a matriz inversa no Exemplo <a href="#Thmex1" title="Exemplo 4.3.1. ‣ 4.3.1 Caso 2×2 ‣ 4.3 Matriz inversa ‣ Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4.3.1</span></a>:</p>
+<div id="Ch4.E56" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E56.m1" class="ltx_Math" alttext="A^{-1}=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right]." display="block"><semantics><mrow><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{-1}=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.56)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Segue que a solução é</p>
+<div id="Ch4.E57" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E57.m1" class="ltx_Math" alttext="\vec{x}=A^{-1}\vec{b}=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right]\left[\begin{array}[]{c}1\\
+2\end{array}\right]=\left[\begin{array}[]{c}1/4\\
+3/4\end{array}\right].\ \lhd" display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\vec{x}=A^{-1}\vec{b}=\left[\begin{array}[]{cc}3/4&amp;-1/4\\
+1/4&amp;1/4\end{array}\right]\left[\begin{array}[]{c}1\\
+2\end{array}\right]=\left[\begin{array}[]{c}1/4\\
+3/4\end{array}\right].\ \lhd</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.57)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Embora nossa solução do sistema possa parecer “elegante” ao utilizar a matriz inversa, este método é muito ineficiente. Na verdade, escalonar a matriz aumentada associada ao sistema exige um custo computacional muito menor do que calcular a inversa da matriz e, portanto, em geral se usa o escalonamento.</p>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">Matrizes inversas têm uma importância mais teórica no nosso curso, como veremos na subseção abaixo.</p>
+</div>
+</div>
+</section>
+<section id="SS4" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">4.3.4</span> Uma primeira caracterização de matrizes invertíveis</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">Vamos, nesta subseção, verificar (provar de forma rigorosa) que</p>
+<p class="ltx_p ltx_align_center">“a matriz <math id="SS4.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é invertível se, e somente se, o sistema linear <math id="SS4.p1.m2" class="ltx_Math" alttext="A\vec{x}=\vec{b}" display="inline"><semantics><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">A\vec{x}=\vec{b}</annotation></semantics></math> possui exatamente uma solução, para qualquer vetor <math id="SS4.p1.m3" class="ltx_Math" alttext="\vec{b}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{b}\in\mathbb{R}^{n}</annotation></semantics></math>.”</p>
+</div>
+<div id="SS4.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="SS4.p2.m1" class="ltx_Math" alttext="(\!\implies\!\!)" display="inline"><semantics><mrow><mpadded width="0.288em"><mo stretchy="false">(</mo></mpadded><mpadded width="0.420em"><mo stretchy="false">⟹</mo></mpadded><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\!\implies\!\!)</annotation></semantics></math> Se <math id="SS4.p2.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é invertível, então conseguimos resolver todos os sistemas</p>
+<div id="Ch4.E58" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E58.m1" class="ltx_Math" alttext="A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\cdots,A\vec{x}_{n}=%
+\vec{e}_{n}" display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\cdots,A\vec{x}_{n}=%
+\vec{e}_{n}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.58)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">concomitantemente. De fato, qualquer vetor <math id="SS4.p2.m3" class="ltx_Math" alttext="\vec{b}" display="inline"><semantics><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math> pode ser escrito como</p>
+<div id="Ch4.E59" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E59.m1" class="ltx_Math" alttext="\vec{b}=\left[\begin{array}[]{c}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}\end{array}\right]=b_{1}\vec{e}_{1}+b_{2}\vec{e}_{2}+\cdots+b_{n}\vec{e}_%
+{n}," display="block"><semantics><mrow><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>b</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\vec{b}=\left[\begin{array}[]{c}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{n}\end{array}\right]=b_{1}\vec{e}_{1}+b_{2}\vec{e}_{2}+\cdots+b_{n}\vec{e}_%
+{n},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.59)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e daí verificamos que se pode construir uma solução <math id="SS4.p2.m4" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> pela fórmula</p>
+<div id="Ch4.E60" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E60.m1" class="ltx_Math" alttext="\vec{x}=b_{1}\vec{x}_{1}+b_{2}\vec{x}_{2}+\cdots+b_{n}\vec{x}_{n}," display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\vec{x}=b_{1}\vec{x}_{1}+b_{2}\vec{x}_{2}+\cdots+b_{n}\vec{x}_{n},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.60)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">já que pela linearidade do produto da matriz <math id="SS4.p2.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> por vetores, temos</p>
+<div class="bml-overflow-wrapper">
+<table id="Ch12.S4.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch4.Ex15"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch4.Ex15.m1" class="ltx_Math" alttext="\displaystyle A\vec{x}" display="inline"><semantics><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\displaystyle A\vec{x}</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.Ex15.m2" class="ltx_Math" alttext="\displaystyle=b_{1}A\vec{x}_{1}+b_{2}A\vec{x}_{2}+\cdots+b_{n}A\vec{x}_{n}," display="inline"><semantics><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\displaystyle=b_{1}A\vec{x}_{1}+b_{2}A\vec{x}_{2}+\cdots+b_{n}A\vec{x}_{n},</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch4.Ex16"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.Ex16.m1" class="ltx_Math" alttext="\displaystyle=b_{1}\vec{e}_{1}+b_{2}\vec{e}_{2}+\cdots+b_{n}\vec{e}_{n}" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=b_{1}\vec{e}_{1}+b_{2}\vec{e}_{2}+\cdots+b_{n}\vec{e}_{n}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch4.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch4.Ex17.m1" class="ltx_Math" alttext="\displaystyle=\vec{b}." display="inline"><semantics><mrow><mrow><mi></mi><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\displaystyle=\vec{b}.</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+</div>
+<div id="SS4.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="SS4.p3.m1" class="ltx_Math" alttext="(\!\Longleftarrow)" display="inline"><semantics><mrow><mpadded width="0.288em"><mo stretchy="false">(</mo></mpadded><mo rspace="0em" stretchy="false">⟸</mo><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(\!\Longleftarrow)</annotation></semantics></math> Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor <math id="SS4.p3.m2" class="ltx_Math" alttext="\vec{b}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{b}\in\mathbb{R}^{n}</annotation></semantics></math>. Em particular, podemos resolver os sistemas</p>
+<div id="Ch4.E61" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E61.m1" class="ltx_Math" alttext="A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\cdots,A\vec{x}_{n}=%
+\vec{e}_{n}" display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">A\vec{x}_{1}=\vec{e}_{1},\quad A\vec{x}_{2}=\vec{e}_{2},\cdots,A\vec{x}_{n}=%
+\vec{e}_{n}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.61)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e escrever a matriz inversa de acordo com o nosso algoritmo:</p>
+<div id="Ch4.E62" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch4.E62.m1" class="ltx_Math" alttext="A^{-1}=\begin{bmatrix}\ |&amp;|&amp;&amp;|\ \\
+\ \vec{x}_{1}&amp;\vec{x}_{2}&amp;\cdots&amp;\vec{x}_{n}\ \\
+\ |&amp;|&amp;&amp;|\ \\
+\end{bmatrix}." display="block"><semantics><mrow><mrow><msup><mi>A</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr><mtr><mtd><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mtd><mtd><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mtd></mtr><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{-1}=\begin{bmatrix}\ |&amp;|&amp;&amp;|\ \\
+\ \vec{x}_{1}&amp;\vec{x}_{2}&amp;\cdots&amp;\vec{x}_{n}\ \\
+\ |&amp;|&amp;&amp;|\ \\
+\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(4.62)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+</section>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch4.S2.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch4.S4.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

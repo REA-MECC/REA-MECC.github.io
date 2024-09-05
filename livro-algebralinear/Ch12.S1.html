@@ -1,0 +1,1409 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch12.S2.html" title="12.2 Problemas de otimização restritos à esfera ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S2.html" title="12.2 Problemas de otimização restritos à esfera ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S3.html" title="12.3 Matrizes simétricas e prova do Teorema Espectral ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S4.html" title="12.4 Exercícios finais ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="12.1" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active">
+<a href="" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.1 </span></b>Matrizes simétricas</a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li data-level="12.1.1" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS1" title="In 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.1.1 </span></b>Formas quadráticas</a></li>
+<li data-level="12.1.2" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS2" title="In 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.1.2 </span></b>Diagonalização de formas quadráticas</a></li>
+<li data-level="12.1.3" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS3" title="In 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.1.3 </span></b>Aplicação à classificação de cônicas</a></li>
+</ol>
+</li>
+<li data-level="12.2" data-path="Ch12.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S2.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.2 </span></b>Problemas de otimização restritos à esfera</a></li>
+<li data-level="12.3" data-path="Ch12.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S3.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.3 </span></b>Matrizes simétricas e prova do Teorema Espectral</a></li>
+<li data-level="12.4" data-path="Ch12.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S4.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.4 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Matrizes simétricas</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">12.1</span> Matrizes simétricas</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Uma <span class="ltx_text ltx_font_bold">matriz simétrica</span> é uma matriz que é igual à sua transposta. Para que esta definição faça sentido, apenas podemos considerar matrizes que são quadradas. De forma mais precisa, se <math id="p1.m1" class="ltx_Math" alttext="A=\begin{bmatrix}a_{ij}\end{bmatrix}" display="inline"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable><mtr><mtd><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}a_{ij}\end{bmatrix}</annotation></semantics></math> é uma matriz de ordem <math id="p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><semantics><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">n\times n</annotation></semantics></math>, nós dizemos que <math id="p1.m3" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é simétrica quando <math id="p1.m4" class="ltx_Math" alttext="A=A^{T}" display="inline"><semantics><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A=A^{T}</annotation></semantics></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Formas equivalentes de dizer que <math id="p2.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é simétrica incluem:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i1.m1" class="ltx_Math" alttext="(1)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(1)</annotation></semantics></math></span><div id="I1.i1.p1" class="ltx_para">​<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="A=A^{T}" display="inline"><semantics><mrow><mi>A</mi><mo>=</mo><msup><mi>A</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">A=A^{T}</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i2.m1" class="ltx_Math" alttext="(2)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(2)</annotation></semantics></math></span><div id="I1.i2.p1" class="ltx_para">​<p class="ltx_p">para todos os índices <math id="I1.i2.p1.m1" class="ltx_Math" alttext="i,j\in\{1,2,\dots,n\}" display="inline"><semantics><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>∈</mo><mrow><mo stretchy="false">{</mo><mn>1,2</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">i,j\in\{1,2,\dots,n\}</annotation></semantics></math>, temos que <math id="I1.i2.p1.m2" class="ltx_Math" alttext="a_{ij}=a_{ji}" display="inline"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>a</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">a_{ij}=a_{ji}</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i3.m1" class="ltx_Math" alttext="(3)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(3)</annotation></semantics></math></span><div id="I1.i3.p1" class="ltx_para">​<p class="ltx_p">as colunas de <math id="I1.i3.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> são iguais às linhas de <math id="I1.i3.p1.m2" class="ltx_Math" alttext="A^{T}" display="inline"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^{T}</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i4.m1" class="ltx_Math" alttext="(4)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(4)</annotation></semantics></math></span><div id="I1.i4.p1" class="ltx_para">​<p class="ltx_p">as linhas de <math id="I1.i4.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> são iguais às colunas de <math id="I1.i4.p1.m2" class="ltx_Math" alttext="A^{T}" display="inline"><semantics><msup><mi>A</mi><mi>T</mi></msup><annotation encoding="application/x-tex">A^{T}</annotation></semantics></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">As matrizes</p>
+<div id="Ch12.E1" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E1.m1" class="ltx_Math" alttext="\begin{bmatrix}1&amp;-3\\
+-3&amp;2\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3\\
+-3&amp;1\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3&amp;0\\
+-3&amp;-1&amp;4\\
+0&amp;4&amp;6\end{bmatrix}\checkmark" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mi mathvariant="normal">✓</mi></mrow></mrow><annotation encoding="application/x-tex">\begin{bmatrix}1&amp;-3\\
+-3&amp;2\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3\\
+-3&amp;1\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3&amp;0\\
+-3&amp;-1&amp;4\\
+0&amp;4&amp;6\end{bmatrix}\checkmark</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.1)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">são simétricas, enquanto as matrizes</p>
+<div id="Ch12.E2" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E2.m1" class="ltx_Math" alttext="\begin{bmatrix}1&amp;-3\\
+3&amp;1\end{bmatrix},\ \ \begin{bmatrix}1&amp;3\\
+-3&amp;2\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3&amp;0\\
+4&amp;-1&amp;-3\\
+0&amp;4&amp;1\end{bmatrix}\textsc{x}" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mtext class="ltx_font_smallcaps">x</mtext></mrow></mrow><annotation encoding="application/x-tex">\begin{bmatrix}1&amp;-3\\
+3&amp;1\end{bmatrix},\ \ \begin{bmatrix}1&amp;3\\
+-3&amp;2\end{bmatrix},\ \ \begin{bmatrix}1&amp;-3&amp;0\\
+4&amp;-1&amp;-3\\
+0&amp;4&amp;1\end{bmatrix}\textsc{x}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.2)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">não são. Deve-se tomar o cuidado de verificar a simetria <span class="ltx_text ltx_font_italic">com relação à diagonal principal</span>. Qualquer outro tipo de simetria não deve interferir na nossa análise<math id="Thmex1.p1.m1" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que diz que toda matriz simétrica é diagonalizável por uma base de autovetores que é ortonormal. De forma mais precisa:</p>
+</div>
+<div id="Thmteo1" class="ltx_theorem ltx_theorem_teo">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Teorema 12.1.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmteo1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suponhamos que <math id="Thmteo1.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é uma matriz simétrica com coeficientes reais. Então:</span></p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I2.i1.m1" class="ltx_Math" alttext="(i)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(i)</annotation></semantics></math></span><div id="I2.i1.p1" class="ltx_para">​<p class="ltx_p"><span class="ltx_text ltx_font_italic">todos os autovalores de </span><math id="I2.i1.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math><span class="ltx_text ltx_font_italic"> são reais;</span></p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I2.i2.m1" class="ltx_Math" alttext="(ii)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(ii)</annotation></semantics></math></span><div id="I2.i2.p1" class="ltx_para">​<p class="ltx_p"><span class="ltx_text ltx_font_italic">autovetores associados a autovalores distintos são ortogonais.</span></p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I2.i3.m1" class="ltx_Math" alttext="(iii)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(iii)</annotation></semantics></math></span><div id="I2.i3.p1" class="ltx_para">​<p class="ltx_p"><span class="ltx_text ltx_font_italic">a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor como raiz do polinômio característico;</span></p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I2.i4.m1" class="ltx_Math" alttext="(iv)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(iv)</annotation></semantics></math></span><div id="I2.i4.p1" class="ltx_para">​<p class="ltx_p"><span class="ltx_text ltx_font_italic">existe uma base ortonormal de </span><math id="I2.i4.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math><span class="ltx_text ltx_font_italic"> formada por autovetores de </span><math id="I2.i4.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I2.i5.m1" class="ltx_Math" alttext="(v)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(v)</annotation></semantics></math></span><div id="I2.i5.p1" class="ltx_para">​<p class="ltx_p"><math id="I2.i5.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math><span class="ltx_text ltx_font_italic"> é diagonalizável por uma matriz de mudança de coordenadas ortonormal </span><math id="I2.i5.p1.m2" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math><span class="ltx_text ltx_font_italic">: a matriz </span><math id="I2.i5.p1.m3" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math><span class="ltx_text ltx_font_italic"> cujas colunas são os autovetores (ortonormais) de </span><math id="I2.i5.p1.m4" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math><span class="ltx_text ltx_font_italic"> é tal que</span></p>
+<div id="Ch12.E3" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E3.m1" class="ltx_Math" alttext="P^{T}AP=P^{-1}AP=D." display="block"><semantics><mrow><mrow><mrow><msup><mi>P</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">P^{T}AP=P^{-1}AP=D.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.3)</span>
+                    
+                    
+                  
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicações que justificam a importância do Teorema Espectral. No entanto, é fortemente aconselhado que o leitor acompanhe os elementos da demonstração, para efetivamente entender as propriedades essenciais das matrizes simétricas.</p>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">Considere</p>
+<div id="Ch12.E4" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E4.m1" class="ltx_Math" alttext="A=\begin{bmatrix}1&amp;-5\\
+-5&amp;1\end{bmatrix}." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}1&amp;-5\\
+-5&amp;1\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.4)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">O polinômio característico é</p>
+<div id="Ch12.E5" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E5.m1" class="ltx_Math" alttext="\det\begin{bmatrix}1-\lambda&amp;-4\\
+-4&amp;5-\lambda\end{bmatrix}=(1-\lambda)^{2}-25=\lambda^{2}-2\lambda-24" display="block"><semantics><mrow><mrow><mo movablelimits="false" rspace="0em">det</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>−</mo><mi>λ</mi></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>5</mn><mo>−</mo><mi>λ</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mn>25</mn></mrow><mo>=</mo><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>−</mo><mn>24</mn></mrow></mrow><annotation encoding="application/x-tex">\det\begin{bmatrix}1-\lambda&amp;-4\\
+-4&amp;5-\lambda\end{bmatrix}=(1-\lambda)^{2}-25=\lambda^{2}-2\lambda-24</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.5)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">cujas raízes são <math id="Thmex2.p1.m1" class="ltx_Math" alttext="6" display="inline"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math> e <math id="Thmex2.p1.m2" class="ltx_Math" alttext="-4" display="inline"><semantics><mrow><mo>−</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">-4</annotation></semantics></math>. Os autovetores são calculados como</p>
+<div id="Ch12.E6" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E6.m1" class="ltx_Math" alttext="A+4I=\begin{bmatrix}5&amp;-5\\
+-5&amp;5\end{bmatrix}\sim\begin{bmatrix}1&amp;-1\\
+0&amp;0\end{bmatrix}\implies\left\{\begin{array}[]{l}v_{1}=v_{2}\\
+\text{uma vari\'{a}vel livre}\end{array}\right.\implies\vec{v}_{1}=v_{2}\begin%
+{bmatrix}1\\
+1\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mtext>uma variável livre</mtext></mtd></mtr></mtable><mi></mi></mrow><mo stretchy="false">⟹</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>=</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A+4I=\begin{bmatrix}5&amp;-5\\
+-5&amp;5\end{bmatrix}\sim\begin{bmatrix}1&amp;-1\\
+0&amp;0\end{bmatrix}\implies\left\{\begin{array}[]{l}v_{1}=v_{2}\\
+\text{uma vari\'{a}vel livre}\end{array}\right.\implies\vec{v}_{1}=v_{2}\begin%
+{bmatrix}1\\
+1\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.6)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Associado com <math id="Thmex2.p1.m3" class="ltx_Math" alttext="6" display="inline"><semantics><mn>6</mn><annotation encoding="application/x-tex">6</annotation></semantics></math>:</p>
+<div id="Ch12.E7" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E7.m1" class="ltx_Math" alttext="A-6I=\begin{bmatrix}-5&amp;-5\\
+-5&amp;-5\end{bmatrix}\sim\begin{bmatrix}1&amp;1\\
+0&amp;0\end{bmatrix}\implies\left\{\begin{array}[]{l}v_{2}=-v_{1}\\
+\text{uma vari\'{a}vel livre}\end{array}\right.\implies\vec{v}_{2}=v_{2}\begin%
+{bmatrix}1\\
+-1\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mn>6</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>−</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mtext>uma variável livre</mtext></mtd></mtr></mtable><mi></mi></mrow><mo stretchy="false">⟹</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A-6I=\begin{bmatrix}-5&amp;-5\\
+-5&amp;-5\end{bmatrix}\sim\begin{bmatrix}1&amp;1\\
+0&amp;0\end{bmatrix}\implies\left\{\begin{array}[]{l}v_{2}=-v_{1}\\
+\text{uma vari\'{a}vel livre}\end{array}\right.\implies\vec{v}_{2}=v_{2}\begin%
+{bmatrix}1\\
+-1\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.7)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Uma base de autovetores é</p>
+<div id="Ch12.E8" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E8.m1" class="ltx_Math" alttext="\left\{\begin{bmatrix}1\\
+1\end{bmatrix},\begin{bmatrix}1\\
+-1\end{bmatrix}\right\}." display="block"><semantics><mrow><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{bmatrix}1\\
+1\end{bmatrix},\begin{bmatrix}1\\
+-1\end{bmatrix}\right\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.8)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Observe que são de fato reais os autovalores e que os autovetores associados são ortogonais (faça a conta!). Se quisermos uma base ortonormal para <math id="Thmex2.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math> formada por autovetores, normalizamos os que já obtivemos:</p>
+<div id="Ch12.E9" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E9.m1" class="ltx_Math" alttext="\mathbb{R}^{2}=\operatorname{Span}\left\{\begin{bmatrix}1/\sqrt{2}\\
+1/\sqrt{2}\end{bmatrix},\begin{bmatrix}1/\sqrt{2}\\
+-1/\sqrt{2}\end{bmatrix}\right\}." display="block"><semantics><mrow><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\mathbb{R}^{2}=\operatorname{Span}\left\{\begin{bmatrix}1/\sqrt{2}\\
+1/\sqrt{2}\end{bmatrix},\begin{bmatrix}1/\sqrt{2}\\
+-1/\sqrt{2}\end{bmatrix}\right\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.9)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Lembrando do nosso processo de diagonalização, sabemos que</p>
+<div id="Ch12.E10" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E10.m1" class="ltx_Math" alttext="P=\begin{bmatrix}1/\sqrt{2}&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}\implies P^{-1}AP=\begin{bmatrix}1/\sqrt{2}%
+&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}\begin{bmatrix}1&amp;-5\\
+-5&amp;1\end{bmatrix}\begin{bmatrix}1/\sqrt{2}&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}=\begin{bmatrix}-4&amp;0\\
+0&amp;6\end{bmatrix}." display="block"><semantics><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}1/\sqrt{2}&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}\implies P^{-1}AP=\begin{bmatrix}1/\sqrt{2}%
+&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}\begin{bmatrix}1&amp;-5\\
+-5&amp;1\end{bmatrix}\begin{bmatrix}1/\sqrt{2}&amp;1/\sqrt{2}\\
+1/\sqrt{2}&amp;-1/\sqrt{2}\end{bmatrix}=\begin{bmatrix}-4&amp;0\\
+0&amp;6\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.10)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">A matriz <math id="Thmex2.p1.m5" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> que montamos acima é uma matriz ortogonal (de modo que <math id="Thmex2.p1.m6" class="ltx_Math" alttext="P^{-1}=P^{T}" display="inline"><semantics><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>P</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">P^{-1}=P^{T}</annotation></semantics></math>), pois sabemos que autovetores associados com autovalores distintos são ortogonais e fizemos a normalização dos autovetores (lembra que uma matriz ortogonal deve ter colunas ortonormais)<math id="Thmex2.p1.m7" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<div id="Thmex3" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex3.p1" class="ltx_para">
+<p class="ltx_p">Vamos aplicar o procedimento de diagonalização para encontrar uma base ortonormal de autovetores de uma matriz de ordem <math id="Thmex3.p1.m1" class="ltx_Math" alttext="3\times 3" display="inline"><semantics><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math>. Considere a matriz simétrica</p>
+<div id="Ch12.E11" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E11.m1" class="ltx_Math" alttext="A=\begin{bmatrix}3&amp;-2&amp;4\\
+-2&amp;6&amp;2\\
+4&amp;2&amp;3\\
+\end{bmatrix}." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>6</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}3&amp;-2&amp;4\\
+-2&amp;6&amp;2\\
+4&amp;2&amp;3\\
+\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.11)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">O polinômio característico de <math id="Thmex3.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é</p>
+<div class="bml-overflow-wrapper">
+<table id="Ch12.S4.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="Ch12.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="Ch12.Ex1.m1" class="ltx_Math" alttext="\displaystyle p(\lambda)=\det(A-\lambda I)" display="inline"><semantics><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" movablelimits="false" rspace="0em">det</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle p(\lambda)=\det(A-\lambda I)</annotation></semantics></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch12.Ex1.m2" class="ltx_Math" alttext="\displaystyle=\det\begin{bmatrix}3-\lambda&amp;-2&amp;4\\
+-2&amp;6-\lambda&amp;2\\
+4&amp;2&amp;3-\lambda\\
+\end{bmatrix}" display="inline"><semantics><mrow><mi></mi><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" movablelimits="false" rspace="0em">det</mo><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mn>6</mn><mo>−</mo><mi>λ</mi></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=\det\begin{bmatrix}3-\lambda&amp;-2&amp;4\\
+-2&amp;6-\lambda&amp;2\\
+4&amp;2&amp;3-\lambda\\
+\end{bmatrix}</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch12.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch12.Ex2.m1" class="ltx_Math" alttext="\displaystyle=(3-\lambda)\left[(6-\lambda)(3-\lambda)-4\right]+2\left[-6+2%
+\lambda-8\right]+4\left[-4-24+4\lambda\right]" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>6</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>4</mn></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mrow><mo>−</mo><mn>6</mn></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>−</mo><mn>8</mn></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><mrow><mo>−</mo><mn>4</mn></mrow><mo>−</mo><mn>24</mn></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>]</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=(3-\lambda)\left[(6-\lambda)(3-\lambda)-4\right]+2\left[-6+2%
+\lambda-8\right]+4\left[-4-24+4\lambda\right]</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch12.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch12.Ex3.m1" class="ltx_Math" alttext="\displaystyle=(3-\lambda)\left[\lambda^{2}-9\lambda+14\right]-28+4\lambda-112+%
+16\lambda" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>14</mn></mrow><mo>]</mo></mrow></mrow><mo>−</mo><mn>28</mn></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>−</mo><mn>112</mn></mrow><mo>+</mo><mrow><mn>16</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=(3-\lambda)\left[\lambda^{2}-9\lambda+14\right]-28+4\lambda-112+%
+16\lambda</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch12.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch12.Ex4.m1" class="ltx_Math" alttext="\displaystyle=3\lambda^{2}-27\lambda+42-\left[\lambda^{3}-9\lambda^{2}+14%
+\lambda\right]+20\lambda-140" display="inline"><semantics><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow><mo>−</mo><mrow><mn>27</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>42</mn></mrow><mo>−</mo><mrow><mo>[</mo><mrow><mrow><msup><mi>λ</mi><mn>3</mn></msup><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>20</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>−</mo><mn>140</mn></mrow></mrow><annotation encoding="application/x-tex">\displaystyle=3\lambda^{2}-27\lambda+42-\left[\lambda^{3}-9\lambda^{2}+14%
+\lambda\right]+20\lambda-140</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="Ch12.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="Ch12.Ex5.m1" class="ltx_Math" alttext="\displaystyle=-\lambda^{3}+12\lambda^{2}-21\lambda-98." display="inline"><semantics><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>−</mo><msup><mi>λ</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></mrow><mo>−</mo><mrow><mn>21</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>−</mo><mn>98</mn></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\displaystyle=-\lambda^{3}+12\lambda^{2}-21\lambda-98.</annotation></semantics></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<p class="ltx_p">Como sabemos, se os coeficientes da matriz simétrica acima fossem escolhidos de maneira aleatória, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, quaisquer raízes racionais (este exemplo foi construído artificialmente) deste polinômio só podem ser divisores de <math id="Thmex3.p1.m3" class="ltx_Math" alttext="98" display="inline"><semantics><mn>98</mn><annotation encoding="application/x-tex">98</annotation></semantics></math> dividido pelos divisores de <math id="Thmex3.p1.m4" class="ltx_Math" alttext="-1" display="inline"><semantics><mrow><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>, isto é: <math id="Thmex3.p1.m5" class="ltx_Math" alttext="\pm 1,\pm 2,\pm 7,\pm 14,\pm 21" display="inline"><semantics><mrow><mrow><mo>±</mo><mn>1</mn></mrow><mo>,</mo><mrow><mo>±</mo><mn>2</mn></mrow><mo>,</mo><mrow><mo>±</mo><mn>7</mn></mrow><mo>,</mo><mrow><mo>±</mo><mn>14</mn></mrow><mo>,</mo><mrow><mo>±</mo><mn>21</mn></mrow></mrow><annotation encoding="application/x-tex">\pm 1,\pm 2,\pm 7,\pm 14,\pm 21</annotation></semantics></math>. Testando os primeiros, vemos que <math id="Thmex3.p1.m6" class="ltx_Math" alttext="-2" display="inline"><semantics><mrow><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math> é uma raiz. Pela divisão de polinômios, fatoramos</p>
+<div id="Ch12.E12" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E12.m1" class="ltx_Math" alttext="p(\lambda)=-(\lambda+2)(\lambda^{2}-14\lambda+49)=-(\lambda+2)(\lambda-7)^{2}." display="block"><semantics><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>14</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>49</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>−</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>−</mo><mn>7</mn></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">p(\lambda)=-(\lambda+2)(\lambda^{2}-14\lambda+49)=-(\lambda+2)(\lambda-7)^{2}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.12)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Logo, os autovalores de <math id="Thmex3.p1.m7" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> são <math id="Thmex3.p1.m8" class="ltx_Math" alttext="-2" display="inline"><semantics><mrow><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math> (simples) e <math id="Thmex3.p1.m9" class="ltx_Math" alttext="7" display="inline"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> (duplo).</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I3.i1.p1" class="ltx_para">​<p class="ltx_p">Autoespaço associado com o autovalor <math id="I3.i1.p1.m1" class="ltx_Math" alttext="-2" display="inline"><semantics><mrow><mo>−</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">-2</annotation></semantics></math>:</p>
+<div id="Ch12.E13" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E13.m1" class="ltx_Math" alttext="A+2I=\begin{bmatrix}5&amp;-2&amp;4\\
+-2&amp;8&amp;2\\
+4&amp;2&amp;5\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;4&amp;1\\
+5&amp;-2&amp;4\\
+4&amp;2&amp;5\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;4&amp;1\\
+0&amp;18&amp;9\\
+0&amp;18&amp;9\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;2&amp;0\\
+0&amp;2&amp;1\\
+0&amp;0&amp;0\\
+\end{bmatrix}\leftrightsquigarrow\left\{\begin{array}[]{l}v_{1}=2v_{2}\\
+v_{3}=-2v_{2}\\
+\text{1 vari\'{a}vel livre}\end{array}\right." display="block"><semantics><mrow><mrow><mi>A</mi><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>8</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>4</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>18</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>18</mn></mtd><mtd><mn>9</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">↭</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>v</mi><mn>3</mn></msub><mo>=</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mtext>1 variável livre</mtext></mtd></mtr></mtable><mi></mi></mrow></mrow><annotation encoding="application/x-tex">A+2I=\begin{bmatrix}5&amp;-2&amp;4\\
+-2&amp;8&amp;2\\
+4&amp;2&amp;5\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;4&amp;1\\
+5&amp;-2&amp;4\\
+4&amp;2&amp;5\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;4&amp;1\\
+0&amp;18&amp;9\\
+0&amp;18&amp;9\\
+\end{bmatrix}\sim\begin{bmatrix}-1&amp;2&amp;0\\
+0&amp;2&amp;1\\
+0&amp;0&amp;0\\
+\end{bmatrix}\leftrightsquigarrow\left\{\begin{array}[]{l}v_{1}=2v_{2}\\
+v_{3}=-2v_{2}\\
+\text{1 vari\'{a}vel livre}\end{array}\right.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.13)</span>
+                    
+                    
+                  
+</div>
+<p class="ltx_p">Assim, um autovetor associado é (<math id="I3.i1.p1.m2" class="ltx_Math" alttext="v_{2}=1" display="inline"><semantics><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">v_{2}=1</annotation></semantics></math>)</p>
+<div id="Ch12.E14" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E14.m1" class="ltx_Math" alttext="\vec{v}_{1}=\begin{bmatrix}2\\
+1\\
+-2\end{bmatrix}." display="block"><semantics><mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}_{1}=\begin{bmatrix}2\\
+1\\
+-2\end{bmatrix}.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.14)</span>
+                    
+                    
+                  
+</div>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I3.i2.p1" class="ltx_para">​<p class="ltx_p">Autoespaço associado com o autovalor <math id="I3.i2.p1.m1" class="ltx_Math" alttext="7" display="inline"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math>:</p>
+<div id="Ch12.E15" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E15.m1" class="ltx_Math" alttext="A-7I=\begin{bmatrix}-4&amp;-2&amp;4\\
+-2&amp;-1&amp;2\\
+4&amp;2&amp;-4\\
+\end{bmatrix}\sim\begin{bmatrix}-2&amp;-1&amp;2\\
+2&amp;1&amp;-2\\
+0&amp;0&amp;0\\
+\end{bmatrix}\sim\begin{bmatrix}-2&amp;-1&amp;2\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+\end{bmatrix}\leftrightsquigarrow\left\{\begin{array}[]{l}v_{2}=-2v_{1}+2v_{3}%
+\\
+\text{2 vari\'{a}veis livres}\end{array}\right." display="block"><semantics><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mn>7</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">↭</mo><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mtext>2 variáveis livres</mtext></mtd></mtr></mtable><mi></mi></mrow></mrow><annotation encoding="application/x-tex">A-7I=\begin{bmatrix}-4&amp;-2&amp;4\\
+-2&amp;-1&amp;2\\
+4&amp;2&amp;-4\\
+\end{bmatrix}\sim\begin{bmatrix}-2&amp;-1&amp;2\\
+2&amp;1&amp;-2\\
+0&amp;0&amp;0\\
+\end{bmatrix}\sim\begin{bmatrix}-2&amp;-1&amp;2\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+\end{bmatrix}\leftrightsquigarrow\left\{\begin{array}[]{l}v_{2}=-2v_{1}+2v_{3}%
+\\
+\text{2 vari\'{a}veis livres}\end{array}\right.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.15)</span>
+                    
+                    
+                  
+</div>
+<p class="ltx_p">Assim, qualquer autovetor pode ser escrito parametricamente como</p>
+<div id="Ch12.E16" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E16.m1" class="ltx_Math" alttext="\vec{v}=\begin{bmatrix}v_{1}\\
+-2v_{1}+2v_{3}\\
+v_{3}\end{bmatrix}=v_{1}\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}+v_{2}\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>v</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><msub><mi>v</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}=\begin{bmatrix}v_{1}\\
+-2v_{1}+2v_{3}\\
+v_{3}\end{bmatrix}=v_{1}\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}+v_{2}\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.16)</span>
+                    
+                    
+                  
+</div>
+<p class="ltx_p">Já era de se esperar que encontraríamos duas variáveis livres, porque sabemos (item <math id="I3.i2.p1.m2" class="ltx_Math" alttext="(iii)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(iii)</annotation></semantics></math> do Teorema Espectral) que deve ser dois a dimensão do autoespaço associado com um autovalor de multiplicidade dois.<span id="Ch12.footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+                      <span class="ltx_tag ltx_tag_note">1</span>
+                      
+                      
+                      
+                    Enfatizamos que isto não é verdade para qualquer matriz, apenas para as simétricas!</span></span></span> Concluímos que uma base para o autoespaço <math id="I3.i2.p1.m3" class="ltx_Math" alttext="\operatorname{Nul}(A-7I)" display="inline"><semantics><mrow><mi>Nul</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mrow><mn>7</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\operatorname{Nul}(A-7I)</annotation></semantics></math> é</p>
+<div id="Ch12.E17" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E17.m1" class="ltx_Math" alttext="\left\{\vec{v}_{2}=\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix},\vec{v}_{3}=\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}\right\}." display="block"><semantics><mrow><mrow><mo>{</mo><mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\vec{v}_{2}=\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix},\vec{v}_{3}=\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}\right\}.</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.17)</span>
+                    
+                    
+                  
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div id="Thmex3.p2" class="ltx_para">
+<p class="ltx_p">Observamos que, em concordância com o item <math id="Thmex3.p2.m1" class="ltx_Math" alttext="(ii)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(ii)</annotation></semantics></math> do Teorema Espectral, autovetores associados a autovalores distintos são ortogonais: temos que <math id="Thmex3.p2.m2" class="ltx_Math" alttext="\vec{v}_{1}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><annotation encoding="application/x-tex">\vec{v}_{1}</annotation></semantics></math> é ortogonal a cada um dos vetores <math id="Thmex3.p2.m3" class="ltx_Math" alttext="\vec{v}_{2}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><annotation encoding="application/x-tex">\vec{v}_{2}</annotation></semantics></math> e <math id="Thmex3.p2.m4" class="ltx_Math" alttext="\vec{v}_{3}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><annotation encoding="application/x-tex">\vec{v}_{3}</annotation></semantics></math> (faça as contas!). No entanto, estes três vetores não são ortogonais, pois os dois autovetores que estão associados com o mesmo autovalor satisfazem <math id="Thmex3.p2.m5" class="ltx_Math" alttext="\vec{v}_{2}\cdot\vec{v}_{3}=-4\neq 0." display="inline"><semantics><mrow><mrow><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow><mo>=</mo><mrow><mo>−</mo><mn>4</mn></mrow><mo>≠</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{v}_{2}\cdot\vec{v}_{3}=-4\neq 0.</annotation></semantics></math></p>
+</div>
+<div id="Thmex3.p3" class="ltx_para">
+<p class="ltx_p">O fato de que os três autovetores que encontramos não são ortogonais não contradiz o Teorema Espectral. Pelo que vimos, o autoespaço associado com o autovalor <math id="Thmex3.p3.m1" class="ltx_Math" alttext="7" display="inline"><semantics><mn>7</mn><annotation encoding="application/x-tex">7</annotation></semantics></math> tem dimensão dois. Encontramos uma base da maneira usual, mas ocorre que esta base não é ortogonal. Para obter uma base ortogonal, aplicamos o procedimento de Gram-Schmidt:</p>
+<div id="Ch12.E18" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E18.m1" class="ltx_Math" alttext="\vec{u}_{2}=\vec{v}_{2}=\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}" display="block"><semantics><mrow><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{u}_{2}=\vec{v}_{2}=\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.18)</span>
+              
+              
+            
+</div>
+<div id="Ch12.E19" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E19.m1" class="ltx_Math" alttext="\vec{u}_{3}=\vec{v}_{3}-\operatorname{proj}_{\vec{u}_{2}}\vec{v}_{3}=\vec{v}_{%
+3}-\frac{\vec{v}_{3}\cdot\vec{u}_{2}}{\vec{u}_{2}\cdot\vec{u}_{2}}\,\vec{u}_{2%
+}=\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}-\frac{-4}{5}\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}=\begin{bmatrix}4/5\\
+2/5\\
+1\end{bmatrix}\xrightarrow{\text{podemos considerar }\times 5}\begin{bmatrix}4%
+\\
+2\\
+5\end{bmatrix}" display="block"><semantics><mrow><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>=</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>−</mo><mrow><msub><mi>proj</mi><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></msub><mo lspace="0.167em">⁡</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub></mrow></mrow><mo>=</mo><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo>−</mo><mrow><mfrac><mrow><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>3</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mrow><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mfrac><mo lspace="0.170em">⁢</mo><msub><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>−</mo><mrow><mfrac><mrow><mo>−</mo><mn>4</mn></mrow><mn>5</mn></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>4</mn><mo>/</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mtext>podemos considerar </mtext><mo lspace="0.222em" rspace="0.222em">×</mo><mn>5</mn></mrow></mover><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{u}_{3}=\vec{v}_{3}-\operatorname{proj}_{\vec{u}_{2}}\vec{v}_{3}=\vec{v}_{%
+3}-\frac{\vec{v}_{3}\cdot\vec{u}_{2}}{\vec{u}_{2}\cdot\vec{u}_{2}}\,\vec{u}_{2%
+}=\begin{bmatrix}0\\
+2\\
+1\end{bmatrix}-\frac{-4}{5}\begin{bmatrix}1\\
+-2\\
+0\end{bmatrix}=\begin{bmatrix}4/5\\
+2/5\\
+1\end{bmatrix}\xrightarrow{\text{podemos considerar }\times 5}\begin{bmatrix}4%
+\\
+2\\
+5\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.19)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Agora</p>
+<div id="Ch12.E20" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E20.m1" class="ltx_Math" alttext="\left\{\begin{bmatrix}2\\
+1\\
+-2\end{bmatrix},\ \begin{bmatrix}1\\
+-2\\
+0\end{bmatrix},\ \begin{bmatrix}4\\
+2\\
+5\end{bmatrix}\right\}." display="block"><semantics><mrow><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="0.767em">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="0.767em">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{bmatrix}2\\
+1\\
+-2\end{bmatrix},\ \begin{bmatrix}1\\
+-2\\
+0\end{bmatrix},\ \begin{bmatrix}4\\
+2\\
+5\end{bmatrix}\right\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.20)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">é uma base ortogonal de <math id="Thmex3.p3.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math> formada por autovalores da matriz <math id="Thmex3.p3.m3" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>. Para obter uma base ortonormal, basta normalizar cada um dos vetores da base:</p>
+<div id="Ch12.E21" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E21.m1" class="ltx_Math" alttext="\left\{\begin{bmatrix}2/3\\
+1/3\\
+-2/3\end{bmatrix},\ \begin{bmatrix}1/\sqrt{5}\\
+-2/\sqrt{5}\\
+0\end{bmatrix},\ \begin{bmatrix}4/(3\sqrt{5})\\
+2/(3\sqrt{5})\\
+5/(3\sqrt{5})\end{bmatrix}\right\}." display="block"><semantics><mrow><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="0.767em">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo rspace="0.767em">,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>4</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>5</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{bmatrix}2/3\\
+1/3\\
+-2/3\end{bmatrix},\ \begin{bmatrix}1/\sqrt{5}\\
+-2/\sqrt{5}\\
+0\end{bmatrix},\ \begin{bmatrix}4/(3\sqrt{5})\\
+2/(3\sqrt{5})\\
+5/(3\sqrt{5})\end{bmatrix}\right\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.21)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Pelo método de diagonalização de matrizes, concluímos que <math id="Thmex3.p3.m4" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> pode ser diagonalizada pela matriz</p>
+<div id="Ch12.E22" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E22.m1" class="ltx_Math" alttext="P=\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix}," display="block"><semantics><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd><mtd><mrow><mn>4</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd><mtd><mrow><mn>2</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.22)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">que, neste caso (em que <math id="Thmex3.p3.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é matriz simétrica), pode ser obtida ortogonal. Sendo <math id="Thmex3.p3.m6" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> ortogonal, tem-se <math id="Thmex3.p3.m7" class="ltx_Math" alttext="P^{-1}=P^{T}" display="inline"><semantics><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>=</mo><msup><mi>P</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">P^{-1}=P^{T}</annotation></semantics></math> e portanto <math id="Thmex3.p3.m8" class="ltx_Math" alttext="P^{T}AP=D" display="inline"><semantics><mrow><mrow><msup><mi>P</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">P^{T}AP=D</annotation></semantics></math>, isto é,</p>
+<div id="Ch12.E23" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E23.m1" class="ltx_Math" alttext="\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix}\begin{bmatrix}5&amp;-2&amp;4\\
+-2&amp;8&amp;2\\
+4&amp;2&amp;5\\
+\end{bmatrix}\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix}=\begin{bmatrix}-2&amp;0&amp;0\\
+0&amp;7&amp;0\\
+0&amp;0&amp;7\\
+\end{bmatrix}.\ \lhd" display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd><mtd><mrow><mn>4</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd><mtd><mrow><mn>2</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>5</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>8</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd><mtd><mrow><mn>4</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd><mtd><mrow><mn>2</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><mn>3</mn></mrow></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mn>5</mn><mo>/</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><msqrt><mn>5</mn></msqrt></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix}\begin{bmatrix}5&amp;-2&amp;4\\
+-2&amp;8&amp;2\\
+4&amp;2&amp;5\\
+\end{bmatrix}\begin{bmatrix}2/3&amp;1/\sqrt{5}&amp;4/(3\sqrt{5})\\
+1/3&amp;-2/\sqrt{5}&amp;2/(3\sqrt{5})\\
+-2/3&amp;0&amp;5/(3\sqrt{5})\end{bmatrix}=\begin{bmatrix}-2&amp;0&amp;0\\
+0&amp;7&amp;0\\
+0&amp;0&amp;7\\
+\end{bmatrix}.\ \lhd</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.23)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma que, no caso de uma matriz simétrica <math id="p5.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor <math id="p5.m2" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> de multiplicidade <math id="p5.m3" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>, seremos capazes de encontrar <math id="p5.m4" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> autovetores linearmente independentes, que geram o autoespaço <math id="p5.m5" class="ltx_Math" alttext="\operatorname{Nul}(A-\lambda I)" display="inline"><semantics><mrow><mi>Nul</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\operatorname{Nul}(A-\lambda I)</annotation></semantics></math>. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. Além disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de <math id="p5.m6" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.</p>
+</div>
+<section id="SS1" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">12.1.1</span> Formas quadráticas</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma <span class="ltx_text ltx_font_bold">forma quadrática</span> em <math id="SS1.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> é uma função polinomial em que todos os termos são de grau 2.</p>
+</div>
+<div id="Thmex4" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex4.p1" class="ltx_para">
+<p class="ltx_p">A função <math id="Thmex4.p1.m1" class="ltx_Math" alttext="Q:\mathbb{R}^{2}\to\mathbb{R}" display="inline"><semantics><mrow><mi>Q</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow><annotation encoding="application/x-tex">Q:\mathbb{R}^{2}\to\mathbb{R}</annotation></semantics></math>, definida por</p>
+<div id="Ch12.E24" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E24.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=3x_{1}^{2}+x_{1}x_{2}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=3x_{1}^{2}+x_{1}x_{2}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.24)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">é uma forma quadrática em <math id="Thmex4.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>, já que cada um dos termos tem grau 2.</p>
+</div>
+<div id="Thmex4.p2" class="ltx_para">
+<p class="ltx_p">Mais geralmente, qualquer forma quadrática em <math id="Thmex4.p2.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math> pode ser escrita como</p>
+<div id="Ch12.E25" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E25.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=ax_{1}^{2}+2bx_{1}x_{2}+cx_{2}^{2}," display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=ax_{1}^{2}+2bx_{1}x_{2}+cx_{2}^{2},</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.25)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">onde <math id="Thmex4.p2.m2" class="ltx_Math" alttext="a,b,c\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b,c\in\mathbb{R}</annotation></semantics></math>, já que os três termos acima são todos os possíveis monômios de grau dois em duas variáveis <math id="Thmex4.p2.m3" class="ltx_Math" alttext="x_{1}" display="inline"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_{1}</annotation></semantics></math> e <math id="Thmex4.p2.m4" class="ltx_Math" alttext="x_{2}" display="inline"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_{2}</annotation></semantics></math>. O coeficiente <math id="Thmex4.p2.m5" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math> que aparece no segundo termo é motivado pela fórmula mais geral (<a href="#Ch12.E28" title="In 12.1.1 Formas quadráticas ‣ 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12.28</span></a>) abaixo (observe que cada termo <math id="Thmex4.p2.m6" class="ltx_Math" alttext="x_{i}x_{j}" display="inline"><semantics><mrow><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">x_{i}x_{j}</annotation></semantics></math> aparece duas vezes na soma).</p>
+</div>
+</div>
+<div id="Thmex5" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex5.p1" class="ltx_para">
+<p class="ltx_p">A função <math id="Thmex5.p1.m1" class="ltx_Math" alttext="Q:\mathbb{R}^{3}\to\mathbb{R}" display="inline"><semantics><mrow><mi>Q</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℝ</mi><mn>3</mn></msup><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow><annotation encoding="application/x-tex">Q:\mathbb{R}^{3}\to\mathbb{R}</annotation></semantics></math>, definida por</p>
+<div id="Ch12.E26" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E26.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},x_{3})=x_{2}^{2}-x_{3}^{2}+3x_{1}x_{2}-8x_{1}x_{3}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},x_{3})=x_{2}^{2}-x_{3}^{2}+3x_{1}x_{2}-8x_{1}x_{3}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.26)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">é uma forma quadrática em <math id="Thmex5.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>. Qualquer forma quadrática em <math id="Thmex5.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math> pode ser escrita como</p>
+<div id="Ch12.E27" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E27.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=ax_{1}^{2}+bx_{2}^{2}+cx_{3}^{2}+2dx_{1}x_{2}+2ex_{1}x_{3}+2fx_%
+{2}x_{3}," display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>d</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>e</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>f</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=ax_{1}^{2}+bx_{2}^{2}+cx_{3}^{2}+2dx_{1}x_{2}+2ex_{1}x_{3}+2fx_%
+{2}x_{3},</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.27)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">onde <math id="Thmex5.p1.m4" class="ltx_Math" alttext="a,b,c,d,e,f\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>e</mi><mo>,</mo><mi>f</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b,c,d,e,f\in\mathbb{R}</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">De forma geral, uma forma quadrática <math id="SS1.p2.m1" class="ltx_Math" alttext="Q:\mathbb{R}^{n}\to\mathbb{R}" display="inline"><semantics><mrow><mi>Q</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow><annotation encoding="application/x-tex">Q:\mathbb{R}^{n}\to\mathbb{R}</annotation></semantics></math> pode ser escrita como</p>
+<div id="Ch12.E28" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E28.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}," display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.28)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde cada um dos coeficientes <math id="SS1.p2.m2" class="ltx_Math" alttext="a_{ij}" display="inline"><semantics><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">a_{ij}</annotation></semantics></math> são números reais. Podemos também supor que a matriz <math id="SS1.p2.m3" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">A=(a_{ij})</annotation></semantics></math> é simétrica.<span id="Ch12.footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+                <span class="ltx_tag ltx_tag_note">2</span>
+                
+                
+                
+              Caso <math id="Ch12.footnote2.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}b_{ij}x_{i}x_{j}" display="inline"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}b_{ij}x_{i}x_{j}</annotation></semantics></math> com uma matriz <math id="Ch12.footnote2.m2" class="ltx_Math" alttext="B=(b_{ij})" display="inline"><semantics><mrow><mi>B</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">B=(b_{ij})</annotation></semantics></math> não simétrica, podemos escrever <math id="Ch12.footnote2.m3" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}b_{ii}x_{i}^{2}+\sum_{i&lt;j}(b_{ij}+b_{%
+ji})x_{i}x_{j}" display="inline"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow><mo rspace="0.055em">+</mo><mrow><msub><mo rspace="0em">∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}b_{ii}x_{i}^{2}+\sum_{i&lt;j}(b_{ij}+b_{%
+ji})x_{i}x_{j}</annotation></semantics></math>. Definindo <math id="Ch12.footnote2.m4" class="ltx_Math" alttext="a_{ij}=\frac{b_{ij}+b_{ji}}{2}" display="inline"><semantics><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">a_{ij}=\frac{b_{ij}+b_{ji}}{2}</annotation></semantics></math> temos também <math id="Ch12.footnote2.m5" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}a_{ii}x_{i}^{2}+2\sum_{i&lt;j}a_{ij}x_{i%
+}x_{j}" display="inline"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></msub><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}a_{ii}x_{i}^{2}+2\sum_{i&lt;j}a_{ij}x_{i%
+}x_{j}</annotation></semantics></math>. Esta forma é mais semelhante com as dos exemplos acima. Note como aparece o coeficiente 2 nos termos com <math id="Ch12.footnote2.m6" class="ltx_Math" alttext="i\neq j" display="inline"><semantics><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i\neq j</annotation></semantics></math>. Finalmente, observamos que <math id="Ch12.footnote2.m7" class="ltx_Math" alttext="A=(a_{ij})" display="inline"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">A=(a_{ij})</annotation></semantics></math> é uma matriz simétrica e que <math id="Ch12.footnote2.m8" class="ltx_Math" alttext="\sum_{i=1}^{n}\sum_{j=1}^{n}b_{ij}x_{i}x_{j}=\sum_{i=1}^{n}a_{ii}x_{i}^{2}+2%
+\sum_{i&lt;j}a_{ij}x_{i}x_{j}=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}." display="inline"><semantics><mrow><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo lspace="0.167em">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>b</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>⁢</mo><msubsup><mi>x</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mo>∑</mo><mrow><mi>i</mi><mo>&lt;</mo><mi>j</mi></mrow></msub><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><msubsup><mo rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msubsup><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\sum_{i=1}^{n}\sum_{j=1}^{n}b_{ij}x_{i}x_{j}=\sum_{i=1}^{n}a_{ii}x_{i}^{2}+2%
+\sum_{i&lt;j}a_{ij}x_{i}x_{j}=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}.</annotation></semantics></math></span></span></span></p>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<p class="ltx_p">Notamos o seguinte: se <math id="SS1.p3.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é uma matriz de ordem <math id="SS1.p3.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> e <math id="SS1.p3.m3" class="ltx_Math" alttext="\vec{x}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{x}\in\mathbb{R}^{n}</annotation></semantics></math> é um vetor com <math id="SS1.p3.m4" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> componentes, então o vetor <math id="SS1.p3.m5" class="ltx_Math" alttext="A\vec{x}" display="inline"><semantics><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">A\vec{x}</annotation></semantics></math>, que é o produto de <math id="SS1.p3.m6" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> por <math id="SS1.p3.m7" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, tem na sua <math id="SS1.p3.m8" class="ltx_Math" alttext="i" display="inline"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-ésima componente o produto escalar entre a linha <math id="SS1.p3.m9" class="ltx_Math" alttext="i" display="inline"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math> de <math id="SS1.p3.m10" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> e o vetor <math id="SS1.p3.m11" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>:</p>
+<div id="Ch12.E29" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E29.m1" class="ltx_Math" alttext="\left(A\vec{x}\right)_{i}=\text{componente $i$ de }A\vec{x}=\sum_{j=1}^{n}a_{%
+ij}x_{j}." display="block"><semantics><mrow><mrow><msub><mrow><mo>(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>)</mo></mrow><mi>i</mi></msub><mo>=</mo><mrow><mrow><mtext>componente </mtext><mi>i</mi><mtext> de </mtext></mrow><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left(A\vec{x}\right)_{i}=\text{componente $i$ de }A\vec{x}=\sum_{j=1}^{n}a_{%
+ij}x_{j}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.29)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Dessa forma, temos</p>
+<div id="Ch12.E30" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E30.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}=\sum_{%
+i=1}^{n}\left(A\vec{x}\right)_{i}x_{i}=\left(A\vec{x}\right)\cdot\vec{x}." display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false" rspace="0em">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mrow><mo>(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>)</mo></mrow><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub></mrow></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="0.055em">)</mo></mrow><mo rspace="0.222em">⋅</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=\sum_{i=1}^{n}\sum_{j=1}^{n}a_{ij}x_{i}x_{j}=\sum_{%
+i=1}^{n}\left(A\vec{x}\right)_{i}x_{i}=\left(A\vec{x}\right)\cdot\vec{x}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.30)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">E aí está a relação entre as formas quadráticas e matrizes simétricas. Acabamos de verificar que:</p>
+<div id="Ch12.E31" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E31.m1" class="ltx_Math" alttext="\boxed{\begin{array}[]{c}\text{Qualquer forma quadr\'{a}tica em $\mathbb{R}^{n%
+}$ pode ser escrita na forma}\\
+Q(x_{1},x_{2},\dots,x_{n})=A\vec{x}\cdot\vec{x},\\
+\text{onde $A$ \'{e} uma matriz sim\'{e}trica de ordem $n\times n$.}\end{array}}" display="block"><semantics><menclose notation="box"><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mtext>Qualquer forma quadrática em </mtext><msup><mi>ℝ</mi><mi>n</mi></msup><mtext> pode ser escrita na forma</mtext></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd><mrow><mtext>onde </mtext><mi>A</mi><mtext> é uma matriz simétrica de ordem </mtext><mrow><mi>n</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><mtext>.</mtext></mrow></mtd></mtr></mtable></menclose><annotation encoding="application/x-tex">\boxed{\begin{array}[]{c}\text{Qualquer forma quadr\'{a}tica em $\mathbb{R}^{n%
+}$ pode ser escrita na forma}\\
+Q(x_{1},x_{2},\dots,x_{n})=A\vec{x}\cdot\vec{x},\\
+\text{onde $A$ \'{e} uma matriz sim\'{e}trica de ordem $n\times n$.}\end{array}}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.31)</span>
+              
+              
+            
+</div>
+</div>
+<div id="SS1.p4" class="ltx_para ltx_noindent">
+<p class="ltx_p">Uma outra forma de escrever a mesma coisa (verifique a última igualdade como exercício) é</p>
+<div id="Ch12.E32" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E32.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},\dots,x_{n})=A\vec{x}\cdot\vec{x}=\vec{x}^{T}A\vec{x}." display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},\dots,x_{n})=A\vec{x}\cdot\vec{x}=\vec{x}^{T}A\vec{x}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.32)</span>
+              
+              
+            
+</div>
+</div>
+<div id="Thmex6" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex6.p1" class="ltx_para">
+<p class="ltx_p">Voltamos a analisar os Exemplos <a href="#Thmex4" title="Exemplo 12.1.4. ‣ 12.1.1 Formas quadráticas ‣ 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12.1.4</span></a> e <a href="#Thmex5" title="Exemplo 12.1.5. ‣ 12.1.1 Formas quadráticas ‣ 12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12.1.5</span></a> acima. Uma forma quadrática em <math id="Thmex6.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math> pode ser escrita na forma</p>
+<div id="Ch12.E33" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E33.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=ax_{1}^{2}+2bx_{1}x_{2}+cx_{2}^{2}=\begin{bmatrix}x_{1}&amp;x_{2}%
+\end{bmatrix}\begin{bmatrix}a&amp;b\\
+b&amp;c\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=ax_{1}^{2}+2bx_{1}x_{2}+cx_{2}^{2}=\begin{bmatrix}x_{1}&amp;x_{2}%
+\end{bmatrix}\begin{bmatrix}a&amp;b\\
+b&amp;c\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.33)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim,</p>
+<div id="Ch12.E34" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E34.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=3x_{1}^{2}+x_{1}x_{2}=\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}%
+\begin{bmatrix}3&amp;1/2\\
+1/2&amp;0\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=3x_{1}^{2}+x_{1}x_{2}=\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}%
+\begin{bmatrix}3&amp;1/2\\
+1/2&amp;0\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.34)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Observe como o coeficiente do termo misto <math id="Thmex6.p1.m2" class="ltx_Math" alttext="x_{1}x_{2}" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_{1}x_{2}</annotation></semantics></math> aparece (dividido por <math id="Thmex6.p1.m3" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>) nas posições <math id="Thmex6.p1.m4" class="ltx_Math" alttext="a_{12}" display="inline"><semantics><msub><mi>a</mi><mn>12</mn></msub><annotation encoding="application/x-tex">a_{12}</annotation></semantics></math> e <math id="Thmex6.p1.m5" class="ltx_Math" alttext="a_{21}" display="inline"><semantics><msub><mi>a</mi><mn>21</mn></msub><annotation encoding="application/x-tex">a_{21}</annotation></semantics></math> da matriz <math id="Thmex6.p1.m6" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>. Os coeficientes de <math id="Thmex6.p1.m7" class="ltx_Math" alttext="x_{1}^{2}" display="inline"><semantics><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">x_{1}^{2}</annotation></semantics></math> e de <math id="Thmex6.p1.m8" class="ltx_Math" alttext="x_{2}^{2}" display="inline"><semantics><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">x_{2}^{2}</annotation></semantics></math> aparecem na diagonal principal. Antes de prosseguir, faremos uma conta para verificar que de fato tudo está de acordo:</p>
+<div id="Ch12.E35" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E35.m1" class="ltx_Math" alttext="\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}\begin{bmatrix}3&amp;1/2\\
+1/2&amp;0\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}=\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}\begin{bmatrix}3x_{1%
+}+x_{2}/2\\
+x_{1}/2\end{bmatrix}=3x_{1}^{2}+\frac{x_{1}x_{2}}{2}+\frac{x_{1}x_{2}}{2}." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mfrac><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}\begin{bmatrix}3&amp;1/2\\
+1/2&amp;0\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\end{bmatrix}=\begin{bmatrix}x_{1}&amp;x_{2}\end{bmatrix}\begin{bmatrix}3x_{1%
+}+x_{2}/2\\
+x_{1}/2\end{bmatrix}=3x_{1}^{2}+\frac{x_{1}x_{2}}{2}+\frac{x_{1}x_{2}}{2}.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.35)</span>
+                
+                
+              
+</div>
+</div>
+<div id="Thmex6.p2" class="ltx_para">
+<p class="ltx_p">No caso <math id="Thmex6.p2.m1" class="ltx_Math" alttext="3\times 3" display="inline"><semantics><mrow><mn>3</mn><mo lspace="0.222em" rspace="0.222em">×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3\times 3</annotation></semantics></math>, aplicamos a mesma ideia</p>
+<div id="Ch12.E36" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E36.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},x_{3})=x_{2}^{2}-x_{3}^{2}+3x_{1}x_{2}-8x_{1}x_{3}=\begin{%
+bmatrix}x_{1}&amp;x_{2}&amp;x_{3}\end{bmatrix}\begin{bmatrix}0&amp;3/2&amp;-4\\
+3/2&amp;1&amp;0\\
+-4&amp;0&amp;-1\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>−</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mn>3</mn><mo>/</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},x_{3})=x_{2}^{2}-x_{3}^{2}+3x_{1}x_{2}-8x_{1}x_{3}=\begin{%
+bmatrix}x_{1}&amp;x_{2}&amp;x_{3}\end{bmatrix}\begin{bmatrix}0&amp;3/2&amp;-4\\
+3/2&amp;1&amp;0\\
+-4&amp;0&amp;-1\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.36)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim como anteriormente, observe que</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i1.p1" class="ltx_para">​<p class="ltx_p">os coeficientes de <math id="I4.i1.p1.m1" class="ltx_Math" alttext="x_{1}^{2}" display="inline"><semantics><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">x_{1}^{2}</annotation></semantics></math>, de <math id="I4.i1.p1.m2" class="ltx_Math" alttext="x_{2}^{2}" display="inline"><semantics><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">x_{2}^{2}</annotation></semantics></math> e de <math id="I4.i1.p1.m3" class="ltx_Math" alttext="x_{3}^{2}" display="inline"><semantics><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">x_{3}^{2}</annotation></semantics></math> aparecem na diagonal principal;</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i2.p1" class="ltx_para">​<p class="ltx_p">o coeficiente do termo misto <math id="I4.i2.p1.m1" class="ltx_Math" alttext="x_{1}x_{2}" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_{1}x_{2}</annotation></semantics></math> aparece (dividido por <math id="I4.i2.p1.m2" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>) nas posições <math id="I4.i2.p1.m3" class="ltx_Math" alttext="a_{12}" display="inline"><semantics><msub><mi>a</mi><mn>12</mn></msub><annotation encoding="application/x-tex">a_{12}</annotation></semantics></math> e <math id="I4.i2.p1.m4" class="ltx_Math" alttext="a_{21}" display="inline"><semantics><msub><mi>a</mi><mn>21</mn></msub><annotation encoding="application/x-tex">a_{21}</annotation></semantics></math> de <math id="I4.i2.p1.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I4.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i3.p1" class="ltx_para">​<p class="ltx_p">o coeficiente do termo misto <math id="I4.i3.p1.m1" class="ltx_Math" alttext="x_{1}x_{3}" display="inline"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">x_{1}x_{3}</annotation></semantics></math> aparece (dividido por <math id="I4.i3.p1.m2" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>) nas posições <math id="I4.i3.p1.m3" class="ltx_Math" alttext="a_{13}" display="inline"><semantics><msub><mi>a</mi><mn>13</mn></msub><annotation encoding="application/x-tex">a_{13}</annotation></semantics></math> e <math id="I4.i3.p1.m4" class="ltx_Math" alttext="a_{31}" display="inline"><semantics><msub><mi>a</mi><mn>31</mn></msub><annotation encoding="application/x-tex">a_{31}</annotation></semantics></math> de <math id="I4.i3.p1.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I4.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i4.p1" class="ltx_para">​<p class="ltx_p">o coeficiente do termo misto <math id="I4.i4.p1.m1" class="ltx_Math" alttext="x_{2}x_{3}" display="inline"><semantics><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">x_{2}x_{3}</annotation></semantics></math> aparece (dividido por <math id="I4.i4.p1.m2" class="ltx_Math" alttext="2" display="inline"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>) nas posições <math id="I4.i4.p1.m3" class="ltx_Math" alttext="a_{23}" display="inline"><semantics><msub><mi>a</mi><mn>23</mn></msub><annotation encoding="application/x-tex">a_{23}</annotation></semantics></math> e <math id="I4.i4.p1.m4" class="ltx_Math" alttext="a_{32}" display="inline"><semantics><msub><mi>a</mi><mn>32</mn></msub><annotation encoding="application/x-tex">a_{32}</annotation></semantics></math> de <math id="I4.i4.p1.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Faça as contas para verificar a igualdade acima!<math id="Thmex6.p2.m2" class="ltx_Math" alttext="\ \lhd" display="inline"><semantics><mo>⊲</mo><annotation encoding="application/x-tex">\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+</div>
+</section>
+<section id="SS2" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">12.1.2</span> Diagonalização de formas quadráticas</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de <math id="SS2.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz <math id="SS2.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que</p>
+<div id="Ch12.E37" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E37.m1" class="ltx_Math" alttext="Q(\vec{x})=\vec{x}^{T}A\vec{x}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">Q(\vec{x})=\vec{x}^{T}A\vec{x}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.37)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e que <math id="SS2.p1.m3" class="ltx_Math" alttext="\mathcal{B}=\{\vec{v}_{1},\vec{v}_{2},\dots,\vec{v}_{n}\}" display="inline"><semantics><mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{B}=\{\vec{v}_{1},\vec{v}_{2},\dots,\vec{v}_{n}\}</annotation></semantics></math> é base ortonormal de <math id="SS2.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> formada por autovetores de <math id="SS2.p1.m5" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>. Desta forma,</p>
+<div id="Ch12.E38" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E38.m1" class="ltx_Math" alttext="P=\begin{bmatrix}|&amp;|&amp;&amp;|\\
+\vec{v}_{1}&amp;\vec{v}_{2}&amp;\cdots&amp;\vec{v}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{bmatrix}\ \text{satisfaz}\ P^{-1}AP=D," display="block"><semantics><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr><mtr><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mtd><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mtd></mtr><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mtext>satisfaz</mtext><mo lspace="0.600em">⁢</mo><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}|&amp;|&amp;&amp;|\\
+\vec{v}_{1}&amp;\vec{v}_{2}&amp;\cdots&amp;\vec{v}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{bmatrix}\ \text{satisfaz}\ P^{-1}AP=D,</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.38)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde <math id="SS2.p1.m6" class="ltx_Math" alttext="D" display="inline"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, <math id="SS2.p1.m7" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é ortogonal: <math id="SS2.p1.m8" class="ltx_Math" alttext="P^{T}=P^{-1}" display="inline"><semantics><mrow><msup><mi>P</mi><mi>T</mi></msup><mo>=</mo><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">P^{T}=P^{-1}</annotation></semantics></math>. O vetor <math id="SS2.p1.m9" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> pode ser representado na base <math id="SS2.p1.m10" class="ltx_Math" alttext="\mathcal{B}" display="inline"><semantics><mi class="ltx_font_mathcaligraphic">ℬ</mi><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math> por:</p>
+<div id="Ch12.E39" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E39.m1" class="ltx_Math" alttext="\vec{x}=y_{1}\vec{v}_{1}+y_{2}\vec{v}_{2}+\cdots+y_{n}\vec{v}_{n}=P\vec{y},%
+\quad\text{onde denotamos}\quad\vec{y}=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}\end{bmatrix}=\begin{bmatrix}\vec{x}\end{bmatrix}_{\mathcal{B}}." display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>y</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mtext>onde denotamos</mtext><mspace width="1.2em"></mspace><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><msub><mrow><mo>[</mo><mtable displaystyle="true"><mtr><mtd><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mtd></mtr></mtable><mo>]</mo></mrow><mi class="ltx_font_mathcaligraphic">ℬ</mi></msub></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}=y_{1}\vec{v}_{1}+y_{2}\vec{v}_{2}+\cdots+y_{n}\vec{v}_{n}=P\vec{y},%
+\quad\text{onde denotamos}\quad\vec{y}=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{n}\end{bmatrix}=\begin{bmatrix}\vec{x}\end{bmatrix}_{\mathcal{B}}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.39)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Agora, vamos escrever a forma quadrática na base <math id="SS2.p1.m11" class="ltx_Math" alttext="\mathcal{B}" display="inline"><semantics><mi class="ltx_font_mathcaligraphic">ℬ</mi><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math>, isto é, em termos do vetor <math id="SS2.p1.m12" class="ltx_Math" alttext="\vec{y}" display="inline"><semantics><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{y}</annotation></semantics></math> (lembre que <math id="SS2.p1.m13" class="ltx_Math" alttext="\vec{x}=P\vec{y}\implies\vec{x}^{T}=\vec{y}^{T}P^{T}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">⟹</mo><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><msup><mi>P</mi><mi>T</mi></msup></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=P\vec{y}\implies\vec{x}^{T}=\vec{y}^{T}P^{T}</annotation></semantics></math>):</p>
+<div id="Ch12.E40" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E40.m1" class="ltx_Math" alttext="\vec{x}^{T}A\vec{x}=(\vec{y}^{T}P^{T})A(P\vec{y})=\vec{y}^{T}(P^{T}AP)\vec{y}=%
+\vec{y}^{T}D\vec{y}." display="block"><semantics><mrow><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><msup><mi>P</mi><mi>T</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>P</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}^{T}A\vec{x}=(\vec{y}^{T}P^{T})A(P\vec{y})=\vec{y}^{T}(P^{T}AP)\vec{y}=%
+\vec{y}^{T}D\vec{y}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.40)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Isto significa que, ao mudar da base canônica (componentes <math id="SS2.p1.m14" class="ltx_Math" alttext="x_{i}" display="inline"><semantics><msub><mi>x</mi><mi>i</mi></msub><annotation encoding="application/x-tex">x_{i}</annotation></semantics></math>) para a base <math id="SS2.p1.m15" class="ltx_Math" alttext="\mathcal{B}" display="inline"><semantics><mi class="ltx_font_mathcaligraphic">ℬ</mi><annotation encoding="application/x-tex">\mathcal{B}</annotation></semantics></math> (componentes <math id="SS2.p1.m16" class="ltx_Math" alttext="y_{i}" display="inline"><semantics><msub><mi>y</mi><mi>i</mi></msub><annotation encoding="application/x-tex">y_{i}</annotation></semantics></math>), temos</p>
+<div id="Ch12.E41" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E41.m1" class="ltx_Math" alttext="\sum_{i,j=1}^{n}a_{ij}x_{i}x_{j}=\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}=\sum_%
+{i=1}^{n}\lambda_{i}y_{i}^{2}," display="block"><semantics><mrow><mrow><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>x</mi><mi>j</mi></msub></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="0.111em">=</mo><mrow><munderover><mo movablelimits="false">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><msubsup><mi>y</mi><mi>i</mi><mn>2</mn></msubsup></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\sum_{i,j=1}^{n}a_{ij}x_{i}x_{j}=\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}=\sum_%
+{i=1}^{n}\lambda_{i}y_{i}^{2},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.41)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde os números <math id="SS2.p1.m17" class="ltx_Math" alttext="\lambda_{i}\in\mathbb{R}" display="inline"><semantics><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">\lambda_{i}\in\mathbb{R}</annotation></semantics></math> são os autovalores da matriz <math id="SS2.p1.m18" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> (são reais porque a matriz é simétrica). Em outras palavras, a base (ortonormal) de autovetores de <math id="SS2.p1.m19" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> deixou transformou a nossa forma quadrática original em uma que não possui mais termos mistos, muito mais simples de trabalhar.</p>
+</div>
+<div id="Thmex7" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex7.p1" class="ltx_para">
+<p class="ltx_p">Considere a forma quadrática</p>
+<div id="Ch12.E42" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E42.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=6x_{1}^{2}-2x_{1}x_{2}+4x_{2}^{2}\quad\leftrightsquigarrow\quad
+Q%
+(\vec{x})=\vec{x}^{T}A\vec{x},\quad\text{onde}\quad A=\begin{bmatrix}6&amp;-2\\
+-2&amp;3\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mn>6</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mspace width="1.2em"></mspace><mo stretchy="false">↭</mo></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo rspace="1.367em">,</mo><mtext>onde</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>6</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=6x_{1}^{2}-2x_{1}x_{2}+4x_{2}^{2}\quad\leftrightsquigarrow\quad
+Q%
+(\vec{x})=\vec{x}^{T}A\vec{x},\quad\text{onde}\quad A=\begin{bmatrix}6&amp;-2\\
+-2&amp;3\end{bmatrix}.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.42)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Vamos fazer uma mudança de coordenadas que transforma a forma quadrática <math id="Thmex7.p1.m1" class="ltx_Math" alttext="Q" display="inline"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> em uma forma sem termos mistos. Os autovalores de <math id="Thmex7.p1.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> são as raízes de</p>
+<div id="Ch12.E43" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E43.m1" class="ltx_Math" alttext="p(\lambda)=\det(A-\lambda I)=(6-\lambda)(3-\lambda)-4=\lambda^{2}-9\lambda+14." display="block"><semantics><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo rspace="0.1389em">=</mo><mrow><mo lspace="0.1389em" movablelimits="false" rspace="0em">det</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>−</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>6</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>4</mn></mrow><mo>=</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>14</mn></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">p(\lambda)=\det(A-\lambda I)=(6-\lambda)(3-\lambda)-4=\lambda^{2}-9\lambda+14.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.43)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim,</p>
+<div id="Ch12.E44" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E44.m1" class="ltx_Math" alttext="\lambda=\frac{9\pm\sqrt{81-56}}{2}=\frac{9\pm 5}{2}\implies\lambda_{1}=2,%
+\lambda_{2}=7." display="block"><semantics><mrow><mrow><mrow><mi>λ</mi><mo>=</mo><mfrac><mrow><mn>9</mn><mo>±</mo><msqrt><mrow><mn>81</mn><mo>−</mo><mn>56</mn></mrow></msqrt></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>9</mn><mo>±</mo><mn>5</mn></mrow><mn>2</mn></mfrac><mo stretchy="false">⟹</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow><mo>,</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>7</mn></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\lambda=\frac{9\pm\sqrt{81-56}}{2}=\frac{9\pm 5}{2}\implies\lambda_{1}=2,%
+\lambda_{2}=7.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.44)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Já sabemos que, ao obter uma base ortonormal de autovetores e escrevermos <math id="Thmex7.p1.m3" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> nesta base, a saber <math id="Thmex7.p1.m4" class="ltx_Math" alttext="\vec{x}=P\vec{y}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=P\vec{y}</annotation></semantics></math>, teremos</p>
+<div id="Ch12.E45" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E45.m1" class="ltx_Math" alttext="Q(\vec{x})=Q(P\vec{y})=2y_{1}^{2}+7y_{2}^{2}." display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">Q(\vec{x})=Q(P\vec{y})=2y_{1}^{2}+7y_{2}^{2}.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.45)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Vamos verificar neste exemplo que isto de fato acontece.</p>
+<ul id="I5" class="ltx_itemize">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I5.i1.p1" class="ltx_para">​<p class="ltx_p">Autovetor unitário associado ao autovalor <math id="I5.i1.p1.m1" class="ltx_Math" alttext="\lambda_{1}=2" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">\lambda_{1}=2</annotation></semantics></math>:</p>
+<div id="Ch12.E46" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E46.m1" class="ltx_Math" alttext="A-2I=\begin{bmatrix}4&amp;-2\\
+-2&amp;1\end{bmatrix}\sim\begin{bmatrix}2&amp;-1\\
+0&amp;0\end{bmatrix}\implies v_{2}=2v_{1}\rightsquigarrow\begin{bmatrix}1\\
+2\end{bmatrix}\rightsquigarrow\vec{v}_{1}=\begin{bmatrix}1/\sqrt{5}\\
+2/\sqrt{5}\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>4</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><msub><mi>v</mi><mn>2</mn></msub><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo stretchy="false">↝</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">↝</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A-2I=\begin{bmatrix}4&amp;-2\\
+-2&amp;1\end{bmatrix}\sim\begin{bmatrix}2&amp;-1\\
+0&amp;0\end{bmatrix}\implies v_{2}=2v_{1}\rightsquigarrow\begin{bmatrix}1\\
+2\end{bmatrix}\rightsquigarrow\vec{v}_{1}=\begin{bmatrix}1/\sqrt{5}\\
+2/\sqrt{5}\end{bmatrix}.</annotation></semantics></math></span>
+                      <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.46)</span>
+                      
+                      
+                    
+</div>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I5.i2.p1" class="ltx_para">​<p class="ltx_p">Autovetor unitário associado ao autovalor <math id="I5.i2.p1.m1" class="ltx_Math" alttext="\lambda_{2}=7" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\lambda_{2}=7</annotation></semantics></math>:</p>
+<div id="Ch12.E47" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E47.m1" class="ltx_Math" alttext="A-2I=\begin{bmatrix}-1&amp;-2\\
+-2&amp;-4\end{bmatrix}\sim\begin{bmatrix}-1&amp;-2\\
+0&amp;0\end{bmatrix}\implies v_{1}=-2v_{2}\rightsquigarrow\begin{bmatrix}-2\\
+1\end{bmatrix}\rightsquigarrow\vec{v}_{2}=\begin{bmatrix}-2/\sqrt{5}\\
+1/\sqrt{5}\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">↝</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">↝</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A-2I=\begin{bmatrix}-1&amp;-2\\
+-2&amp;-4\end{bmatrix}\sim\begin{bmatrix}-1&amp;-2\\
+0&amp;0\end{bmatrix}\implies v_{1}=-2v_{2}\rightsquigarrow\begin{bmatrix}-2\\
+1\end{bmatrix}\rightsquigarrow\vec{v}_{2}=\begin{bmatrix}-2/\sqrt{5}\\
+1/\sqrt{5}\end{bmatrix}.</annotation></semantics></math></span>
+                      <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.47)</span>
+                      
+                      
+                    
+</div>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Portanto, encontramos uma base ortonormal (de modo que <math id="Thmex7.p1.m5" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> abaixo é matriz ortogonal e satisfaz <math id="Thmex7.p1.m6" class="ltx_Math" alttext="P=P^{T}" display="inline"><semantics><mrow><mi>P</mi><mo>=</mo><msup><mi>P</mi><mi>T</mi></msup></mrow><annotation encoding="application/x-tex">P=P^{T}</annotation></semantics></math>) e podemos escrever</p>
+<div id="Ch12.E48" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E48.m1" class="ltx_Math" alttext="P=\begin{bmatrix}1/\sqrt{5}&amp;-2/\sqrt{5}\\
+2/\sqrt{5}&amp;1/\sqrt{5}\end{bmatrix}\implies P^{T}AP=D=\begin{bmatrix}2&amp;0\\
+0&amp;7\end{bmatrix}" display="block"><semantics><mrow><mi>P</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>5</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><msup><mi>P</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}1/\sqrt{5}&amp;-2/\sqrt{5}\\
+2/\sqrt{5}&amp;1/\sqrt{5}\end{bmatrix}\implies P^{T}AP=D=\begin{bmatrix}2&amp;0\\
+0&amp;7\end{bmatrix}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.48)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim,</p>
+<div id="Ch12.E49" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E49.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=Q(\vec{x})=Q(P\vec{y})=\vec{x}^{T}A\vec{x}=\vec{y}^{T}A\vec{y}=%
+2y_{1}^{2}+7y_{2}^{2}.\ \lhd" display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=Q(\vec{x})=Q(P\vec{y})=\vec{x}^{T}A\vec{x}=\vec{y}^{T}A\vec{y}=%
+2y_{1}^{2}+7y_{2}^{2}.\ \lhd</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.49)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="SS3" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">12.1.3</span> Aplicação à classificação de cônicas</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Nesta subseção, nos restringimos a formas quadráticas em <math id="SS3.p1.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>. Uma <span class="ltx_text ltx_font_bold">curva de nível</span> de uma forma quadrática, também conhecida como uma <span class="ltx_text ltx_font_bold">cônica</span>, é um conjunto definido implicitamente pela equação</p>
+<div id="Ch12.E50" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E50.m1" class="ltx_Math" alttext="Q(x_{1},x_{2})=k\quad\leftrightsquigarrow\quad ax_{1}^{2}+bx_{1}x_{2}+cx_{2}^{%
+2}=k," display="block"><semantics><mrow><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>k</mi><mspace width="1.2em"></mspace><mo stretchy="false">↭</mo></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mo>=</mo><mi>k</mi></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=k\quad\leftrightsquigarrow\quad ax_{1}^{2}+bx_{1}x_{2}+cx_{2}^{%
+2}=k,</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.50)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde <math id="SS3.p1.m2" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> é uma constante. Em outras palavras, uma curva de nível é o conjunto de todos os pontos <math id="SS3.p1.m3" class="ltx_Math" alttext="(x_{1},x_{2})" display="inline"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_{1},x_{2})</annotation></semantics></math> que satisfazem <math id="SS3.p1.m4" class="ltx_Math" alttext="Q(x_{1},x_{2})=k" display="inline"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>k</mi></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2})=k</annotation></semantics></math>.</p>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<p class="ltx_p">Já conhecemos alguns exemplos:</p>
+<ul id="I6" class="ltx_itemize">
+<li id="I6.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I6.i1.p1" class="ltx_para">​<p class="ltx_p"><math id="I6.i1.p1.m1" class="ltx_Math" alttext="x_{1}^{2}+x_{2}^{2}=r^{2}" display="inline"><semantics><mrow><mrow><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>=</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x_{1}^{2}+x_{2}^{2}=r^{2}</annotation></semantics></math> representa um círculo de raio <math id="I6.i1.p1.m2" class="ltx_Math" alttext="r" display="inline"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I6.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I6.i2.p1" class="ltx_para">​<p class="ltx_p"><math id="I6.i2.p1.m1" class="ltx_Math" alttext="\frac{x_{1}^{2}}{a^{2}}+\frac{x_{2}^{2}}{b^{2}}=1" display="inline"><semantics><mrow><mrow><mfrac><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><msup><mi>a</mi><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><msup><mi>b</mi><mn>2</mn></msup></mfrac></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{x_{1}^{2}}{a^{2}}+\frac{x_{2}^{2}}{b^{2}}=1</annotation></semantics></math> representa uma elipse;</p>
+</div>
+</li>
+<li id="I6.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I6.i3.p1" class="ltx_para">​<p class="ltx_p"><math id="I6.i3.p1.m1" class="ltx_Math" alttext="\frac{x_{1}^{2}}{a^{2}}-\frac{x_{2}^{2}}{b^{2}}=1" display="inline"><semantics><mrow><mrow><mfrac><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><msup><mi>a</mi><mn>2</mn></msup></mfrac><mo>−</mo><mfrac><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><msup><mi>b</mi><mn>2</mn></msup></mfrac></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{x_{1}^{2}}{a^{2}}-\frac{x_{2}^{2}}{b^{2}}=1</annotation></semantics></math> representa uma hipérbole.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Graficamente, vemos alguns exemplos na figura abaixo.</p>
+</div>
+<figure id="SS3.fig1" class="ltx_figure">
+<div class="ltx_flex_figure">
+<div class="ltx_flex_cell ltx_flex_size_3"><div class="bml-overflow-wrapper"><img src="Semana14-15/semana14-circulo.png" id="SS3.g1" class="ltx_graphics ltx_centering ltx_figure_panel ltx_img_square" width="120" height="116" alt="[Uncaptioned image]"></div></div>
+<div class="ltx_flex_cell ltx_flex_size_3"><div class="bml-overflow-wrapper"><img src="Semana14-15/semana14-elipse.png" id="SS3.g2" class="ltx_graphics ltx_centering ltx_figure_panel ltx_img_landscape" width="180" height="108" alt="[Uncaptioned image]"></div></div>
+<div class="ltx_flex_cell ltx_flex_size_3"><div class="bml-overflow-wrapper"><img src="Semana14-15/semana14-hiperbole.png" id="SS3.g3" class="ltx_graphics ltx_centering ltx_figure_panel ltx_img_landscape" width="180" height="133" alt="[Uncaptioned image]"></div></div>
+</div>
+</figure>
+<div id="SS3.p3" class="ltx_para ltx_noindent">
+<p class="ltx_p">Vamos ver como que a diagonalização de formas simétricas se aplica para conseguirmos identificar cônicas de formas quadráticas que possuem termos mistos.</p>
+</div>
+<div id="Thmex8" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.1.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex8.p1" class="ltx_para">
+<p class="ltx_p">Vamos identificar a cônica cuja equação é</p>
+<div id="Ch12.E51" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E51.m1" class="ltx_Math" alttext="31x_{1}^{2}-10\sqrt{3}x_{1}x_{2}+21x_{2}^{2}=144." display="block"><semantics><mrow><mrow><mrow><mrow><mrow><mn>31</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>−</mo><mrow><mn>10</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>21</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mo>=</mo><mn>144</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">31x_{1}^{2}-10\sqrt{3}x_{1}x_{2}+21x_{2}^{2}=144.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.51)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Podemos escrever</p>
+<div id="Ch12.E52" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E52.m1" class="ltx_Math" alttext="\vec{x}^{T}A\vec{x}=144,\quad\text{onde}\quad A=\begin{bmatrix}31&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;21\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mn>144</mn><mo rspace="1.367em">,</mo><mtext>onde</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>31</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd><mtd><mn>21</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}^{T}A\vec{x}=144,\quad\text{onde}\quad A=\begin{bmatrix}31&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;21\end{bmatrix}.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.52)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Autovalores de <math id="Thmex8.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>:</p>
+<div id="Ch12.E53" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E53.m1" class="ltx_Math" alttext="p(\lambda)=(31-\lambda)(21-\lambda)-75=0\implies\lambda^{2}-52\lambda+576=0" display="block"><semantics><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>31</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>21</mn><mo>−</mo><mi>λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>−</mo><mn>75</mn></mrow><mo>=</mo><mn>0</mn><mo stretchy="false">⟹</mo><mrow><mrow><msup><mi>λ</mi><mn>2</mn></msup><mo>−</mo><mrow><mn>52</mn><mo>⁢</mo><mi>λ</mi></mrow></mrow><mo>+</mo><mn>576</mn></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p(\lambda)=(31-\lambda)(21-\lambda)-75=0\implies\lambda^{2}-52\lambda+576=0</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.53)</span>
+                
+                
+              
+</div>
+<div id="Ch12.E54" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E54.m1" class="ltx_Math" alttext="\implies\lambda=\frac{52\pm\sqrt{2704-2304}}{2}=\frac{52\pm 20}{2}=26\pm 10%
+\implies\lambda_{1}=16,\ \lambda_{2}=36." display="block"><semantics><mrow><mrow><mrow><mi></mi><mo stretchy="false">⟹</mo><mi>λ</mi><mo>=</mo><mfrac><mrow><mn>52</mn><mo>±</mo><msqrt><mrow><mn>2704</mn><mo>−</mo><mn>2304</mn></mrow></msqrt></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mn>52</mn><mo>±</mo><mn>20</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mrow><mn>26</mn><mo>±</mo><mn>10</mn></mrow><mo stretchy="false">⟹</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>16</mn></mrow><mo rspace="0.767em">,</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>36</mn></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\implies\lambda=\frac{52\pm\sqrt{2704-2304}}{2}=\frac{52\pm 20}{2}=26\pm 10%
+\implies\lambda_{1}=16,\ \lambda_{2}=36.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.54)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Autovetores associados:</p>
+<ul id="I7" class="ltx_itemize">
+<li id="I7.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I7.i1.p1" class="ltx_para">​<p class="ltx_p">ao autovalor <math id="I7.i1.p1.m1" class="ltx_Math" alttext="\lambda_{1}=16" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mn>16</mn></mrow><annotation encoding="application/x-tex">\lambda_{1}=16</annotation></semantics></math>:</p>
+<div id="Ch12.E55" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E55.m1" class="ltx_Math" alttext="\begin{bmatrix}15&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;5\end{bmatrix}\sim\begin{bmatrix}3&amp;-\sqrt{3}\\
+0&amp;0\end{bmatrix}\implies 3v_{1}=\sqrt{3}v_{2}\ \ \xrightarrow[\text{e j\'{a} %
+normalizando}]{\text{podemos escolher}}\ \ \vec{v}_{1}=\begin{bmatrix}1/2\\
+\sqrt{3}/2\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>15</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><msqrt><mn>3</mn></msqrt></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msqrt><mn>3</mn></msqrt><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><munderover accent="true" accentunder="true"><mo stretchy="false">→</mo><mtext mathsize="142%">e já normalizando</mtext><mtext>podemos escolher</mtext></munderover><mspace width="1.2em"></mspace><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><msqrt><mn>3</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}15&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;5\end{bmatrix}\sim\begin{bmatrix}3&amp;-\sqrt{3}\\
+0&amp;0\end{bmatrix}\implies 3v_{1}=\sqrt{3}v_{2}\ \ \xrightarrow[\text{e j\'{a} %
+normalizando}]{\text{podemos escolher}}\ \ \vec{v}_{1}=\begin{bmatrix}1/2\\
+\sqrt{3}/2\end{bmatrix}.</annotation></semantics></math></span>
+                      <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.55)</span>
+                      
+                      
+                    
+</div>
+</div>
+</li>
+<li id="I7.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I7.i2.p1" class="ltx_para">​<p class="ltx_p">ao autovalor <math id="I7.i2.p1.m1" class="ltx_Math" alttext="\lambda_{2}=36" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>36</mn></mrow><annotation encoding="application/x-tex">\lambda_{2}=36</annotation></semantics></math>:</p>
+<div id="Ch12.E56" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E56.m1" class="ltx_Math" alttext="\begin{bmatrix}-5&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;-15\end{bmatrix}\sim\begin{bmatrix}1&amp;\sqrt{3}\\
+0&amp;0\end{bmatrix}\implies v_{1}=-\sqrt{3}v_{2}\ \ \xrightarrow[\text{e j\'{a} %
+normalizando}]{\text{podemos escolher}}\ \ \vec{v}_{2}=\begin{bmatrix}-\sqrt{3%
+}/2\\
+1/2\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msqrt><mn>3</mn></msqrt></mrow></mrow></mtd><mtd><mrow><mo>−</mo><mn>15</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><msqrt><mn>3</mn></msqrt></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>−</mo><mrow><msqrt><mn>3</mn></msqrt><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><munderover accent="true" accentunder="true"><mo stretchy="false">→</mo><mtext mathsize="142%">e já normalizando</mtext><mtext>podemos escolher</mtext></munderover><mspace width="1.2em"></mspace><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mrow><msqrt><mn>3</mn></msqrt><mo>/</mo><mn>2</mn></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix}-5&amp;-5\sqrt{3}\\
+-5\sqrt{3}&amp;-15\end{bmatrix}\sim\begin{bmatrix}1&amp;\sqrt{3}\\
+0&amp;0\end{bmatrix}\implies v_{1}=-\sqrt{3}v_{2}\ \ \xrightarrow[\text{e j\'{a} %
+normalizando}]{\text{podemos escolher}}\ \ \vec{v}_{2}=\begin{bmatrix}-\sqrt{3%
+}/2\\
+1/2\end{bmatrix}.</annotation></semantics></math></span>
+                      <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.56)</span>
+                      
+                      
+                    
+</div>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Temos</p>
+<div id="Ch12.E57" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E57.m1" class="ltx_Math" alttext="P^{-1}AP=D=\begin{bmatrix}16&amp;0\\
+0&amp;26\end{bmatrix}" display="block"><semantics><mrow><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>16</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>26</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">P^{-1}AP=D=\begin{bmatrix}16&amp;0\\
+0&amp;26\end{bmatrix}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.57)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim, na base de <math id="Thmex8.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math> determinada por <math id="Thmex8.p1.m3" class="ltx_Math" alttext="\{\vec{v}_{1},\vec{v}_{2}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{v}_{1},\vec{v}_{2}\}</annotation></semantics></math>, podemos escrever a equação da equação cônica como</p>
+<div id="Ch12.E58" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E58.m1" class="ltx_Math" alttext="\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}\implies\begin{bmatrix}y_{1}&amp;y_{2}\end{%
+bmatrix}\begin{bmatrix}16&amp;0\\
+0&amp;26\end{bmatrix}\begin{bmatrix}y_{1}\\
+y_{2}\end{bmatrix}=144." display="block"><semantics><mrow><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">⟹</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>16</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>26</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mn>144</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}\implies\begin{bmatrix}y_{1}&amp;y_{2}\end{%
+bmatrix}\begin{bmatrix}16&amp;0\\
+0&amp;26\end{bmatrix}\begin{bmatrix}y_{1}\\
+y_{2}\end{bmatrix}=144.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.58)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Isto pode ser reescrito como</p>
+<div id="Ch12.E59" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E59.m1" class="ltx_Math" alttext="16y_{1}^{2}+36y_{2}^{2}=144\ \leftrightsquigarrow\ \frac{y_{1}^{2}}{(144/16)}+%
+\frac{y_{1}^{2}}{(144/36)}=1\ \leftrightsquigarrow\ \frac{y_{1}^{2}}{3^{2}}+%
+\frac{y_{1}^{2}}{2^{2}}=1." display="block"><semantics><mrow><mrow><mrow><mrow><mn>16</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><mn>36</mn><mo>⁢</mo><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup></mrow></mrow><mo>=</mo><mn>144</mn><mo lspace="0.878em" rspace="0.878em" stretchy="false">↭</mo><mrow><mfrac><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mrow><mo stretchy="false">(</mo><mrow><mn>144</mn><mo>/</mo><mn>16</mn></mrow><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mrow><mo stretchy="false">(</mo><mrow><mn>144</mn><mo>/</mo><mn>36</mn></mrow><mo stretchy="false">)</mo></mrow></mfrac></mrow><mo>=</mo><mn>1</mn><mo lspace="0.878em" rspace="0.878em" stretchy="false">↭</mo><mrow><mfrac><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><msup><mn>3</mn><mn>2</mn></msup></mfrac><mo>+</mo><mfrac><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><msup><mn>2</mn><mn>2</mn></msup></mfrac></mrow><mo>=</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">16y_{1}^{2}+36y_{2}^{2}=144\ \leftrightsquigarrow\ \frac{y_{1}^{2}}{(144/16)}+%
+\frac{y_{1}^{2}}{(144/36)}=1\ \leftrightsquigarrow\ \frac{y_{1}^{2}}{3^{2}}+%
+\frac{y_{1}^{2}}{2^{2}}=1.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.59)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Esta equação é pode ser agora identificada como uma elipse nos “novos eixos” <math id="Thmex8.p1.m4" class="ltx_Math" alttext="\vec{v}_{1}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><annotation encoding="application/x-tex">\vec{v}_{1}</annotation></semantics></math> e <math id="Thmex8.p1.m5" class="ltx_Math" alttext="\vec{v}_{2}" display="inline"><semantics><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><annotation encoding="application/x-tex">\vec{v}_{2}</annotation></semantics></math>.</p>
+<div class="bml-overflow-wrapper"><img src="Semana14-15/semana14-conicas2.png" id="Thmex8.p1.g1" class="ltx_graphics ltx_centering ltx_img_square" width="299" height="295" alt="[Uncaptioned image]"></div>
+</div>
+<div id="Thmex8.p2" class="ltx_para ltx_noindent">
+<p class="ltx_p">Observamos que quando a coordenada <math id="Thmex8.p2.m1" class="ltx_Math" alttext="y_{1}=0" display="inline"><semantics><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">y_{1}=0</annotation></semantics></math> devemos ter que <math id="Thmex8.p2.m2" class="ltx_Math" alttext="y_{2}^{2}=2^{2}" display="inline"><semantics><mrow><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup><mo>=</mo><msup><mn>2</mn><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y_{2}^{2}=2^{2}</annotation></semantics></math>, de modo que deve ser <math id="Thmex8.p2.m3" class="ltx_Math" alttext="\vec{x}=y_{1}\vec{v}_{1}+y_{2}\vec{v}_{2}=\pm 2\vec{v}_{2}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>y</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mo>±</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=y_{1}\vec{v}_{1}+y_{2}\vec{v}_{2}=\pm 2\vec{v}_{2}</annotation></semantics></math>, como na figura. Este é o análogo da análise que normalmente fazemos, só que agora na base ortonormal <math id="Thmex8.p2.m4" class="ltx_Math" alttext="\{\vec{v}_{1},\vec{v}_{2}\}" display="inline"><semantics><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo stretchy="false">}</mo></mrow><annotation encoding="application/x-tex">\{\vec{v}_{1},\vec{v}_{2}\}</annotation></semantics></math></p>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch12.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch12.S2.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

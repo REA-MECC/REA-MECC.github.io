@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>12.2 Problemas de otimização restritos à esfera ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch12.S1.html" title="12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch12.S3.html" title="12.3 Matrizes simétricas e prova do Teorema Espectral ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S1.html" title="12.1 Matrizes simétricas ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S3.html" title="12.3 Matrizes simétricas e prova do Teorema Espectral ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch12.S4.html" title="12.4 Exercícios finais ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="12.1" data-path="Ch12.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S1.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.1 </span></b>Matrizes simétricas</a></li>
+<li data-level="12.2" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active"><a href="" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.2 </span></b>Problemas de otimização restritos à esfera</a></li>
+<li data-level="12.3" data-path="Ch12.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S3.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.3 </span></b>Matrizes simétricas e prova do Teorema Espectral</a></li>
+<li data-level="12.4" data-path="Ch12.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch12.S4.html" title="In Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12.4 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Problemas de otimização restritos à esfera</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">12.2</span> Problemas de otimização restritos à esfera</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Nesta seção, estudamos alguns problemas de otimização bem específicos. Mais precisamente, podemos encontrar valores de máximo e mínimo de formas quadráticas</p>
+<div id="Ch12.E60" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E60.m1" class="ltx_Math" alttext="Q(\vec{x})=\vec{x}^{T}A\vec{x}" display="block"><semantics><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">Q(\vec{x})=\vec{x}^{T}A\vec{x}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.60)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">sujeitos à restrição</p>
+<div id="Ch12.E61" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E61.m1" class="ltx_Math" alttext="x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}=1," display="block"><semantics><mrow><mrow><mrow><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msubsup><mi>x</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mn>1</mn></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">x_{1}^{2}+x_{2}^{2}+\cdots+x_{n}^{2}=1,</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.61)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">que caracteriza os pontos <math id="p1.m1" class="ltx_Math" alttext="(x_{1},x_{2},\dots,x_{n})\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">(x_{1},x_{2},\dots,x_{n})\in\mathbb{R}^{n}</annotation></semantics></math> que tem comprimento unitário, isto é, a esfera de raio 1 e centro na origem em <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. Em outras palavras, nosso problema de otimização restrito consiste em achar, na esfera unitária, os vetores em que a forma quadrática <math id="p1.m3" class="ltx_Math" alttext="Q" display="inline"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> assume seu maior valor e seu menor valor.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Mais resumidamente, queremos:</p>
+<div id="Ch12.E62" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E62.m1" class="ltx_Math" alttext="\text{maximizar/minimizar }Q(\vec{x})\ \text{sujeito \`{a} restri\c{c}\~{a}o}%
+\ \|\vec{x}\|=1." display="block"><semantics><mrow><mrow><mrow><mtext>maximizar/minimizar </mtext><mo>⁢</mo><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow><mo lspace="0.600em">⁢</mo><mtext>sujeito à restrição</mtext><mo lspace="0.600em">⁢</mo><mrow><mo stretchy="false">‖</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">‖</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\text{maximizar/minimizar }Q(\vec{x})\ \text{sujeito \`{a} restri\c{c}\~{a}o}%
+\ \|\vec{x}\|=1.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.62)</span>
+            
+            
+          
+</div>
+</div>
+<div id="p3" class="ltx_para ltx_noindent">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Ideia por trás do método.</span> Sendo <math id="p3.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> uma matriz simétrica, todos os seus autovalores são reais. Vamos ordená-los em forma crescente</p>
+<div id="Ch12.E63" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E63.m1" class="ltx_Math" alttext="\lambda_{1}\leq\lambda_{2}\leq\cdots\leq\lambda_{n}." display="block"><semantics><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>≤</mo><mi mathvariant="normal">⋯</mi><mo>≤</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\lambda_{1}\leq\lambda_{2}\leq\cdots\leq\lambda_{n}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.63)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Podemos também encontrar uma base ortonormal de autovetores e, com eles, formar uma matriz ortogonal que diagonaliza <math id="p3.m2" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>:</p>
+<div id="Ch12.E64" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E64.m1" class="ltx_Math" alttext="P=\begin{bmatrix}|&amp;|&amp;&amp;|\\
+\vec{v}_{1}&amp;\vec{v}_{2}&amp;\cdots&amp;\vec{v}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{bmatrix}\implies P^{-1}AP=D=\begin{bmatrix}\lambda_{1}&amp;0&amp;\cdots&amp;0\\
+0&amp;\lambda_{2}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;\lambda_{n}\end{bmatrix}." display="block"><semantics><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr><mtr><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mtd><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mtd></mtr><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><msup><mi>P</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mi>P</mi></mrow><mo>=</mo><mi>D</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>λ</mi><mn>1</mn></msub></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><msub><mi>λ</mi><mn>2</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>λ</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">P=\begin{bmatrix}|&amp;|&amp;&amp;|\\
+\vec{v}_{1}&amp;\vec{v}_{2}&amp;\cdots&amp;\vec{v}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{bmatrix}\implies P^{-1}AP=D=\begin{bmatrix}\lambda_{1}&amp;0&amp;\cdots&amp;0\\
+0&amp;\lambda_{2}&amp;\cdots&amp;0\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+0&amp;0&amp;\cdots&amp;\lambda_{n}\end{bmatrix}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.64)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Nota que <math id="p3.m3" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>, sendo ortogonal, preserva comprimentos (ver Observação <a href="Ch12.S3.html#Thmobs1" title="Observação 12.3.1. ‣ 12.3 Matrizes simétricas e prova do Teorema Espectral ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12.3.1</span></a> na seção seguinte). Assim, escrevendo <math id="p3.m4" class="ltx_Math" alttext="\vec{x}=P\vec{y}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\vec{x}=P\vec{y}</annotation></semantics></math>, temos que <math id="p3.m5" class="ltx_Math" alttext="\|\vec{x}\|=1" display="inline"><semantics><mrow><mrow><mo stretchy="false">‖</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">‖</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\|\vec{x}\|=1</annotation></semantics></math> se, e somente se, <math id="p3.m6" class="ltx_Math" alttext="\|\vec{y}\|=1" display="inline"><semantics><mrow><mrow><mo stretchy="false">‖</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">‖</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\|\vec{y}\|=1</annotation></semantics></math>. Além disso, esta matriz <math id="p3.m7" class="ltx_Math" alttext="P" display="inline"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math> é a matriz ortogonal que diagonaliza <math id="p3.m8" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>, de modo que, pelo que vimos na seção anterior,</p>
+<div id="Ch12.E65" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E65.m1" class="ltx_Math" alttext="\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}." display="block"><semantics><mrow><mrow><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}^{T}A\vec{x}=\vec{y}^{T}D\vec{y}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.65)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Mas a forma quadrática <math id="p3.m9" class="ltx_Math" alttext="\vec{y}^{T}D\vec{y}" display="inline"><semantics><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{y}^{T}D\vec{y}</annotation></semantics></math> é mais fácil de maximizar: sendo <math id="p3.m10" class="ltx_Math" alttext="\lambda_{n}" display="inline"><semantics><msub><mi>λ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\lambda_{n}</annotation></semantics></math> a maior das entradas da diagonal principal de <math id="p3.m11" class="ltx_Math" alttext="D" display="inline"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>, temos (já que cada <math id="p3.m12" class="ltx_Math" alttext="\lambda_{j}\leq\lambda_{n}" display="inline"><semantics><mrow><msub><mi>λ</mi><mi>j</mi></msub><mo>≤</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\lambda_{j}\leq\lambda_{n}</annotation></semantics></math> e <math id="p3.m13" class="ltx_Math" alttext="\|\vec{y}\|=1" display="inline"><semantics><mrow><mrow><mo stretchy="false">‖</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">‖</mo></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\|\vec{y}\|=1</annotation></semantics></math>)</p>
+<div id="Ch12.E66" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E66.m1" class="ltx_Math" alttext="\vec{y}^{T}D\vec{y}=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{%
+n}y_{n}^{2}\leq\lambda_{n}(y_{1}^{2}+y_{2}^{2}+\cdots+y_{n}^{2})=\lambda_{n}." display="block"><semantics><mrow><mrow><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>⁢</mo><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow></mrow><mo>≤</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>y</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>y</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{y}^{T}D\vec{y}=\lambda_{1}y_{1}^{2}+\lambda_{2}y_{2}^{2}+\cdots+\lambda_{%
+n}y_{n}^{2}\leq\lambda_{n}(y_{1}^{2}+y_{2}^{2}+\cdots+y_{n}^{2})=\lambda_{n}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.66)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Logo, <math id="p3.m14" class="ltx_Math" alttext="\lambda_{n}" display="inline"><semantics><msub><mi>λ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\lambda_{n}</annotation></semantics></math> é uma cota superior para <math id="p3.m15" class="ltx_Math" alttext="\vec{y}^{T}D\vec{y}" display="inline"><semantics><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{y}^{T}D\vec{y}</annotation></semantics></math>. Além disso, já que <math id="p3.m16" class="ltx_Math" alttext="D" display="inline"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math> é uma matriz diagonal, esta cota superior é atingida pelo vetor <math id="p3.m17" class="ltx_Math" alttext="\vec{y}=\vec{e}_{n}" display="inline"><semantics><mrow><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mo>=</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\vec{y}=\vec{e}_{n}</annotation></semantics></math>, o último vetor da base canônica de <math id="p3.m18" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. Traduzindo estas informações para a variável <math id="p3.m19" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math>, temos que <math id="p3.m20" class="ltx_Math" alttext="\lambda_{n}" display="inline"><semantics><msub><mi>λ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\lambda_{n}</annotation></semantics></math> é o valor máximo de <math id="p3.m21" class="ltx_Math" alttext="\vec{x}^{T}A\vec{x}" display="inline"><semantics><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{x}^{T}A\vec{x}</annotation></semantics></math> (pois é igual a <math id="p3.m22" class="ltx_Math" alttext="\vec{y}^{T}D\vec{y}" display="inline"><semantics><mrow><msup><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mi>D</mi><mo>⁢</mo><mover accent="true"><mi>y</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{y}^{T}D\vec{y}</annotation></semantics></math>) na esfera unitária. Além disso, este valor máximo é atingido quando <math id="p3.m23" class="ltx_Math" alttext="\vec{x}=P\vec{e}_{n}=\vec{v}_{n}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><msub><mover accent="true"><mi>e</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><mo>=</mo><msub><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow><annotation encoding="application/x-tex">\vec{x}=P\vec{e}_{n}=\vec{v}_{n}</annotation></semantics></math>, um autovetor unitário associado com o maior autovalor <math id="p3.m24" class="ltx_Math" alttext="\lambda_{n}" display="inline"><semantics><msub><mi>λ</mi><mi>n</mi></msub><annotation encoding="application/x-tex">\lambda_{n}</annotation></semantics></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<span class="ltx_ERROR undefined">{Exercise}</span>
+<p class="ltx_p">Fazer toda a análise acima para o problema de minimização. <span class="ltx_text ltx_font_italic">Dica</span>: olhar para o menor autovalor.</p>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 12.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Vamos maximizar a forma quadrática</p>
+<div id="Ch12.E67" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E67.m1" class="ltx_Math" alttext="Q(x_{1},x_{2},x_{3})=7x_{1}^{2}+x_{2}^{2}+7x_{3}^{2}-8x_{1}x_{2}-4x_{1}x_{3}-8%
+x_{2}x_{3}," display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mn>7</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mrow><mn>7</mn><mo>⁢</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">Q(x_{1},x_{2},x_{3})=7x_{1}^{2}+x_{2}^{2}+7x_{3}^{2}-8x_{1}x_{2}-4x_{1}x_{3}-8%
+x_{2}x_{3},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.67)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">sujeito à restrição <math id="Thmex1.p1.m1" class="ltx_Math" alttext="x_{1}^{2}+x_{2}^{2}+x_{3}^{2}=1" display="inline"><semantics><mrow><mrow><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x_{1}^{2}+x_{2}^{2}+x_{3}^{2}=1</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex1.p2" class="ltx_para">
+<p class="ltx_p">Note que podemos escrever</p>
+<div id="Ch12.E68" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E68.m1" class="ltx_Math" alttext="\vec{x}=\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}\implies Q(\vec{x})=\vec{x}^{T}\begin{bmatrix}7&amp;-4&amp;-2\\
+-4&amp;1&amp;-4\\
+-2&amp;-4&amp;7\\
+\end{bmatrix}\vec{x}." display="block"><semantics><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mi>T</mi></msup><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{x}=\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}\implies Q(\vec{x})=\vec{x}^{T}\begin{bmatrix}7&amp;-4&amp;-2\\
+-4&amp;1&amp;-4\\
+-2&amp;-4&amp;7\\
+\end{bmatrix}\vec{x}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.68)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Precisamos determinar o maior autovalor e um autovetor unitário associado. O polinômio característico de <math id="Thmex1.p2.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é dado por</p>
+<div id="Ch12.E69" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E69.m1" class="ltx_Math" alttext="\det\begin{bmatrix}7-\lambda&amp;-4&amp;-2\\
+-4&amp;1-\lambda&amp;-4\\
+-2&amp;-4&amp;7-\lambda\\
+\end{bmatrix}=-\lambda^{3}+15\lambda^{2}-27\lambda-243," display="block"><semantics><mrow><mrow><mrow><mo movablelimits="false" rspace="0em">det</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mn>7</mn><mo>−</mo><mi>λ</mi></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>1</mn><mo>−</mo><mi>λ</mi></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mn>7</mn><mo>−</mo><mi>λ</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo>−</mo><msup><mi>λ</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mn>15</mn><mo>⁢</mo><msup><mi>λ</mi><mn>2</mn></msup></mrow></mrow><mo>−</mo><mrow><mn>27</mn><mo>⁢</mo><mi>λ</mi></mrow><mo>−</mo><mn>243</mn></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\det\begin{bmatrix}7-\lambda&amp;-4&amp;-2\\
+-4&amp;1-\lambda&amp;-4\\
+-2&amp;-4&amp;7-\lambda\\
+\end{bmatrix}=-\lambda^{3}+15\lambda^{2}-27\lambda-243,</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.69)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">cujas raízes são <math id="Thmex1.p2.m2" class="ltx_Math" alttext="\lambda_{1}=-3" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>−</mo><mn>3</mn></mrow></mrow><annotation encoding="application/x-tex">\lambda_{1}=-3</annotation></semantics></math> e <math id="Thmex1.p2.m3" class="ltx_Math" alttext="\lambda_{2}=9" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\lambda_{2}=9</annotation></semantics></math>. Portanto, o valor máximo que a forma quadrática <math id="Thmex1.p2.m4" class="ltx_Math" alttext="Q" display="inline"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math> assume na esfera unitária é <math id="Thmex1.p2.m5" class="ltx_Math" alttext="9" display="inline"><semantics><mn>9</mn><annotation encoding="application/x-tex">9</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex1.p3" class="ltx_para">
+<p class="ltx_p">Além disso, sabemos que qualquer um autovetor unitário associado com o autovalor <math id="Thmex1.p3.m1" class="ltx_Math" alttext="\lambda_{2}=9" display="inline"><semantics><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>=</mo><mn>9</mn></mrow><annotation encoding="application/x-tex">\lambda_{2}=9</annotation></semantics></math> assume este valor máximo. Resolvemos</p>
+<div id="Ch12.E70" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E70.m1" class="ltx_Math" alttext="A-9I=\begin{bmatrix}-2&amp;-4&amp;-2\\
+-4&amp;-8&amp;-4\\
+-2&amp;-4&amp;-2\\
+\end{bmatrix}\sim\begin{bmatrix}1&amp;2&amp;1\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+\end{bmatrix}\implies\vec{v}=\begin{bmatrix}-2v_{2}-v_{3}\\
+v_{2}\\
+v_{3}\end{bmatrix}=v_{2}\begin{bmatrix}-2\\
+1\\
+0\end{bmatrix}+v_{3}\begin{bmatrix}-1\\
+0\\
+1\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><mi>I</mi></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><msub><mi>v</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>v</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>v</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A-9I=\begin{bmatrix}-2&amp;-4&amp;-2\\
+-4&amp;-8&amp;-4\\
+-2&amp;-4&amp;-2\\
+\end{bmatrix}\sim\begin{bmatrix}1&amp;2&amp;1\\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\\
+\end{bmatrix}\implies\vec{v}=\begin{bmatrix}-2v_{2}-v_{3}\\
+v_{2}\\
+v_{3}\end{bmatrix}=v_{2}\begin{bmatrix}-2\\
+1\\
+0\end{bmatrix}+v_{3}\begin{bmatrix}-1\\
+0\\
+1\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.70)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Um autovetor (unitário!) possível é</p>
+<div id="Ch12.E71" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E71.m1" class="ltx_Math" alttext="\frac{1}{\sqrt{2}}\begin{bmatrix}-1\\
+0\\
+1\end{bmatrix}=\begin{bmatrix}-1/\sqrt{2}\\
+0\\
+1/\sqrt{2}\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mrow><mo>−</mo><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mn>1</mn><mo>/</mo><msqrt><mn>2</mn></msqrt></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\frac{1}{\sqrt{2}}\begin{bmatrix}-1\\
+0\\
+1\end{bmatrix}=\begin{bmatrix}-1/\sqrt{2}\\
+0\\
+1/\sqrt{2}\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.71)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Conferimos que</p>
+<div id="Ch12.E72" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E72.m1" class="ltx_Math" alttext="Q\left(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}\right)=\frac{7}{2}+0+\frac{7}{2%
+}-0+\frac{4}{2}-0=9.\ \lhd" display="block"><semantics><mrow><mrow><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>⁢</mo><mn>,0</mn></mrow><mo>,</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mfrac><mn>7</mn><mn>2</mn></mfrac><mo>+</mo><mn>0</mn><mo>+</mo><mfrac><mn>7</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mn>0</mn></mrow><mo>+</mo><mfrac><mn>4</mn><mn>2</mn></mfrac></mrow><mo>−</mo><mn>0</mn></mrow><mo>=</mo><mn>9</mn></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">Q\left(\frac{1}{\sqrt{2}},0,\frac{1}{\sqrt{2}}\right)=\frac{7}{2}+0+\frac{7}{2%
+}-0+\frac{4}{2}-0=9.\ \lhd</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.72)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="Thmobs1" class="ltx_theorem ltx_theorem_obs">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Observação 12.2.1</span></span><span class="ltx_text ltx_font_bold"> </span>(Opcional)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmobs1.p1" class="ltx_para">
+<p class="ltx_p">Em cursos de cálculo com várias variáveis, estudamos multiplicadores de Lagrange, uma ferramenta para estudar problemas de otimização com restrição. De uma maneira geral, queremos</p>
+<div id="Ch12.E73" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E73.m1" class="ltx_Math" alttext="\text{minimizar }f(x_{1},x_{2},\cdots,x_{n})\text{ com a restri\c{c}\~{a}o }g(%
+x_{1},x_{2},\cdots,x_{n})=0." display="block"><semantics><mrow><mrow><mrow><mtext>minimizar </mtext><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mtext> com a restrição </mtext><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">⋯</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\text{minimizar }f(x_{1},x_{2},\cdots,x_{n})\text{ com a restri\c{c}\~{a}o }g(%
+x_{1},x_{2},\cdots,x_{n})=0.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.73)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">O método dos multiplicadores de Lagrange nos dá uma condição necessária: se um ponto é de máximo/mínimo com restrição, então existe uma constante <math id="Thmobs1.p1.m1" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> tal que, neste ponto,</p>
+<div id="Ch12.E74" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E74.m1" class="ltx_Math" alttext="\vec{\nabla}f=\lambda\vec{\nabla}g." display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo lspace="0.167em">⁢</mo><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>g</mi></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{\nabla}f=\lambda\vec{\nabla}g.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.74)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Esta constante <math id="Thmobs1.p1.m2" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> é conhecida como um <span class="ltx_text ltx_font_bold">multiplicador de Lagrange</span>. Como mencionamos, esta é uma condição necessária, de modo que não garante que o ponto é de mínimo/máximo. Na prática, depois de encontrarmos os possíveis valores de <math id="Thmobs1.p1.m3" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> e de <math id="Thmobs1.p1.m4" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>, podemos substituir na função para ver quais são os pontos de mínimo e quais são os de máximo.</p>
+</div>
+<div id="Thmobs1.p2" class="ltx_para">
+<p class="ltx_p">Vejamos como esta técnica se aplicaria no Exemplo <a href="#Thmex1" title="Exemplo 12.2.1. ‣ 12.2 Problemas de otimização restritos à esfera ‣ Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12.2.1</span></a> que já resolvemos acima. Vamos considerar <math id="Thmobs1.p2.m1" class="ltx_Math" alttext="f(x_{1},x_{2},x_{3})=Q(x_{1},x_{2},x_{3})" display="inline"><semantics><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">f(x_{1},x_{2},x_{3})=Q(x_{1},x_{2},x_{3})</annotation></semantics></math> e <math id="Thmobs1.p2.m2" class="ltx_Math" alttext="g(x_{1},x_{2},x_{3})=x_{1}^{2}+x_{2}^{2}+x_{3}^{2}-1" display="inline"><semantics><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>x</mi><mn>3</mn><mn>2</mn></msubsup></mrow><mo>−</mo><mn>1</mn></mrow></mrow><annotation encoding="application/x-tex">g(x_{1},x_{2},x_{3})=x_{1}^{2}+x_{2}^{2}+x_{3}^{2}-1</annotation></semantics></math> Se estivermos em um ponto de máximo, então existe a constante <math id="Thmobs1.p2.m3" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> como acima. Calculamos:</p>
+<div id="Ch12.E75" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E75.m1" class="ltx_Math" alttext="\vec{\nabla}Q=\left(14x_{1}-8x_{2}-4x_{3},2x_{2}-8x_{1}-8x_{3},14x_{3}-4x_{1}-%
+8x_{2}\right)" display="block"><semantics><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mrow><mn>14</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub><mo>⁢</mo><mn>,2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub><mo>⁢</mo><mn>,14</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>)</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{\nabla}Q=\left(14x_{1}-8x_{2}-4x_{3},2x_{2}-8x_{1}-8x_{3},14x_{3}-4x_{1}-%
+8x_{2}\right)</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.75)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e</p>
+<div id="Ch12.E76" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E76.m1" class="ltx_Math" alttext="\vec{\nabla}g=\left(2x_{1},2x_{2},2x_{3}\right)." display="block"><semantics><mrow><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>g</mi></mrow><mo>=</mo><mrow><mo>(</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><mn>,2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mn>,2</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\vec{\nabla}g=\left(2x_{1},2x_{2},2x_{3}\right).</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.76)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">A condição <math id="Thmobs1.p2.m4" class="ltx_Math" alttext="\vec{\nabla}Q=\lambda\vec{\nabla}g" display="inline"><semantics><mrow><mrow><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>Q</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo lspace="0.167em">⁢</mo><mover accent="true"><mo>∇</mo><mo stretchy="false">→</mo></mover><mo lspace="0.167em">⁢</mo><mi>g</mi></mrow></mrow><annotation encoding="application/x-tex">\vec{\nabla}Q=\lambda\vec{\nabla}g</annotation></semantics></math> nos diz que devemos resolver</p>
+<div id="Ch12.E77" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch12.E77.m1" class="ltx_Math" alttext="\begin{array}[]{c}14x_{1}-8x_{2}-4x_{3}=2\lambda x_{1}\\
+-8x_{1}+2x_{2}-8x_{3}=2\lambda x_{2}\\
+-4x_{1}-8x_{2}+14x_{3}=2\lambda x_{3}\\
+\end{array}\xrightarrow[\text{em cada eq.}]{\text{Simplifica um $2$}}\begin{%
+bmatrix}7&amp;-4&amp;-2\\
+-4&amp;1&amp;-4\\
+-2&amp;-4&amp;7\\
+\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\lambda\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}." display="block"><semantics><mrow><mrow><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mrow><mrow><mn>14</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow><mo>−</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>14</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr></mtable><munderover accent="true" accentunder="true"><mo stretchy="false">→</mo><mtext mathsize="142%">em cada eq.</mtext><mrow><mtext>Simplifica um </mtext><mn>2</mn></mrow></munderover><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>7</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>7</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\begin{array}[]{c}14x_{1}-8x_{2}-4x_{3}=2\lambda x_{1}\\
+-8x_{1}+2x_{2}-8x_{3}=2\lambda x_{2}\\
+-4x_{1}-8x_{2}+14x_{3}=2\lambda x_{3}\\
+\end{array}\xrightarrow[\text{em cada eq.}]{\text{Simplifica um $2$}}\begin{%
+bmatrix}7&amp;-4&amp;-2\\
+-4&amp;1&amp;-4\\
+-2&amp;-4&amp;7\\
+\end{bmatrix}\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}=\lambda\begin{bmatrix}x_{1}\\
+x_{2}\\
+x_{3}\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(12.77)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Chegamos, por outro caminho, à mesma conclusão: <math id="Thmobs1.p2.m5" class="ltx_Math" alttext="\lambda" display="inline"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math> deve ser um autovalor e <math id="Thmobs1.p2.m6" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> um autovetor (unitário, já que <math id="Thmobs1.p2.m7" class="ltx_Math" alttext="g(x_{1},x_{2},x_{3})=0" display="inline"><semantics><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">g(x_{1},x_{2},x_{3})=0</annotation></semantics></math>) associado<math id="Thmobs1.p2.m8" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch12.S1.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch12.S3.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

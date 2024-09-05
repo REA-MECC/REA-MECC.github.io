@@ -1,0 +1,829 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>2.3 Multiplicação de matriz por vetor e representação matricial para sistemas lineares ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch2.S2.html" title="2.2 Combinações lineares de vetores ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch2.S4.html" title="2.4 Sistemas lineares e combinações lineares das colunas ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch2.S1.html" title="2.1 Vetores ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch2.S2.html" title="2.2 Combinações lineares de vetores ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch2.S4.html" title="2.4 Sistemas lineares e combinações lineares das colunas ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch2.S5.html" title="2.5 Exercícios finais ‣ Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="2.1" data-path="Ch2.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch2.S1.html" title="In Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2.1 </span></b>Vetores</a></li>
+<li data-level="2.2" data-path="Ch2.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch2.S2.html" title="In Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2.2 </span></b>Combinações lineares de vetores</a></li>
+<li data-level="2.3" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active"><a href="" title="In Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2.3 </span></b>Multiplicação de matriz por vetor e representação matricial para sistemas lineares</a></li>
+<li data-level="2.4" data-path="Ch2.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch2.S4.html" title="In Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2.4 </span></b>Sistemas lineares e combinações lineares das colunas</a></li>
+<li data-level="2.5" data-path="Ch2.S5.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch2.S5.html" title="In Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2.5 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Multiplicação de matriz por vetor e representação matricial para sistemas lineares</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">2.3</span> Multiplicação de matriz por vetor e representação matricial para sistemas lineares</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Se <math id="p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é uma matriz com <math id="p1.m2" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> linhas e <math id="p1.m3" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> colunas, e <math id="p1.m4" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> é um vetor do <math id="p1.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>, então definimos o <span class="ltx_text ltx_font_bold">produto da matriz <math id="p1.m6" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> pelo vetor <math id="p1.m7" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> </span> como o vetor de <math id="p1.m8" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{m}</annotation></semantics></math> resultante da combinação linear das colunas de <math id="p1.m9" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> com coeficientes dados pelas entradas do vetor <math id="p1.m10" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 2.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<div id="Ch2.E18" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E18.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc}2&amp;1&amp;3\\
+4&amp;-3&amp;5\end{array}\right]\left[\begin{array}[]{c}2\\
+3\\
+5\end{array}\right]=2\left[\begin{array}[]{c}2\\
+4\end{array}\right]+3\left[\begin{array}[]{c}1\\
+-3\end{array}\right]+5\left[\begin{array}[]{c}3\\
+5\end{array}\right]=\left[\begin{array}[]{c}22\\
+24\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>22</mn></mtd></mtr><mtr><mtd><mn>24</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc}2&amp;1&amp;3\\
+4&amp;-3&amp;5\end{array}\right]\left[\begin{array}[]{c}2\\
+3\\
+5\end{array}\right]=2\left[\begin{array}[]{c}2\\
+4\end{array}\right]+3\left[\begin{array}[]{c}1\\
+-3\end{array}\right]+5\left[\begin{array}[]{c}3\\
+5\end{array}\right]=\left[\begin{array}[]{c}22\\
+24\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.18)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quando todas as suas componentes são iguais. Desta forma, podemos interpretar as equações de um sistema linear</p>
+<div id="Ch2.E19" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E19.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{rcl}x+3y&amp;=&amp;-1\\
+2x-y&amp;=&amp;2\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd><mtd><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mi>y</mi></mrow></mtd><mtd><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mn>2</mn></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{rcl}x+3y&amp;=&amp;-1\\
+2x-y&amp;=&amp;2\end{array}\right.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.19)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">como uma igualdade entre vetores de <math id="p2.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>, isto é, de vetores com duas componentes:</p>
+<div id="Ch2.E20" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E20.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}x+3y\\
+2x-y\end{array}\right]=\left[\begin{array}[]{c}-1\\
+2\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>x</mi><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>y</mi></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mi>y</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}x+3y\\
+2x-y\end{array}\right]=\left[\begin{array}[]{c}-1\\
+2\end{array}\right].</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.20)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Além disso, é desta forma que surge naturalmente o produto de uma matriz por um vetor:</p>
+<div id="Ch2.E21" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E21.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc}1&amp;3\\
+2&amp;-1\end{array}\right]\left[\begin{array}[]{c}x\\
+y\end{array}\right]=\left[\begin{array}[]{c}-1\\
+2\end{array}\right]," display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc}1&amp;3\\
+2&amp;-1\end{array}\right]\left[\begin{array}[]{c}x\\
+y\end{array}\right]=\left[\begin{array}[]{c}-1\\
+2\end{array}\right],</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.21)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">definido de modo que as duas últimas igualdades acima signifiquem a mesma coisa. Esta última notação é conhecida como a <span class="ltx_text ltx_font_bold">forma matricial</span> do sistema linear.</p>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 2.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">O sistema, que já apareceu nas notas da semana anterior</p>
+<div id="Ch2.E22" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E22.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{ll}x_{1}+2x_{2}+x_{3}=12\\
+x_{1}-3x_{2}+5x_{3}=1\\
+2x_{1}-x_{2}+3x_{3}=10\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>=</mo><mn>12</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>1</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>10</mn></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{ll}x_{1}+2x_{2}+x_{3}=12\\
+x_{1}-3x_{2}+5x_{3}=1\\
+2x_{1}-x_{2}+3x_{3}=10\end{array}\right.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.22)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">pode ser representado matricialmente por</p>
+<div id="Ch2.E23" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E23.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc}1&amp;2&amp;1\\
+1&amp;-3&amp;5\\
+2&amp;-1&amp;3\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right]=\left[\begin{array}[]{c}12\\
+1\\
+10\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>12</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc}1&amp;2&amp;1\\
+1&amp;-3&amp;5\\
+2&amp;-1&amp;3\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right]=\left[\begin{array}[]{c}12\\
+1\\
+10\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.23)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">De forma mais sucinta,</p>
+<div id="Ch2.E24" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E24.m1" class="ltx_Math" alttext="\boxed{A\vec{x}=\vec{b}}" display="block"><semantics><menclose notation="box"><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow></menclose><annotation encoding="application/x-tex">\boxed{A\vec{x}=\vec{b}}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.24)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">onde</p>
+<div id="Ch2.E25" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E25.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{ccc}1&amp;2&amp;1\\
+1&amp;-3&amp;5\\
+2&amp;-1&amp;3\end{array}\right],\quad\vec{x}=\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right],\ \text{ e }\ \vec{b}=\left[\begin{array}[]{c}12\\
+1\\
+10\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="1.367em">,</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo rspace="0.767em">,</mo><mrow><mrow><mtext> e </mtext><mo lspace="0.600em">⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>12</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>10</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{ccc}1&amp;2&amp;1\\
+1&amp;-3&amp;5\\
+2&amp;-1&amp;3\end{array}\right],\quad\vec{x}=\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right],\ \text{ e }\ \vec{b}=\left[\begin{array}[]{c}12\\
+1\\
+10\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.25)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Chegamos a esta conclusão colocando os coeficientes da primeira variável <math id="Thmex2.p1.m1" class="ltx_Math" alttext="x_{1}" display="inline"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_{1}</annotation></semantics></math> na primeira coluna, os coeficientes da segunda variável <math id="Thmex2.p1.m2" class="ltx_Math" alttext="x_{2}" display="inline"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_{2}</annotation></semantics></math> na segunda coluna e os coeficientes da terceira variável <math id="Thmex2.p1.m3" class="ltx_Math" alttext="x_{3}" display="inline"><semantics><msub><mi>x</mi><mn>3</mn></msub><annotation encoding="application/x-tex">x_{3}</annotation></semantics></math> na terceira coluna<math id="Thmex2.p1.m4" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Mais geralmente, uma matriz do tipo <math id="p3.m1" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> (leia-se “<math id="p3.m2" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> por <math id="p3.m3" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>”) é uma matriz com <math id="p3.m4" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> linhas e <math id="p3.m5" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> colunas:</p>
+<div id="Ch2.E26" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E26.m1" class="ltx_Math" alttext="A=\left(a_{ij}\right)=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}" display="block"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><msub><mi>a</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>)</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">A=\left(a_{ij}\right)=\begin{bmatrix}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{bmatrix}</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.26)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">e pode estar associada a um sistema com <math id="p3.m6" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> equações e <math id="p3.m7" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math> variáveis, já que o produto</p>
+<div id="Ch2.E27" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E27.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}\end{array}\right]=\left[\begin{array}[]{c}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{m}\end{array}\right]," display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋱</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>x</mi><mi>n</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>b</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>b</mi><mi>m</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n}\end{array}\right]=\left[\begin{array}[]{c}b_{1}\\
+b_{2}\\
+\vdots\\
+b_{m}\end{array}\right],</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.27)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">quando visto componente a componente, representa:</p>
+<div id="Ch2.E28" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E28.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{cc}a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
+\vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mrow><mrow><msub><mi>a</mi><mn>11</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>12</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mrow><mrow><mrow><msub><mi>a</mi><mn>21</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>22</mn></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><msub><mi>b</mi><mn>2</mn></msub></mrow></mtd><mtd></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd><mrow><mrow><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><msub><mi>b</mi><mi>m</mi></msub></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{cc}a_{11}x_{1}+a_{12}x_{2}+\cdots+a_{1n}x_{n}=b_{1}\\
+a_{21}x_{1}+a_{22}x_{2}+\cdots+a_{2n}x_{n}=b_{2}\\
+\vdots\\
+a_{m1}x_{1}+a_{m2}x_{2}+\cdots+a_{mn}x_{n}=b_{m}\end{array}\right.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.28)</span>
+            
+            
+          
+</div>
+</div>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmexeresol1" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 2.3.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol1.p1" class="ltx_para">
+<p class="ltx_p">Dado os vetores abaixo, resolva <math id="Thmexeresol1.p1.m1" class="ltx_Math" alttext="4\vec{u}" display="inline"><semantics><mrow><mn>4</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">4\vec{u}</annotation></semantics></math>, <math id="Thmexeresol1.p1.m2" class="ltx_Math" alttext="10\vec{v}" display="inline"><semantics><mrow><mn>10</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">10\vec{v}</annotation></semantics></math> e <math id="Thmexeresol1.p1.m3" class="ltx_Math" alttext="3\vec{u}+2\vec{v}" display="inline"><semantics><mrow><mrow><mn>3</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">3\vec{u}+2\vec{v}</annotation></semantics></math>.</p>
+<div id="Ch2.E29" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E29.m1" class="ltx_Math" alttext="\vec{u}=\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]\quad e\quad\vec{v}=\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]" display="block"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mi>e</mi></mrow></mrow><mspace width="1.2em"></mspace><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{u}=\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]\quad e\quad\vec{v}=\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.29)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p2" class="ltx_para">
+<p class="ltx_p">Utilizando a definição de multiplicação de escalar em vetores obtemos para <math id="SSx1.p2.m1" class="ltx_Math" alttext="4\vec{u}" display="inline"><semantics><mrow><mn>4</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">4\vec{u}</annotation></semantics></math>:</p>
+<div id="Ch2.E30" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E30.m1" class="ltx_Math" alttext="4\vec{u}=4\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]=\left[\begin{array}[]{c}12\\
+8\\
+8\end{array}\right]" display="block"><semantics><mrow><mrow><mn>4</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mn>4</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>12</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>8</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">4\vec{u}=4\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]=\left[\begin{array}[]{c}12\\
+8\\
+8\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.30)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">e para <math id="SSx1.p2.m2" class="ltx_Math" alttext="10\vec{v}" display="inline"><semantics><mrow><mn>10</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">10\vec{v}</annotation></semantics></math>:</p>
+<div id="Ch2.E31" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E31.m1" class="ltx_Math" alttext="10\vec{v}=10\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]=\left[\begin{array}[]{c}-20\\
+40\\
+90\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mn>10</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mn>10</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>20</mn></mrow></mtd></mtr><mtr><mtd><mn>40</mn></mtd></mtr><mtr><mtd><mn>90</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">10\vec{v}=10\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]=\left[\begin{array}[]{c}-20\\
+40\\
+90\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.31)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Por fim, para resolver <math id="SSx1.p2.m3" class="ltx_Math" alttext="3\vec{u}+2\vec{v}" display="inline"><semantics><mrow><mrow><mn>3</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">3\vec{u}+2\vec{v}</annotation></semantics></math> primeiro temos que multiplicar os escalares pelos vetores <math id="SSx1.p2.m4" class="ltx_Math" alttext="\vec{u}" display="inline"><semantics><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{u}</annotation></semantics></math> e <math id="SSx1.p2.m5" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> separadamente e, por último, somamos o resultado de cada um. Fazendo direto, temos o seguinte:</p>
+<div id="Ch2.E32" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E32.m1" class="ltx_Math" alttext="3\vec{u}+2\vec{v}=3\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]+2\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]=\left[\begin{array}[]{c}9\\
+6\\
+6\end{array}\right]+\left[\begin{array}[]{c}-4\\
+8\\
+18\end{array}\right]=\left[\begin{array}[]{c}5\\
+14\\
+24\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>9</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr><mtr><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>18</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>14</mn></mtd></mtr><mtr><mtd><mn>24</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">3\vec{u}+2\vec{v}=3\left[\begin{array}[]{c}3\\
+2\\
+2\end{array}\right]+2\left[\begin{array}[]{c}-2\\
+4\\
+9\end{array}\right]=\left[\begin{array}[]{c}9\\
+6\\
+6\end{array}\right]+\left[\begin{array}[]{c}-4\\
+8\\
+18\end{array}\right]=\left[\begin{array}[]{c}5\\
+14\\
+24\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.32)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmexeresol2" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 2.3.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol2.p1" class="ltx_para">
+<p class="ltx_p">Escreva o sistema de equações abaixo na sua forma matricial.</p>
+<div id="Ch2.E33" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E33.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{ll}2x_{1}-4x_{2}+6x_{3}=10\\
+-3x_{1}+x_{2}-x_{3}=12\\
+2x_{1}-3x_{2}+8x_{3}=5\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>10</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>=</mo><mn>12</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>=</mo><mn>5</mn></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{ll}2x_{1}-4x_{2}+6x_{3}=10\\
+-3x_{1}+x_{2}-x_{3}=12\\
+2x_{1}-3x_{2}+8x_{3}=5\end{array}\right.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.33)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p3" class="ltx_para">
+<p class="ltx_p">Para colocar um sistema de equações na sua forma matricial, temos que representá-lo como um produto de uma matriz onde se encontram os coeficientes das variáveis e um vetor contendo as variáveis. Temos, assim:</p>
+<div id="Ch2.E34" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E34.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc}2&amp;-4&amp;6\\
+-3&amp;1&amp;-1\\
+2&amp;-3&amp;8\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right]=\left[\begin{array}[]{c}10\\
+12\\
+5\end{array}\right]" display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>8</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>12</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc}2&amp;-4&amp;6\\
+-3&amp;1&amp;-1\\
+2&amp;-3&amp;8\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\end{array}\right]=\left[\begin{array}[]{c}10\\
+12\\
+5\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.34)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Também podemos dizer que <math id="SSx1.p3.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> é a matriz dos coeficientes das variáveis, <math id="SSx1.p3.m2" class="ltx_Math" alttext="\vec{x}" display="inline"><semantics><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{x}</annotation></semantics></math> o vetor das variáveis e <math id="SSx1.p3.m3" class="ltx_Math" alttext="\vec{b}" display="inline"><semantics><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math> o vetor contendo os resultados de cada equação do sistema.
+∎</p>
+</div>
+</div>
+<div id="Thmexeresol3" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 2.3.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol3.p1" class="ltx_para">
+<p class="ltx_p">Escreva o vetor <math id="Thmexeresol3.p1.m1" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> como uma combinação linear dos vetores <math id="Thmexeresol3.p1.m2" class="ltx_Math" alttext="\vec{e_{1}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{1}}</annotation></semantics></math>, <math id="Thmexeresol3.p1.m3" class="ltx_Math" alttext="\vec{e_{2}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{2}}</annotation></semantics></math>, e <math id="Thmexeresol3.p1.m4" class="ltx_Math" alttext="\vec{e_{3}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>3</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{3}}</annotation></semantics></math>.</p>
+<div id="Ch2.E35" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E35.m1" class="ltx_math_unparsed" alttext="\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]\quad,\quad\vec{e_{1}}=\left[\begin{array}[]{c}1\\
+1\\
+1\end{array}\right]\quad,\quad\vec{e_{2}}=\left[\begin{array}[]{c}1\\
+2\\
+4\end{array}\right]\quad,\quad\vec{e_{3}}=\left[\begin{array}[]{c}2\\
+-1\\
+3\end{array}\right]" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mo rspace="1.367em">,</mo><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mo rspace="1.367em">,</mo><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mo rspace="1.367em">,</mo><mover accent="true"><msub><mi>e</mi><mn>3</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]\quad,\quad\vec{e_{1}}=\left[\begin{array}[]{c}1\\
+1\\
+1\end{array}\right]\quad,\quad\vec{e_{2}}=\left[\begin{array}[]{c}1\\
+2\\
+4\end{array}\right]\quad,\quad\vec{e_{3}}=\left[\begin{array}[]{c}2\\
+-1\\
+3\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.35)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p4" class="ltx_para">
+<p class="ltx_p">Podemos representar o vetor <math id="SSx1.p4.m1" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> como uma combinação linear dos outros vetores da seguinte maneira:</p>
+<div id="Ch2.E36" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E36.m1" class="ltx_Math" alttext="\vec{v}=c_{1}\vec{e_{1}}+c_{2}\vec{e_{2}}+c_{3}\vec{e_{3}}" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>3</mn></msub><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=c_{1}\vec{e_{1}}+c_{2}\vec{e_{2}}+c_{3}\vec{e_{3}}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.36)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim, temos:</p>
+<div id="Ch2.E37" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E37.m1" class="ltx_Math" alttext="\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]=c_{1}\left[\begin{array}[]{c}1\\
+1\\
+1\end{array}\right]+c_{2}\left[\begin{array}[]{c}1\\
+2\\
+4\end{array}\right]+c_{3}\left[\begin{array}[]{c}2\\
+-1\\
+3\end{array}\right]" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]=c_{1}\left[\begin{array}[]{c}1\\
+1\\
+1\end{array}\right]+c_{2}\left[\begin{array}[]{c}1\\
+2\\
+4\end{array}\right]+c_{3}\left[\begin{array}[]{c}2\\
+-1\\
+3\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.37)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Usando as propriedades anteriormente estudadas, obtemos:</p>
+<div id="Ch2.E38" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E38.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]=\left[\begin{array}[]{c}c_{1}\\
+c_{1}\\
+c_{1}\end{array}\right]+\left[\begin{array}[]{c}c_{2}\\
+2c_{2}\\
+4c_{2}\end{array}\right]+\left[\begin{array}[]{c}2c_{3}\\
+-c_{3}\\
+3c_{3}\end{array}\right]=\left[\begin{array}[]{c}c_{1}+c_{2}+2c_{3}\\
+c_{1}+2c_{2}-c_{3}\\
+c_{1}+4c_{2}+3c_{3}\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>c</mi><mn>1</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>c</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]=\left[\begin{array}[]{c}c_{1}\\
+c_{1}\\
+c_{1}\end{array}\right]+\left[\begin{array}[]{c}c_{2}\\
+2c_{2}\\
+4c_{2}\end{array}\right]+\left[\begin{array}[]{c}2c_{3}\\
+-c_{3}\\
+3c_{3}\end{array}\right]=\left[\begin{array}[]{c}c_{1}+c_{2}+2c_{3}\\
+c_{1}+2c_{2}-c_{3}\\
+c_{1}+4c_{2}+3c_{3}\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.38)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Observamos com esse último resultado que temos um sistema de equações lineares:</p>
+<div id="Ch2.E39" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E39.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}c_{1}+c_{2}+2c_{3}\\
+c_{1}+2c_{2}-c_{3}\\
+c_{1}+4c_{2}+3c_{3}\end{array}\right]=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><msub><mi>c</mi><mn>2</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow><mo>−</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>3</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}c_{1}+c_{2}+2c_{3}\\
+c_{1}+2c_{2}-c_{3}\\
+c_{1}+4c_{2}+3c_{3}\end{array}\right]=\left[\begin{array}[]{c}1\\
+-2\\
+3\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.39)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Usando o método já estudado para resolver sistemas lineares, achamos os valores para <math id="SSx1.p4.m2" class="ltx_Math" alttext="c_{1}" display="inline"><semantics><msub><mi>c</mi><mn>1</mn></msub><annotation encoding="application/x-tex">c_{1}</annotation></semantics></math>, <math id="SSx1.p4.m3" class="ltx_Math" alttext="c_{2}" display="inline"><semantics><msub><mi>c</mi><mn>2</mn></msub><annotation encoding="application/x-tex">c_{2}</annotation></semantics></math> e <math id="SSx1.p4.m4" class="ltx_Math" alttext="c_{3}" display="inline"><semantics><msub><mi>c</mi><mn>3</mn></msub><annotation encoding="application/x-tex">c_{3}</annotation></semantics></math>. Verifique que <math id="SSx1.p4.m5" class="ltx_Math" alttext="c_{1}=-\frac{3}{2}" display="inline"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>−</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></mrow><annotation encoding="application/x-tex">c_{1}=-\frac{3}{2}</annotation></semantics></math>, <math id="SSx1.p4.m6" class="ltx_Math" alttext="c_{2}=\frac{3}{10}" display="inline"><semantics><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mfrac><mn>3</mn><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">c_{2}=\frac{3}{10}</annotation></semantics></math> e <math id="SSx1.p4.m7" class="ltx_Math" alttext="c_{3}=\frac{11}{10}" display="inline"><semantics><mrow><msub><mi>c</mi><mn>3</mn></msub><mo>=</mo><mfrac><mn>11</mn><mn>10</mn></mfrac></mrow><annotation encoding="application/x-tex">c_{3}=\frac{11}{10}</annotation></semantics></math>. Esses valores são os coeficientes que fazem com que o vetor <math id="SSx1.p4.m8" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> possa ser escrito como uma combinação linear dos demais vetores. Assim, obtemos como resposta:</p>
+<div id="Ch2.E40" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E40.m1" class="ltx_Math" alttext="\vec{v}=-\frac{3}{2}\vec{e_{1}}+\frac{3}{10}\vec{e_{2}}+\frac{11}{10}\vec{e_{3%
+}}\lhd" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mrow></mrow><mo>+</mo><mrow><mfrac><mn>3</mn><mn>10</mn></mfrac><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mfrac><mn>11</mn><mn>10</mn></mfrac><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>3</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo lspace="0.222em">⊲</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=-\frac{3}{2}\vec{e_{1}}+\frac{3}{10}\vec{e_{2}}+\frac{11}{10}\vec{e_{3%
+}}\lhd</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.40)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmexeresol4" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 2.3.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol4.p1" class="ltx_para">
+<p class="ltx_p">Para qual valor de <math id="Thmexeresol4.p1.m1" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> o vetor <math id="Thmexeresol4.p1.m2" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> é uma combinação linear dos vetores <math id="Thmexeresol4.p1.m3" class="ltx_Math" alttext="\vec{e_{1}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{1}}</annotation></semantics></math> e <math id="Thmexeresol4.p1.m4" class="ltx_Math" alttext="\vec{e_{2}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{2}}</annotation></semantics></math> ?</p>
+<div id="Ch2.E41" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E41.m1" class="ltx_math_unparsed" alttext="\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]\quad,\quad\vec{e_{1}}=\left[\begin{array}[]{c}3\\
+0\\
+-2\end{array}\right]\quad,\quad\vec{e_{2}}=\left[\begin{array}[]{c}3\\
+-2\\
+5\end{array}\right]" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mo rspace="1.367em">,</mo><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mo rspace="1.367em">,</mo><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]\quad,\quad\vec{e_{1}}=\left[\begin{array}[]{c}3\\
+0\\
+-2\end{array}\right]\quad,\quad\vec{e_{2}}=\left[\begin{array}[]{c}3\\
+-2\\
+5\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.41)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p5" class="ltx_para">
+<p class="ltx_p">Escrevemos o vetor <math id="SSx1.p5.m1" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> como uma combinação linear dos outros vetores da seguinte maneira:</p>
+<div id="Ch2.E42" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E42.m1" class="ltx_Math" alttext="\vec{v}=c_{1}\vec{e_{1}}+c_{2}\vec{e_{2}}" display="block"><semantics><mrow><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover></mrow></mrow></mrow><annotation encoding="application/x-tex">\vec{v}=c_{1}\vec{e_{1}}+c_{2}\vec{e_{2}}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.42)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Obtemos então:</p>
+<div id="Ch2.E43" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E43.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]=c_{1}\left[\begin{array}[]{c}3\\
+0\\
+-2\end{array}\right]+c_{2}\left[\begin{array}[]{c}3\\
+-2\\
+5\end{array}\right]=\left[\begin{array}[]{c}3c_{1}\\
+0c_{1}\\
+-2c_{1}\end{array}\right]+\left[\begin{array}[]{c}3c_{2}\\
+-2c_{2}\\
+5c_{2}\end{array}\right]=\left[\begin{array}[]{c}3c_{1}+3c_{2}\\
+-2c_{2}\\
+-2c_{1}+5c_{2}\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mn>0</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>+</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]=c_{1}\left[\begin{array}[]{c}3\\
+0\\
+-2\end{array}\right]+c_{2}\left[\begin{array}[]{c}3\\
+-2\\
+5\end{array}\right]=\left[\begin{array}[]{c}3c_{1}\\
+0c_{1}\\
+-2c_{1}\end{array}\right]+\left[\begin{array}[]{c}3c_{2}\\
+-2c_{2}\\
+5c_{2}\end{array}\right]=\left[\begin{array}[]{c}3c_{1}+3c_{2}\\
+-2c_{2}\\
+-2c_{1}+5c_{2}\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.43)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim, temos:</p>
+<div id="Ch2.E44" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E44.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}3c_{1}+3c_{2}\\
+-2c_{2}\\
+-2c_{1}+5c_{2}\end{array}\right]=\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mi>k</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}3c_{1}+3c_{2}\\
+-2c_{2}\\
+-2c_{1}+5c_{2}\end{array}\right]=\left[\begin{array}[]{c}1\\
+-2\\
+k\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.44)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Novamente, temos um sistema de equações lineares para resolver. Verifique que <math id="SSx1.p5.m2" class="ltx_Math" alttext="c_{1}=-\frac{2}{3}" display="inline"><semantics><mrow><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><mrow><mo>−</mo><mfrac><mn>2</mn><mn>3</mn></mfrac></mrow></mrow><annotation encoding="application/x-tex">c_{1}=-\frac{2}{3}</annotation></semantics></math> e <math id="SSx1.p5.m3" class="ltx_Math" alttext="c_{2}=1" display="inline"><semantics><mrow><msub><mi>c</mi><mn>2</mn></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c_{2}=1</annotation></semantics></math>. Por fim, pela equação envolvendo <math id="SSx1.p5.m4" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>:</p>
+<div id="Ch2.E45" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch2.E45.m1" class="ltx_Math" alttext="k=-2c_{1}+5c_{2}=\frac{4}{3}+5=\frac{19}{3}" display="block"><semantics><mrow><mi>k</mi><mo>=</mo><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>c</mi><mn>1</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>c</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mfrac><mn>4</mn><mn>3</mn></mfrac><mo>+</mo><mn>5</mn></mrow><mo>=</mo><mfrac><mn>19</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">k=-2c_{1}+5c_{2}=\frac{4}{3}+5=\frac{19}{3}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(2.45)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Ou seja, o valor de <math id="SSx1.p5.m5" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> que faz com que <math id="SSx1.p5.m6" class="ltx_Math" alttext="\vec{v}" display="inline"><semantics><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{v}</annotation></semantics></math> possa ser representado como uma combinação linear de <math id="SSx1.p5.m7" class="ltx_Math" alttext="\vec{e_{1}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{1}}</annotation></semantics></math> e <math id="SSx1.p5.m8" class="ltx_Math" alttext="\vec{e_{2}}" display="inline"><semantics><mover accent="true"><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{e_{2}}</annotation></semantics></math> é <math id="SSx1.p5.m9" class="ltx_Math" alttext="k=\frac{17}{3}" display="inline"><semantics><mrow><mi>k</mi><mo>=</mo><mfrac><mn>17</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">k=\frac{17}{3}</annotation></semantics></math>.
+∎</p>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch2.S2.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch2.S4.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

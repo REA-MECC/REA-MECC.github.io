@@ -1,0 +1,592 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>11.2 Regressão Linear Simples ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch11.S1.html" title="11.1 Método dos mínimos quadrados ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch11.S3.html" title="11.3 Regressão por função não linear ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch11.S1.html" title="11.1 Método dos mínimos quadrados ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch11.S3.html" title="11.3 Regressão por função não linear ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch11.S4.html" title="11.4 Regressão linear múltipla ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch11.S5.html" title="11.5 Fatoração QR e Mínimos Quadrados ‣ Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="11.1" data-path="Ch11.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch11.S1.html" title="In Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11.1 </span></b>Método dos mínimos quadrados</a></li>
+<li data-level="11.2" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active"><a href="" title="In Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11.2 </span></b>Regressão Linear Simples</a></li>
+<li data-level="11.3" data-path="Ch11.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch11.S3.html" title="In Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11.3 </span></b>Regressão por função não linear</a></li>
+<li data-level="11.4" data-path="Ch11.S4.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch11.S4.html" title="In Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11.4 </span></b>Regressão linear múltipla</a></li>
+<li data-level="11.5" data-path="Ch11.S5.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch11.S5.html" title="In Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11.5 </span></b>Fatoração QR e Mínimos Quadrados</a></li>
+</ol>
+</li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Regressão Linear Simples</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">11.2</span> Regressão Linear Simples</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Vamos apresentar uma aplicação de algumas das técnicas do método de mínimos quadrados à Estatística ou Econometria. Uma <span class="ltx_text ltx_font_bold">regressão linear simples</span> é uma equação, tipicamente da forma</p>
+<div id="Ch11.E21" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E21.m1" class="ltx_Math" alttext="y=a+bx," display="block"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">y=a+bx,</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.21)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">para estimar os valores <math id="p1.m1" class="ltx_Math" alttext="(x,y)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math> apenas conhecendo alguns valores específicos <math id="p1.m2" class="ltx_Math" alttext="(x_{1},y_{1}),(x_{2},y_{2}),\dots," display="inline"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">(x_{1},y_{1}),(x_{2},y_{2}),\dots,</annotation></semantics></math> <math id="p1.m3" class="ltx_Math" alttext="(x_{k},y_{k})" display="inline"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>,</mo><msub><mi>y</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_{k},y_{k})</annotation></semantics></math>. A ideia é tentar capturar como que mudanças na variável independente <math id="p1.m4" class="ltx_Math" alttext="x" display="inline"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> afetam a variável dependente <math id="p1.m5" class="ltx_Math" alttext="y" display="inline"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> (neste caso, supondo que esta dependência é linear).</p>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 11.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<span id="Ch11.footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+            
+          Exemplo adaptado de <a href="https://onlinecourses.science.psu.edu/stat501/node/257" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://onlinecourses.science.psu.edu/stat501/node/257</a></span></span></span>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Com o intuito de analisar se é razoável supor que há um relação linear entre a idade de um motorista e quão longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo <span class="ltx_text ltx_font_italic">apenas alguns</span> destes dados.</p>
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Idade</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Distância (em <math id="Thmex1.p1.m1" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">20</td>
+<td class="ltx_td ltx_align_center ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">590</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">32</td>
+<td class="ltx_td ltx_align_center ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">410</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">41</td>
+<td class="ltx_td ltx_align_center ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">460</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">49</td>
+<td class="ltx_td ltx_align_center ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">380</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">66</td>
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">350</td>
+</tr>
+</table>
+</div>
+<p class="ltx_p">Podemos pensar em <math id="Thmex1.p1.m2" class="ltx_Math" alttext="y" display="inline"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math> como a distância e em <math id="Thmex1.p1.m3" class="ltx_Math" alttext="x" display="inline"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math> como a idade. Gostaríamos de achar uma relação linear da forma</p>
+<div id="Ch11.E22" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E22.m1" class="ltx_Math" alttext="y=a+bx." display="block"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">y=a+bx.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.22)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Desta forma, os dados obtidos implicam que</p>
+<div id="Ch11.E23" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E23.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{ll}a+20b=590\\
+a+32b=410\\
+a+41b=460\\
+a+49b=380\\
+a+66b=350\end{array}\right.\ \ \leftrightsquigarrow\ \ \ \begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\begin{bmatrix}a\\
+b\end{bmatrix}=\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}" display="block"><semantics><mrow><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>20</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>590</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>32</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>410</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>41</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>460</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>49</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>380</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>a</mi><mo>+</mo><mrow><mn>66</mn><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>=</mo><mn>350</mn></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><mspace width="1.2em"></mspace><mo stretchy="false">↭</mo><mspace width="1.8em"></mspace><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>41</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>49</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>590</mn></mtd></mtr><mtr><mtd><mn>410</mn></mtd></mtr><mtr><mtd><mn>460</mn></mtd></mtr><mtr><mtd><mn>380</mn></mtd></mtr><mtr><mtd><mn>350</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{ll}a+20b=590\\
+a+32b=410\\
+a+41b=460\\
+a+49b=380\\
+a+66b=350\end{array}\right.\ \ \leftrightsquigarrow\ \ \ \begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\begin{bmatrix}a\\
+b\end{bmatrix}=\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.23)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma solução de mínimos quadrados. Isto é <span class="ltx_text ltx_font_bold">regressão linear simpes</span>.</p>
+</div>
+<div id="Thmex1.p2" class="ltx_para">
+<p class="ltx_p">Denotando</p>
+<div id="Ch11.E24" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E24.m1" class="ltx_Math" alttext="A=\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\quad\text{e}\quad\vec{b}=\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}" display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>41</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>49</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>590</mn></mtd></mtr><mtr><mtd><mn>410</mn></mtd></mtr><mtr><mtd><mn>460</mn></mtd></mtr><mtr><mtd><mn>380</mn></mtd></mtr><mtr><mtd><mn>350</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\quad\text{e}\quad\vec{b}=\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.24)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">precisamos calcular</p>
+<div id="Ch11.E25" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E25.m1" class="ltx_Math" alttext="A^{T}A=\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+20&amp;32&amp;41&amp;49&amp;66\end{bmatrix}\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}=\begin{bmatrix}5&amp;208\\
+208&amp;9832\\
+\end{bmatrix}" display="block"><semantics><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>20</mn></mtd><mtd><mn>32</mn></mtd><mtd><mn>41</mn></mtd><mtd><mn>49</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>41</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>49</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>5</mn></mtd><mtd><mn>208</mn></mtd></mtr><mtr><mtd><mn>208</mn></mtd><mtd><mn>9832</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">A^{T}A=\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+20&amp;32&amp;41&amp;49&amp;66\end{bmatrix}\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}=\begin{bmatrix}5&amp;208\\
+208&amp;9832\\
+\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.25)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">e</p>
+<div id="Ch11.E26" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E26.m1" class="ltx_Math" alttext="A^{T}\vec{b}=\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+20&amp;32&amp;41&amp;49&amp;66\end{bmatrix}\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}=\begin{bmatrix}2190\\
+85500\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>20</mn></mtd><mtd><mn>32</mn></mtd><mtd><mn>41</mn></mtd><mtd><mn>49</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>590</mn></mtd></mtr><mtr><mtd><mn>410</mn></mtd></mtr><mtr><mtd><mn>460</mn></mtd></mtr><mtr><mtd><mn>380</mn></mtd></mtr><mtr><mtd><mn>350</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2190</mn></mtd></mtr><mtr><mtd><mn>85500</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{T}\vec{b}=\begin{bmatrix}1&amp;1&amp;1&amp;1&amp;1\\
+20&amp;32&amp;41&amp;49&amp;66\end{bmatrix}\begin{bmatrix}590\\
+410\\
+460\\
+380\\
+350\end{bmatrix}=\begin{bmatrix}2190\\
+85500\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.26)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Em seguida, a matriz associada aumentada pode ser reduzida por escalonamento:</p>
+<div id="Ch11.E27" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E27.m1" class="ltx_Math" alttext="[\,A^{T}A\ |\ \vec{b}\,]=\begin{bmatrix}5&amp;208&amp;2190\\
+208&amp;9832&amp;85500\\
+\end{bmatrix}\sim\begin{bmatrix}1&amp;0&amp;468510/737\\
+0&amp;1&amp;-7005/1474\\
+\end{bmatrix}\implies\left\{\begin{array}[]{ll}a\simeq 635.7\\
+b\simeq-4.75\end{array}\right.." display="block"><semantics><mrow><mrow><mrow><mo rspace="0.170em" stretchy="false">[</mo><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo fence="false" lspace="0.878em" rspace="0.878em">|</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>5</mn></mtd><mtd><mn>208</mn></mtd><mtd><mn>2190</mn></mtd></mtr><mtr><mtd><mn>208</mn></mtd><mtd><mn>9832</mn></mtd><mtd><mn>85500</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mn>468510</mn><mo>/</mo><mn>737</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>7005</mn><mo>/</mo><mn>1474</mn></mrow></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">⟹</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>a</mi><mo>≃</mo><mn>635.7</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mi>b</mi><mo>≃</mo><mrow><mo>−</mo><mn>4.75</mn></mrow></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">[\,A^{T}A\ |\ \vec{b}\,]=\begin{bmatrix}5&amp;208&amp;2190\\
+208&amp;9832&amp;85500\\
+\end{bmatrix}\sim\begin{bmatrix}1&amp;0&amp;468510/737\\
+0&amp;1&amp;-7005/1474\\
+\end{bmatrix}\implies\left\{\begin{array}[]{ll}a\simeq 635.7\\
+b\simeq-4.75\end{array}\right..</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.27)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Os números são feios, mas as contas feitas foram as que sempre fizemos ao escalonar uma matriz até sua forma escalonada reduzida.</p>
+</div>
+<div id="Thmex1.p3" class="ltx_para">
+<p class="ltx_p">A conclusão é que a reta de mínimos quadrados que melhor aproxima os nossos dados é a reta</p>
+<div id="Ch11.E28" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E28.m1" class="ltx_Math" alttext="y=a+bx=635.7-4.75x." display="block"><semantics><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mn>635.7</mn><mo>−</mo><mrow><mn>4.75</mn><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">y=a+bx=635.7-4.75x.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.28)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">O erro de mínimos quadrados nesta aproximação (ou norma do resíduo) pode ser calculado como</p>
+<div id="Ch11.E29" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E29.m1" class="ltx_Math" alttext="A\vec{x}=\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\begin{bmatrix}635.7\\
+4.75\\
+\end{bmatrix}\simeq\begin{bmatrix}730.7\\
+787.7\\
+830.45\\
+868.45\\
+949.2\\
+\end{bmatrix}\simeq\operatorname{proj}_{\operatorname{Col}A}\vec{b}\implies%
+\text{ erro }=\|\vec{b}-A\vec{x}\|\simeq 947.3" display="block"><semantics><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>41</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>49</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>66</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>635.7</mn></mtd></mtr><mtr><mtd><mn>4.75</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>≃</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>730.7</mn></mtd></mtr><mtr><mtd><mn>787.7</mn></mtd></mtr><mtr><mtd><mn>830.45</mn></mtd></mtr><mtr><mtd><mn>868.45</mn></mtd></mtr><mtr><mtd><mn>949.2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>≃</mo><mrow><msub><mi>proj</mi><mrow><mi>Col</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow></msub><mo lspace="0.167em">⁡</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">⟹</mo><mtext> erro </mtext><mo>=</mo><mrow><mo stretchy="false">‖</mo><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>−</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo stretchy="false">‖</mo></mrow><mo>≃</mo><mn>947.3</mn></mrow><annotation encoding="application/x-tex">A\vec{x}=\begin{bmatrix}1&amp;20\\
+1&amp;32\\
+1&amp;41\\
+1&amp;49\\
+1&amp;66\\
+\end{bmatrix}\begin{bmatrix}635.7\\
+4.75\\
+\end{bmatrix}\simeq\begin{bmatrix}730.7\\
+787.7\\
+830.45\\
+868.45\\
+949.2\\
+\end{bmatrix}\simeq\operatorname{proj}_{\operatorname{Col}A}\vec{b}\implies%
+\text{ erro }=\|\vec{b}-A\vec{x}\|\simeq 947.3</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.29)</span>
+              
+              
+            
+</div>
+</div>
+<figure id="Thmex1.fig1" class="ltx_figure"><div class="bml-overflow-wrapper"><img src="Semana13/semana13-idade.png" id="Thmex1.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="598" height="282" alt="[Uncaptioned image]"></div>
+</figure>
+<div id="Thmex1.p4" class="ltx_para">
+<p class="ltx_p">Na figura, mostramos um esboço da reta que melhor aproxima os dados deste exemplo<math id="Thmex1.p4.m1" class="ltx_math_unparsed" alttext=".\ \lhd" display="inline"><semantics><mrow><mo rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">.\ \lhd</annotation></semantics></math></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">De uma maneira geral, para encontrar uma <span class="ltx_text ltx_font_bold">reta de melhor ajuste</span> a uma quantidade de pontos (dados coletados de algum problema)</p>
+<div id="Ch11.E30" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E30.m1" class="ltx_Math" alttext="(x_{1},y_{1}),\ (x_{2},y_{2}),\ \dots,(x_{k},y_{k})," display="block"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo rspace="0.767em">,</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo rspace="0.767em">,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>k</mi></msub><mo>,</mo><msub><mi>y</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">(x_{1},y_{1}),\ (x_{2},y_{2}),\ \dots,(x_{k},y_{k}),</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.30)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">devemos procurar pela solução <math id="p2.m1" class="ltx_Math" alttext="(a,b)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(a,b)</annotation></semantics></math> de mínimos quadrados do sistema linear</p>
+<div id="Ch11.E31" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E31.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{rl}a+bx_{1}&amp;\!\!\!\!\!=y_{1}\\
+a+bx_{2}&amp;\!\!\!\!\!=y_{2}\\
+\vdots&amp;\\
+a+bx_{k}&amp;\!\!\!\!\!=y_{k}\\
+\end{array}\right.\quad\leftrightsquigarrow\quad\begin{bmatrix}1&amp;x_{1}\\
+1&amp;x_{2}\\
+\vdots&amp;\vdots\\
+1&amp;x_{k}\\
+\end{bmatrix}\begin{bmatrix}a\\
+b\end{bmatrix}=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{k}\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mi>k</mi></msub></mrow></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><msub><mi>y</mi><mi>k</mi></msub></mrow></mtd></mtr></mtable><mi></mi></mrow><mspace width="1.2em"></mspace><mo stretchy="false">↭</mo><mspace width="1.2em"></mspace><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><msub><mi>x</mi><mi>k</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><msub><mi>y</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>y</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>y</mi><mi>k</mi></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{rl}a+bx_{1}&amp;\!\!\!\!\!=y_{1}\\
+a+bx_{2}&amp;\!\!\!\!\!=y_{2}\\
+\vdots&amp;\\
+a+bx_{k}&amp;\!\!\!\!\!=y_{k}\\
+\end{array}\right.\quad\leftrightsquigarrow\quad\begin{bmatrix}1&amp;x_{1}\\
+1&amp;x_{2}\\
+\vdots&amp;\vdots\\
+1&amp;x_{k}\\
+\end{bmatrix}\begin{bmatrix}a\\
+b\end{bmatrix}=\begin{bmatrix}y_{1}\\
+y_{2}\\
+\vdots\\
+y_{k}\end{bmatrix}.</annotation></semantics></math></span>
+            <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.31)</span>
+            
+            
+          
+</div>
+<p class="ltx_p">Vejamos um outro exemplo:</p>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 11.2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">Encontrar a reta que melhor se ajusta aos pontos do plano</p>
+<div id="Ch11.E32" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E32.m1" class="ltx_Math" alttext="(1,2),\ \ (2,3),\ \ (2,4),\ \ (3,2),\ \ (4,3),\ \ (4,4),\ \ (5,3),\ \ (5,5),\ %
+\ (6,4)." display="block"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>1,2</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>2,3</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>2,4</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>3,2</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>4,3</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>4,4</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>5,3</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>5,5</mn><mo stretchy="false">)</mo></mrow><mo rspace="1.367em">,</mo><mrow><mo stretchy="false">(</mo><mn>6,4</mn><mo stretchy="false">)</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">(1,2),\ \ (2,3),\ \ (2,4),\ \ (3,2),\ \ (4,3),\ \ (4,4),\ \ (5,3),\ \ (5,5),\ %
+\ (6,4).</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.32)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Como vimos acima, podemos considerar</p>
+<div id="Ch11.E33" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E33.m1" class="ltx_Math" alttext="A=\begin{bmatrix}1&amp;1\\
+1&amp;2\\
+1&amp;2\\
+1&amp;3\\
+1&amp;4\\
+1&amp;4\\
+1&amp;5\\
+1&amp;5\\
+1&amp;6\\
+\end{bmatrix}\ \ \text{e}\ \ \vec{b}=\begin{bmatrix}2\\
+3\\
+4\\
+2\\
+3\\
+4\\
+3\\
+5\\
+4\end{bmatrix}" display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>6</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">A=\begin{bmatrix}1&amp;1\\
+1&amp;2\\
+1&amp;2\\
+1&amp;3\\
+1&amp;4\\
+1&amp;4\\
+1&amp;5\\
+1&amp;5\\
+1&amp;6\\
+\end{bmatrix}\ \ \text{e}\ \ \vec{b}=\begin{bmatrix}2\\
+3\\
+4\\
+2\\
+3\\
+4\\
+3\\
+5\\
+4\end{bmatrix}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.33)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Assim,</p>
+<div id="Ch11.E34" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E34.m1" class="ltx_Math" alttext="A^{T}A=\begin{bmatrix}9&amp;32\\
+32&amp;136\end{bmatrix}\ \ \text{e}\ \ A^{T}\vec{b}=\begin{bmatrix}30\\
+114\end{bmatrix}." display="block"><semantics><mrow><mrow><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>9</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>32</mn></mtd><mtd><mn>136</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd><mn>30</mn></mtd></mtr><mtr><mtd><mn>114</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A^{T}A=\begin{bmatrix}9&amp;32\\
+32&amp;136\end{bmatrix}\ \ \text{e}\ \ A^{T}\vec{b}=\begin{bmatrix}30\\
+114\end{bmatrix}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.34)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">A solução de mínimos quadrados, que é a solução de <math id="Thmex2.p1.m1" class="ltx_Math" alttext="A^{T}A\vec{x}=A^{T}\vec{b}" display="inline"><semantics><mrow><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>T</mi></msup><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">A^{T}A\vec{x}=A^{T}\vec{b}</annotation></semantics></math>, é dada por</p>
+<div id="Ch11.E35" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch11.E35.m1" class="ltx_Math" alttext="b=54/25=2.16,\\
+a=33/100=0.33." display="block"><semantics><mrow><mrow><mrow><mi>b</mi><mo>=</mo><mrow><mn>54</mn><mo>/</mo><mn>25</mn></mrow><mo>=</mo><mn>2.16</mn></mrow><mo>,</mo><mrow><mi>a</mi><mo>=</mo><mrow><mn>33</mn><mo>/</mo><mn>100</mn></mrow><mo>=</mo><mn>0.33</mn></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">b=54/25=2.16,\\
+a=33/100=0.33.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(11.35)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">A reta procurada é portanto <math id="Thmex2.p1.m2" class="ltx_Math" alttext="y=0.33x+2.16" display="inline"><semantics><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mn>0.33</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>2.16</mn></mrow></mrow><annotation encoding="application/x-tex">y=0.33x+2.16</annotation></semantics></math>.</p>
+</div>
+<figure id="Thmex2.fig1" class="ltx_figure"><div class="bml-overflow-wrapper"><img src="Semana13/semana13-reta.png" id="Thmex2.g1" class="ltx_graphics ltx_centering ltx_img_landscape" width="299" height="201" alt="[Uncaptioned image]"></div>
+</figure>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch11.S1.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch11.S3.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

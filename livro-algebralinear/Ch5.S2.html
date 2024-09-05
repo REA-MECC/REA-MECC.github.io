@@ -1,0 +1,934 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch5.S1.html" title="5.1 Interpretações de sistemas lineares e de matrizes invertíveis ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch5.S3.html" title="5.3 Exercícios finais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch5.S1.html" title="5.1 Interpretações de sistemas lineares e de matrizes invertíveis ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch5.S3.html" title="5.3 Exercícios finais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a></li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="5.1" data-path="Ch5.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch5.S1.html" title="In Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.1 </span></b>Interpretações de sistemas lineares e de matrizes invertíveis</a></li>
+<li data-level="5.2" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active">
+<a href="" title="In Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.2 </span></b>Espaços vetoriais</a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li data-level="5.2.1" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS1" title="In 5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.2.1 </span></b>Subespaços vetoriais</a></li>
+<li data-level="5.2.2" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS2" title="In 5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.2.2 </span></b>Espaço nulo</a></li>
+<li data-level="5.2.3" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS3" title="In 5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.2.3 </span></b>Espaço coluna</a></li>
+</ol>
+</li>
+<li data-level="5.3" data-path="Ch5.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch5.S3.html" title="In Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5.3 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Espaços vetoriais</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">5.2</span> Espaços vetoriais</h1>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Um espaço vetorial (sobre o conjunto <math id="p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math> de escalares) é um conjunto <math id="p1.m2" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços <math id="p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. A ideia é que vários conjuntos mais abstratos possuem a estrutura parecida com a dos espaços <math id="p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> e esta abordagem permite que façamos uma análise sistemática de todos estes casos.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">De forma mais precisa, um <span class="ltx_text ltx_font_bold">espaço vetorial sobre <math id="p2.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span> é um conjunto <math id="p2.m2" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>, cujos elementos são chamados vetores, equipado com duas operações:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i1.p1" class="ltx_para">​<p class="ltx_p">Soma entre vetores, que satisfaz</p>
+<ol id="I1.i1.I1" class="ltx_enumerate">
+<li id="I1.i1.I0.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span><div id="I1.i1.I0.i1.p1" class="ltx_para">​<p class="ltx_p">Associatividade: <math id="I1.i1.I0.i1.p1.m1" class="ltx_Math" alttext="(u+v)+w=u+(v+w)" display="inline"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mi>w</mi></mrow><mo>=</mo><mrow><mi>u</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">(u+v)+w=u+(v+w)</annotation></semantics></math>, para quaisquer <math id="I1.i1.I0.i1.p1.m2" class="ltx_Math" alttext="u,v,w\in V" display="inline"><semantics><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">u,v,w\in V</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i1.I0.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span><div id="I1.i1.I0.i2.p1" class="ltx_para">​<p class="ltx_p">Elemento neutro: existe o vetor <math id="I1.i1.I0.i2.p1.m1" class="ltx_Math" alttext="0\in V" display="inline"><semantics><mrow><mn>0</mn><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">0\in V</annotation></semantics></math> que satisfaz <math id="I1.i1.I0.i2.p1.m2" class="ltx_Math" alttext="v+0=0+v=v" display="inline"><semantics><mrow><mrow><mi>v</mi><mo>+</mo><mn>0</mn></mrow><mo>=</mo><mrow><mn>0</mn><mo>+</mo><mi>v</mi></mrow><mo>=</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">v+0=0+v=v</annotation></semantics></math>, para qualquer <math id="I1.i1.I0.i2.p1.m3" class="ltx_Math" alttext="v\in V" display="inline"><semantics><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">v\in V</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i1.I0.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">3.</span><div id="I1.i1.I0.i3.p1" class="ltx_para">​<p class="ltx_p">Inverso aditivo: para cada <math id="I1.i1.I0.i3.p1.m1" class="ltx_Math" alttext="v\in V" display="inline"><semantics><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">v\in V</annotation></semantics></math>, existe o inverso <math id="I1.i1.I0.i3.p1.m2" class="ltx_Math" alttext="u=-v\in V" display="inline"><semantics><mrow><mi>u</mi><mo>=</mo><mrow><mo>−</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">u=-v\in V</annotation></semantics></math>, que satisfaz <math id="I1.i1.I0.i3.p1.m3" class="ltx_Math" alttext="v+u=0" display="inline"><semantics><mrow><mrow><mi>v</mi><mo>+</mo><mi>u</mi></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v+u=0</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i1.I0.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">4.</span><div id="I1.i1.I0.i4.p1" class="ltx_para">​<p class="ltx_p">Comutatividade: <math id="I1.i1.I0.i4.p1.m1" class="ltx_Math" alttext="u+v=v+u" display="inline"><semantics><mrow><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mi>u</mi></mrow></mrow><annotation encoding="application/x-tex">u+v=v+u</annotation></semantics></math>, para quaisquer <math id="I1.i1.I0.i4.p1.m2" class="ltx_Math" alttext="u,v\in V" display="inline"><semantics><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">u,v\in V</annotation></semantics></math>;</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i2.p1" class="ltx_para">​<p class="ltx_p">Multiplicação de vetor por escalar, que satisfaz</p>
+<ol id="I1.i2.I1" class="ltx_enumerate">
+<li id="I1.i2.I1.ix1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">5.</span><div id="I1.i2.I1.ix1.p1" class="ltx_para">​<p class="ltx_p">Associatividade da multiplicação por escalar: <math id="I1.i2.I1.ix1.p1.m1" class="ltx_Math" alttext="a\cdot(b\cdot v)=(a\cdot b)\cdot v" display="inline"><semantics><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>b</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>v</mi></mrow></mrow><annotation encoding="application/x-tex">a\cdot(b\cdot v)=(a\cdot b)\cdot v</annotation></semantics></math>, para quaisquer <math id="I1.i2.I1.ix1.p1.m2" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b\in\mathbb{R}</annotation></semantics></math> e qualquer <math id="I1.i2.I1.ix1.p1.m3" class="ltx_Math" alttext="v\in V" display="inline"><semantics><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">v\in V</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i2.I1.ix2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">6.</span><div id="I1.i2.I1.ix2.p1" class="ltx_para">​<p class="ltx_p">Vale que <math id="I1.i2.I1.ix2.p1.m1" class="ltx_Math" alttext="1\cdot v=v" display="inline"><semantics><mrow><mrow><mn>1</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow><mo>=</mo><mi>v</mi></mrow><annotation encoding="application/x-tex">1\cdot v=v</annotation></semantics></math>, ou seja, a unidade dos números reais não altera os vetores de <math id="I1.i2.I1.ix2.p1.m2" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i2.I1.ix3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">7.</span><div id="I1.i2.I1.ix3.p1" class="ltx_para">​<p class="ltx_p">Distributiva de um escalar em relação à soma de vetores: <math id="I1.i2.I1.ix3.p1.m1" class="ltx_Math" alttext="a\cdot(u+v)=a\cdot v+a\cdot u" display="inline"><semantics><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mi>u</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>u</mi></mrow></mrow></mrow><annotation encoding="application/x-tex">a\cdot(u+v)=a\cdot v+a\cdot u</annotation></semantics></math>, para qualquer <math id="I1.i2.I1.ix3.p1.m2" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><semantics><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a\in\mathbb{R}</annotation></semantics></math> e quaisquer <math id="I1.i2.I1.ix3.p1.m3" class="ltx_Math" alttext="u,v\in V" display="inline"><semantics><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">u,v\in V</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I1.i2.I1.ix4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">8.</span><div id="I1.i2.I1.ix4.p1" class="ltx_para">​<p class="ltx_p">Distributiva da soma de escalares em relação a um vetor: <math id="I1.i2.I1.ix4.p1.m1" class="ltx_Math" alttext="(a+b)\cdot v=a\cdot v+b\cdot v" display="inline"><semantics><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mi>b</mi></mrow><mo rspace="0.055em" stretchy="false">)</mo></mrow><mo rspace="0.222em">⋅</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow></mrow></mrow><annotation encoding="application/x-tex">(a+b)\cdot v=a\cdot v+b\cdot v</annotation></semantics></math>, para quaisquer <math id="I1.i2.I1.ix4.p1.m2" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b\in\mathbb{R}</annotation></semantics></math> e qualquer <math id="I1.i2.I1.ix4.p1.m3" class="ltx_Math" alttext="v\in V" display="inline"><semantics><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">v\in V</annotation></semantics></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Naturalmente, <math id="Thmex1.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>, <math id="Thmex1.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>, <math id="Thmex1.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>, …, <math id="Thmex1.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> são espaços vetoriais sobre <math id="Thmex1.p1.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>, já que as propriedades acima foram todas inspiradas nas propriedades válidas para vetores de <math id="Thmex1.p1.m6" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="Thmex2" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex2.p1" class="ltx_para">
+<p class="ltx_p">O conjunto <math id="Thmex2.p1.m1" class="ltx_Math" alttext="M_{m\times n}" display="inline"><semantics><msub><mi>M</mi><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow></msub><annotation encoding="application/x-tex">M_{m\times n}</annotation></semantics></math> de todas as matrizes de ordem <math id="Thmex2.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> é um espaço vetorial, com as operações naturais que já utilizamos anteriormente: Se</p>
+<div id="Ch5.E16" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E16.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\\
+\end{array}\right]\quad\text{e}\quad B=\left[\begin{array}[]{cccc}b_{11}&amp;b_{12%
+}&amp;\cdots&amp;b_{1n}\\
+b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\\
+\end{array}\right]," display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>a</mi><mn>11</mn></msub></mtd><mtd><msub><mi>a</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>a</mi><mn>21</mn></msub></mtd><mtd><msub><mi>a</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mi>B</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>b</mi><mn>11</mn></msub></mtd><mtd><msub><mi>b</mi><mn>12</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>b</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><msub><mi>b</mi><mn>21</mn></msub></mtd><mtd><msub><mi>b</mi><mn>22</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>b</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mtd><mtd><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cccc}a_{11}&amp;a_{12}&amp;\cdots&amp;a_{1n}\\
+a_{21}&amp;a_{22}&amp;\cdots&amp;a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}&amp;a_{m2}&amp;\cdots&amp;a_{mn}\\
+\end{array}\right]\quad\text{e}\quad B=\left[\begin{array}[]{cccc}b_{11}&amp;b_{12%
+}&amp;\cdots&amp;b_{1n}\\
+b_{21}&amp;b_{22}&amp;\cdots&amp;b_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+b_{m1}&amp;b_{m2}&amp;\cdots&amp;b_{mn}\\
+\end{array}\right],</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.16)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">definimos</p>
+<div id="Ch5.E17" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E17.m1" class="ltx_Math" alttext="A+B=\left[\begin{array}[]{cccc}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n%
+}\\
+a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\\
+\end{array}\right]\quad\text{e}\quad k\cdot A=\left[\begin{array}[]{cccc}k%
+\cdot a_{11}&amp;k\cdot a_{12}&amp;\cdots&amp;k\cdot a_{1n}\\
+k\cdot a_{21}&amp;k\cdot a_{22}&amp;\cdots&amp;k\cdot a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+k\cdot a_{m1}&amp;k\cdot a_{m2}&amp;\cdots&amp;k\cdot a_{mn}\\
+\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mi>A</mi><mo>+</mo><mi>B</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><msub><mi>a</mi><mn>11</mn></msub><mo>+</mo><msub><mi>b</mi><mn>11</mn></msub></mrow></mtd><mtd><mrow><msub><mi>a</mi><mn>12</mn></msub><mo>+</mo><msub><mi>b</mi><mn>12</mn></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><msub><mi>a</mi><mn>21</mn></msub><mo>+</mo><msub><mi>b</mi><mn>21</mn></msub></mrow></mtd><mtd><mrow><msub><mi>a</mi><mn>22</mn></msub><mo>+</mo><msub><mi>b</mi><mn>22</mn></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub><mo>+</mo><msub><mi>b</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mn>11</mn></msub></mrow></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mn>12</mn></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mrow><mn>1</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mn>21</mn></msub></mrow></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mn>22</mn></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr><mtr><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd><mtd></mtd><mtd><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>1</mn></mrow></msub></mrow></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mn>2</mn></mrow></msub></mrow></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><msub><mi>a</mi><mrow><mi>m</mi><mo>⁢</mo><mi>n</mi></mrow></msub></mrow></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A+B=\left[\begin{array}[]{cccc}a_{11}+b_{11}&amp;a_{12}+b_{12}&amp;\cdots&amp;a_{1n}+b_{1n%
+}\\
+a_{21}+b_{21}&amp;a_{22}+b_{22}&amp;\cdots&amp;a_{2n}+b_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+a_{m1}+b_{m1}&amp;a_{m2}+b_{m2}&amp;\cdots&amp;a_{mn}+b_{mn}\\
+\end{array}\right]\quad\text{e}\quad k\cdot A=\left[\begin{array}[]{cccc}k%
+\cdot a_{11}&amp;k\cdot a_{12}&amp;\cdots&amp;k\cdot a_{1n}\\
+k\cdot a_{21}&amp;k\cdot a_{22}&amp;\cdots&amp;k\cdot a_{2n}\\
+\vdots&amp;\vdots&amp;&amp;\vdots\\
+k\cdot a_{m1}&amp;k\cdot a_{m2}&amp;\cdots&amp;k\cdot a_{mn}\\
+\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.17)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">É imediato verificar que valem todas as 8 propriedades acima (faça!).</p>
+</div>
+</div>
+<div id="Thmex3" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.3</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex3.p1" class="ltx_para">
+<p class="ltx_p">O conjunto de todas as funções de um intervalo <math id="Thmex3.p1.m1" class="ltx_Math" alttext="I" display="inline"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math> em <math id="Thmex3.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></p>
+<div id="Ch5.E18" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E18.m1" class="ltx_Math" alttext="\mathcal{F}(I;\mathbb{R})=\left\{f:I\to\mathbb{R}\text{fun\c{c}\~{o}es}\right\}." display="block"><semantics><mrow><mrow><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mi>f</mi><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>I</mi><mo stretchy="false">→</mo><mrow><mi>ℝ</mi><mo>⁢</mo><mtext>funções</mtext></mrow></mrow><mo>}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\mathcal{F}(I;\mathbb{R})=\left\{f:I\to\mathbb{R}\text{fun\c{c}\~{o}es}\right\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.18)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">forma um espaço vetorial sobre <math id="Thmex3.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><semantics><mi>ℝ</mi><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math>, com as operações:</p>
+<ul id="I2" class="ltx_itemize">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I2.i1.p1" class="ltx_para">​<p class="ltx_p">Dadas duas funções <math id="I2.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> e <math id="I2.i1.p1.m2" class="ltx_Math" alttext="g" display="inline"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>, a função <math id="I2.i1.p1.m3" class="ltx_Math" alttext="f+g:I\to\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>I</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow><annotation encoding="application/x-tex">f+g:I\to\mathbb{R}</annotation></semantics></math> é definida por</p>
+<div id="Ch5.E19" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E19.m1" class="ltx_Math" alttext="\big{(}f+g\big{)}(x)=f(x)+g(x)." display="block"><semantics><mrow><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>f</mi><mo>+</mo><mi>g</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\big{(}f+g\big{)}(x)=f(x)+g(x).</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.19)</span>
+                    
+                    
+                  
+</div>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I2.i2.p1" class="ltx_para">​<p class="ltx_p">Dada uma função <math id="I2.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math> e um número real <math id="I2.i2.p1.m2" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, a função <math id="I2.i2.p1.m3" class="ltx_Math" alttext="k\cdot f:I\to\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>f</mi></mrow><mo lspace="0.278em" rspace="0.278em">:</mo><mrow><mi>I</mi><mo stretchy="false">→</mo><mi>ℝ</mi></mrow></mrow><annotation encoding="application/x-tex">k\cdot f:I\to\mathbb{R}</annotation></semantics></math> é definida por</p>
+<div id="Ch5.E20" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E20.m1" class="ltx_Math" alttext="\big{(}k\cdot f\big{)}(x)=k\cdot f(x)." display="block"><semantics><mrow><mrow><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>f</mi></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>k</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\big{(}k\cdot f\big{)}(x)=k\cdot f(x).</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.20)</span>
+                    
+                    
+                  
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="p3" class="ltx_para">
+<span class="ltx_ERROR undefined">{Exercise}</span>
+<p class="ltx_p">Justifique que o espaço gerado por dois elementos <math id="p3.m1" class="ltx_Math" alttext="\operatorname{Span}\{\vec{u},\vec{v}\}" display="inline"><semantics><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\operatorname{Span}\{\vec{u},\vec{v}\}</annotation></semantics></math> é um espaço vetorial.</p>
+</div>
+<section id="SS1" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">5.2.1</span> Subespaços vetoriais</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Consideramos <math id="SS1.p1.m1" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> um espaço vetorial e <math id="SS1.p1.m2" class="ltx_Math" alttext="H\subseteq V" display="inline"><semantics><mrow><mi>H</mi><mo>⊆</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">H\subseteq V</annotation></semantics></math> um subconjunto. Nós dizemos que <math id="SS1.p1.m3" class="ltx_Math" alttext="H" display="inline"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> é uma <span class="ltx_text ltx_font_bold">subespaço vetorial de</span> <math id="SS1.p1.m4" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> se, além de ser um subconjunto, <math id="SS1.p1.m5" class="ltx_Math" alttext="H" display="inline"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> é por si só um espaço vetorial.</p>
+</div>
+<div id="SS1.p2" class="ltx_para">
+<p class="ltx_p">Na prática, para decidir se um subconjunto <math id="SS1.p2.m1" class="ltx_Math" alttext="H" display="inline"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> é subespaço de <math id="SS1.p2.m2" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>, não precisamos verificar todas as oito propriedades da definição de espaço vetorial. Temos o seguinte:</p>
+</div>
+<div id="Thmteo1" class="ltx_theorem ltx_theorem_teo">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Teorema 5.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmteo1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Um subconjunto <math id="Thmteo1.p1.m1" class="ltx_Math" alttext="H\subseteq V" display="inline"><semantics><mrow><mi>H</mi><mo>⊆</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">H\subseteq V</annotation></semantics></math> é subespaço de <math id="Thmteo1.p1.m2" class="ltx_Math" alttext="V" display="inline"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math> se, e somente se, as duas propriedades abaixo são verificadas:</span></p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I3.i1.p1" class="ltx_para">​<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="0\in H" display="inline"><semantics><mrow><mn>0</mn><mo>∈</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">0\in H</annotation></semantics></math><span class="ltx_text ltx_font_italic">;</span></p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I3.i2.p1" class="ltx_para">​<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="a\cdot u+b\cdot v\in H" display="inline"><semantics><mrow><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>u</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>v</mi></mrow></mrow><mo>∈</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">a\cdot u+b\cdot v\in H</annotation></semantics></math><span class="ltx_text ltx_font_italic"> para quaisquer </span><math id="I3.i2.p1.m2" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b\in\mathbb{R}</annotation></semantics></math><span class="ltx_text ltx_font_italic"> e quaisquer </span><math id="I3.i2.p1.m3" class="ltx_Math" alttext="u,v\in H" display="inline"><semantics><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">u,v\in H</annotation></semantics></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="Thmex4" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.4</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex4.p1" class="ltx_para">
+<p class="ltx_p">A reta <math id="Thmex4.p1.m1" class="ltx_Math" alttext="H_{1}=\{y=2x\}" display="inline"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">H_{1}=\{y=2x\}</annotation></semantics></math> em <math id="Thmex4.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math> é um subespaço de <math id="Thmex4.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>. Temos que</p>
+<ul id="I4" class="ltx_itemize">
+<li id="I4.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i1.p1" class="ltx_para">​<p class="ltx_p"><math id="I4.i1.p1.m1" class="ltx_Math" alttext="\vec{0}=(0,0)" display="inline"><semantics><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0,0</mn><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{0}=(0,0)</annotation></semantics></math> pertence a reta, pois satisfaz a equação da reta: <math id="I4.i1.p1.m2" class="ltx_Math" alttext="0=2\cdot 0" display="inline"><semantics><mrow><mn>0</mn><mo>=</mo><mrow><mn>2</mn><mo lspace="0.222em" rspace="0.222em">⋅</mo><mn>0</mn></mrow></mrow><annotation encoding="application/x-tex">0=2\cdot 0</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I4.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I4.i2.p1" class="ltx_para">​<p class="ltx_p">se <math id="I4.i2.p1.m1" class="ltx_Math" alttext="(x_{1},y_{1})" display="inline"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_{1},y_{1})</annotation></semantics></math> e <math id="I4.i2.p1.m2" class="ltx_Math" alttext="(x_{2},y_{2})" display="inline"><semantics><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x_{2},y_{2})</annotation></semantics></math> pertencem à reta, vamos verificar que <math id="I4.i2.p1.m3" class="ltx_Math" alttext="(ax_{1}+bx_{2},ay_{1}+by_{2})" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(ax_{1}+bx_{2},ay_{1}+by_{2})</annotation></semantics></math> também pertence:</p>
+<div id="Ch5.E21" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E21.m1" class="ltx_Math" alttext="ay_{1}+by_{2}=a\cdot(2x_{1})+b\cdot(2x_{2})=2(ax_{1}+bx_{2})." display="block"><semantics><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">ay_{1}+by_{2}=a\cdot(2x_{1})+b\cdot(2x_{2})=2(ax_{1}+bx_{2}).</annotation></semantics></math></span>
+                      <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.21)</span>
+                      
+                      
+                    
+</div>
+<p class="ltx_p">Portanto, <math id="I4.i2.p1.m4" class="ltx_Math" alttext="H" display="inline"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> é um subespaço de <math id="I4.i2.p1.m5" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="Thmex5" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.5</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex5.p1" class="ltx_para">
+<p class="ltx_p">A reta <math id="Thmex5.p1.m1" class="ltx_Math" alttext="H_{2}=\{y=2x+3\}" display="inline"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">H_{2}=\{y=2x+3\}</annotation></semantics></math> <span class="ltx_text ltx_framed ltx_framed_underline">não</span> é um subespaço de <math id="Thmex5.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><semantics><msup><mi>ℝ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{2}</annotation></semantics></math>. De fato, <math id="Thmex5.p1.m3" class="ltx_Math" alttext="\vec{0}=(0,0)" display="inline"><semantics><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0,0</mn><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\vec{0}=(0,0)</annotation></semantics></math> não pertence a reta. De um modo geral, as retas que passam pela origem são subespaços e as retas que não passam pela origem não são.</p>
+</div>
+</div>
+<div id="Thmex6" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.6</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex6.p1" class="ltx_para">
+<p class="ltx_p">Mais geralmente, para <math id="Thmex6.p1.m1" class="ltx_Math" alttext="\vec{u},\vec{v}\in\mathbb{R}^{n}" display="inline"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">\vec{u},\vec{v}\in\mathbb{R}^{n}</annotation></semantics></math>, o espaço gerado <math id="Thmex6.p1.m2" class="ltx_Math" alttext="\operatorname{Span}\{\vec{u},\vec{v}\}" display="inline"><semantics><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\operatorname{Span}\{\vec{u},\vec{v}\}</annotation></semantics></math> é um subespaço de <math id="Thmex6.p1.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>. Caso os vetores sejam LI, este espaço pode ser pensado como o plano que contém os vetores <math id="Thmex6.p1.m4" class="ltx_Math" alttext="\vec{u},\vec{v}" display="inline"><semantics><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{u},\vec{v}</annotation></semantics></math> dentro de <math id="Thmex6.p1.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math> (por quê?).</p>
+</div>
+<div id="Thmex6.p2" class="ltx_para">
+<p class="ltx_p">Poderíamos argumentar que a reta do Exemplo <a href="#Thmex4" title="Exemplo 5.2.4. ‣ 5.2.1 Subespaços vetoriais ‣ 5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2.4</span></a> é um subespaço, pois todos os pontos da reta satisfazem:</p>
+<div id="Ch5.E22" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E22.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}x\\
+y\\
+\end{array}\right]=\left[\begin{array}[]{c}x\\
+2x\\
+\end{array}\right]=x\cdot\left[\begin{array}[]{c}1\\
+2\\
+\end{array}\right]," display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}x\\
+y\\
+\end{array}\right]=\left[\begin{array}[]{c}x\\
+2x\\
+\end{array}\right]=x\cdot\left[\begin{array}[]{c}1\\
+2\\
+\end{array}\right],</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.22)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">isto é, <math id="Thmex6.p2.m1" class="ltx_Math" alttext="H=\operatorname{Span}\left\{\left[\begin{array}[]{c}1\\
+2\\
+\end{array}\right]\right\}" display="inline"><semantics><mrow><mi>H</mi><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mo>[</mo><mtable rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">H=\operatorname{Span}\left\{\left[\begin{array}[]{c}1\\
+2\\
+\end{array}\right]\right\}</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="Thmex7" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.7</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex7.p1" class="ltx_para">
+<p class="ltx_p">Um plano que passa pela origem <math id="Thmex7.p1.m1" class="ltx_Math" alttext="2x-y+3z=0" display="inline"><semantics><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">2x-y+3z=0</annotation></semantics></math> é um subespaço de <math id="Thmex7.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><semantics><msup><mi>ℝ</mi><mn>3</mn></msup><annotation encoding="application/x-tex">\mathbb{R}^{3}</annotation></semantics></math>, pois podemos escrever pontos do plano como</p>
+<div id="Ch5.E23" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E23.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}x\\
+y\\
+z\\
+\end{array}\right]=\left[\begin{array}[]{c}x\\
+2x+3z\\
+z\\
+\end{array}\right]=x\cdot\left[\begin{array}[]{c}1\\
+2\\
+0\\
+\end{array}\right]+z\cdot\left[\begin{array}[]{c}0\\
+3\\
+1\\
+\end{array}\right]," display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mi>y</mi></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mi>x</mi></mtd></mtr><mtr><mtd><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow></mrow></mtd></mtr><mtr><mtd><mi>z</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><mi>x</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><mi>z</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}x\\
+y\\
+z\\
+\end{array}\right]=\left[\begin{array}[]{c}x\\
+2x+3z\\
+z\\
+\end{array}\right]=x\cdot\left[\begin{array}[]{c}1\\
+2\\
+0\\
+\end{array}\right]+z\cdot\left[\begin{array}[]{c}0\\
+3\\
+1\\
+\end{array}\right],</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.23)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">isto é,</p>
+<div id="Ch5.E24" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E24.m1" class="ltx_Math" alttext="H=\operatorname{Span}\left\{\left[\begin{array}[]{c}1\\
+2\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}0\\
+3\\
+1\\
+\end{array}\right]\right\}" display="block"><semantics><mrow><mi>H</mi><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow></mrow></mrow><annotation encoding="application/x-tex">H=\operatorname{Span}\left\{\left[\begin{array}[]{c}1\\
+2\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}0\\
+3\\
+1\\
+\end{array}\right]\right\}</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.24)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Por outro lado, um plano que não passa pela origem, eg, <math id="Thmex7.p1.m3" class="ltx_Math" alttext="2x-y+3z=1" display="inline"><semantics><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow><mo>−</mo><mi>y</mi></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2x-y+3z=1</annotation></semantics></math>, não pode ser um subespaço, pois <math id="Thmex7.p1.m4" class="ltx_Math" alttext="\vec{0}\not\in H" display="inline"><semantics><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>∉</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">\vec{0}\not\in H</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="Thmex8" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.8</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex8.p1" class="ltx_para">
+<p class="ltx_p">O conjunto <math id="Thmex8.p1.m1" class="ltx_Math" alttext="\mathcal{P}(\mathbb{R})" display="inline"><semantics><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}(\mathbb{R})</annotation></semantics></math> das funções polinomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo <a href="#Thmex3" title="Exemplo 5.2.3. ‣ 5.2 Espaços vetoriais ‣ Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5.2.3</span></a>. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios</p>
+<div id="Ch5.E25" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E25.m1" class="ltx_Math" alttext="p(x)=a_{n}x^{n}+\cdots a_{2}x^{2}+a_{1}x+a_{0}\quad\text{e}\quad q(x)=b_{m}x^{%
+m}+\cdots b_{2}x^{2}+b_{1}x+b_{0}," display="block"><semantics><mrow><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>n</mi></msup></mrow><mo>+</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub></mrow><mspace width="1.2em"></mspace><mtext>e</mtext></mrow></mrow><mspace width="1.2em"></mspace><mrow><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>b</mi><mi>m</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>m</mi></msup></mrow><mo>+</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>b</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><msub><mi>b</mi><mn>0</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">p(x)=a_{n}x^{n}+\cdots a_{2}x^{2}+a_{1}x+a_{0}\quad\text{e}\quad q(x)=b_{m}x^{%
+m}+\cdots b_{2}x^{2}+b_{1}x+b_{0},</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.25)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">sabemos que <math id="Thmex8.p1.m2" class="ltx_Math" alttext="a\cdot p+b\cdot q" display="inline"><semantics><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>p</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>q</mi></mrow></mrow><annotation encoding="application/x-tex">a\cdot p+b\cdot q</annotation></semantics></math> vai ser um polinômio cujo grau é no máximo o maior dos valores <math id="Thmex8.p1.m3" class="ltx_Math" alttext="m" display="inline"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math> ou <math id="Thmex8.p1.m4" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.</p>
+</div>
+</div>
+<div id="SS1.p3" class="ltx_para">
+<span class="ltx_ERROR undefined">{Exercise}</span>
+<p class="ltx_p">Considere o conjunto</p>
+<div id="Ch5.E26" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E26.m1" class="ltx_Math" alttext="\mathcal{P}_{3}(\mathbb{R})=\{p(x)=a_{3}x^{3}+\cdots a_{2}x^{2}+a_{1}x+a_{0}%
+\text{ tais que }a_{0},a_{1},a_{2},a_{3}\in\mathbb{R}\}" display="block"><semantics><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>3</mn></msup></mrow><mo>+</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>0</mn></msub><mo>⁢</mo><mtext> tais que </mtext><mo>⁢</mo><msub><mi>a</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub></mrow></mrow><mo>,</mo><mrow><msub><mi>a</mi><mn>3</mn></msub><mo>∈</mo><mi>ℝ</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}_{3}(\mathbb{R})=\{p(x)=a_{3}x^{3}+\cdots a_{2}x^{2}+a_{1}x+a_{0}%
+\text{ tais que }a_{0},a_{1},a_{2},a_{3}\in\mathbb{R}\}</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.26)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">o conjunto de todos os polinômios de grau 3. Mostre que:</p>
+<ol id="I5" class="ltx_enumerate">
+<li id="I5.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">1.</span><div id="I5.i1.p1" class="ltx_para">​<p class="ltx_p"><math id="I5.i1.p1.m1" class="ltx_Math" alttext="\mathcal{P}_{3}(\mathbb{R})" display="inline"><semantics><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}_{3}(\mathbb{R})</annotation></semantics></math> é um subespaço de <math id="I5.i1.p1.m2" class="ltx_Math" alttext="\mathcal{P}(\mathbb{R})" display="inline"><semantics><mrow><mi class="ltx_font_mathcaligraphic">𝒫</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}(\mathbb{R})</annotation></semantics></math>;</p>
+</div>
+</li>
+<li id="I5.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">2.</span><div id="I5.i2.p1" class="ltx_para">​<p class="ltx_p"><math id="I5.i2.p1.m1" class="ltx_Math" alttext="\mathcal{P}_{3}(\mathbb{R})" display="inline"><semantics><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mn>3</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}_{3}(\mathbb{R})</annotation></semantics></math> é um subespaço de <math id="I5.i2.p1.m2" class="ltx_Math" alttext="\mathcal{F}(I;\mathbb{R})" display="inline"><semantics><mrow><mi class="ltx_font_mathcaligraphic">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>;</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{F}(I;\mathbb{R})</annotation></semantics></math>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">É possível generalizar estas conclusões para o conjunto <math id="SS1.p3.m1" class="ltx_Math" alttext="\mathcal{P}_{n}(\mathbb{R})" display="inline"><semantics><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒫</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><annotation encoding="application/x-tex">\mathcal{P}_{n}(\mathbb{R})</annotation></semantics></math> dos polinômios de grau <math id="SS1.p3.m2" class="ltx_Math" alttext="n" display="inline"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>?</p>
+</div>
+</div>
+</section>
+<section id="SS2" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">5.2.2</span> Espaço nulo</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">O <span class="ltx_text ltx_font_bold">espaço nulo</span> de uma matriz <math id="SS2.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> de ordem <math id="SS2.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> é o conjunto definido por</p>
+<div id="Ch5.E27" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E27.m1" class="ltx_Math" alttext="\operatorname{Nul}A=\big{\{}\vec{x}\in\mathbb{R}^{n}\,|\,A\vec{x}=\vec{0}\big{%
+\}}." display="block"><semantics><mrow><mrow><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo maxsize="120%" minsize="120%">{</mo><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo lspace="0em" rspace="0.170em">|</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow><mo maxsize="120%" minsize="120%">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\big{\{}\vec{x}\in\mathbb{R}^{n}\,|\,A\vec{x}=\vec{0}\big{%
+\}}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.27)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Para verificar que <math id="SS2.p1.m3" class="ltx_Math" alttext="\operatorname{Nul}A" display="inline"><semantics><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> é um subespaço de <math id="SS2.p1.m4" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>, consideramos <math id="SS2.p1.m5" class="ltx_Math" alttext="\vec{u},\vec{v}\in\operatorname{Nul}A" display="inline"><semantics><mrow><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow><mo>∈</mo><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow></mrow><annotation encoding="application/x-tex">\vec{u},\vec{v}\in\operatorname{Nul}A</annotation></semantics></math> e <math id="SS2.p1.m6" class="ltx_Math" alttext="a,b\in\mathbb{R}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><mo>∈</mo><mi>ℝ</mi></mrow><annotation encoding="application/x-tex">a,b\in\mathbb{R}</annotation></semantics></math>. Queremos ver que <math id="SS2.p1.m7" class="ltx_Math" alttext="a\vec{u}+b\vec{v}" display="inline"><semantics><mrow><mrow><mi>a</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">a\vec{u}+b\vec{v}</annotation></semantics></math> também pertence a <math id="SS2.p1.m8" class="ltx_Math" alttext="\operatorname{Nul}A" display="inline"><semantics><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math>: Pela linearidade do produto de matrizes, temos</p>
+<div id="Ch5.E28" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E28.m1" class="ltx_Math" alttext="A(a\vec{u}+b\vec{v})=a\cdot A\vec{u}+b\cdot A\vec{v}=a\cdot\vec{0}+b\cdot\vec{%
+0}=\vec{0}." display="block"><semantics><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>A</mi></mrow><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mi>A</mi></mrow><mo>⁢</mo><mover accent="true"><mi>v</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow><mo>+</mo><mrow><mi>b</mi><mo lspace="0.222em" rspace="0.222em">⋅</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow></mrow><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A(a\vec{u}+b\vec{v})=a\cdot A\vec{u}+b\cdot A\vec{v}=a\cdot\vec{0}+b\cdot\vec{%
+0}=\vec{0}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.28)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Portanto, como também <math id="SS2.p1.m9" class="ltx_Math" alttext="\vec{0}\in\operatorname{Nul}A" display="inline"><semantics><mrow><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover><mo>∈</mo><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow></mrow><annotation encoding="application/x-tex">\vec{0}\in\operatorname{Nul}A</annotation></semantics></math>, concluímos que <math id="SS2.p1.m10" class="ltx_Math" alttext="\operatorname{Nul}A" display="inline"><semantics><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> é subespaço de <math id="SS2.p1.m11" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><semantics><msup><mi>ℝ</mi><mi>n</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{n}</annotation></semantics></math>.</p>
+</div>
+<div id="Thmex9" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 5.2.9</span></span><span class="ltx_text ltx_font_bold"> </span>(Retirado do David C. Lay)<span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex9.p1" class="ltx_para">
+<p class="ltx_p">Encontrar um conjunto gerador para o espaço nulo da matriz</p>
+<div id="Ch5.E29" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E29.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>6</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>5</mn></mtd><mtd><mn>8</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.29)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Nós queremos determinar as soluções do sistema linear homogêneo</p>
+<div id="Ch5.E30" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E30.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=\left[\begin{array}[]{c}0\\
+0\\
+0\\
+\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>6</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>5</mn></mtd><mtd><mn>8</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>4</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>5</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=\left[\begin{array}[]{c}0\\
+0\\
+0\\
+\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.30)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Poderíamos escrever a matriz associada aumentada e escalonar, mas como este é um sistema homogêneo, não faz diferença escrevermos a última coluna com os zeros ou não (nenhuma operação elementar fará com que desapareçam os zeros). Logo, vamos obter a forma escalonada reduzida da matriz <math id="Thmex9.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> (contas como exercício):</p>
+<div id="Ch5.E31" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E31.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]\sim\left[\begin{array}[]{ccccc}1&amp;-2&amp;0&amp;-1&amp;3\\
+0&amp;0&amp;1&amp;2&amp;-2\\
+0&amp;0&amp;0&amp;0&amp;0\\
+\end{array}\right]\sim\left\{\begin{array}[]{ll}x_{1}-2x_{2}-x_{4}+3x_{5}=0\\
+x_{3}+2x_{4}-2x_{5}=0\\
+x_{2},x_{4},x_{5}\hbox{ livres.}\end{array}\right." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>6</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>2</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mn>5</mn></mtd><mtd><mn>8</mn></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>∼</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>−</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>4</mn></msub><mo>,</mo><mrow><msub><mi>x</mi><mn>5</mn></msub><mo>⁢</mo><mtext> livres.</mtext></mrow></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc}-3&amp;6&amp;-1&amp;1&amp;-7\\
+1&amp;-2&amp;2&amp;3&amp;-1\\
+2&amp;-4&amp;5&amp;8&amp;-4\\
+\end{array}\right]\sim\left[\begin{array}[]{ccccc}1&amp;-2&amp;0&amp;-1&amp;3\\
+0&amp;0&amp;1&amp;2&amp;-2\\
+0&amp;0&amp;0&amp;0&amp;0\\
+\end{array}\right]\sim\left\{\begin{array}[]{ll}x_{1}-2x_{2}-x_{4}+3x_{5}=0\\
+x_{3}+2x_{4}-2x_{5}=0\\
+x_{2},x_{4},x_{5}\hbox{ livres.}\end{array}\right.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.31)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim, podemos escrever qualquer vetor de <math id="Thmex9.p1.m2" class="ltx_Math" alttext="\operatorname{Nul}A" display="inline"><semantics><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math> como</p>
+<div id="Ch5.E32" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E32.m1" class="ltx_Math" alttext="\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=\left[\begin{array}[]{c}2x_{2}+x_{4}-3x_{5}\\
+x_{2}\\
+-2x_{4}+2x_{5}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=x_{2}\left[\begin{array}[]{c}2\\
+1\\
+0\\
+0\\
+0\\
+\end{array}\right]+x_{4}\left[\begin{array}[]{c}1\\
+0\\
+-2\\
+1\\
+0\\
+\end{array}\right]+x_{5}\left[\begin{array}[]{c}-3\\
+0\\
+2\\
+0\\
+1\\
+\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><msub><mi>x</mi><mn>1</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>3</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>4</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>5</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo>+</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>2</mn></msub></mtd></mtr><mtr><mtd><mrow><mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>4</mn></msub></mtd></mtr><mtr><mtd><msub><mi>x</mi><mn>5</mn></msub></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>4</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>5</mn></msub><mo>⁢</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{c}x_{1}\\
+x_{2}\\
+x_{3}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=\left[\begin{array}[]{c}2x_{2}+x_{4}-3x_{5}\\
+x_{2}\\
+-2x_{4}+2x_{5}\\
+x_{4}\\
+x_{5}\\
+\end{array}\right]=x_{2}\left[\begin{array}[]{c}2\\
+1\\
+0\\
+0\\
+0\\
+\end{array}\right]+x_{4}\left[\begin{array}[]{c}1\\
+0\\
+-2\\
+1\\
+0\\
+\end{array}\right]+x_{5}\left[\begin{array}[]{c}-3\\
+0\\
+2\\
+0\\
+1\\
+\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.32)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Isto significa que</p>
+<div id="Ch5.E33" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E33.m1" class="ltx_Math" alttext="\operatorname{Nul}A=\operatorname{Span}\left\{\left[\begin{array}[]{c}2\\
+1\\
+0\\
+0\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}1\\
+0\\
+-2\\
+1\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}-3\\
+0\\
+2\\
+0\\
+1\\
+\end{array}\right]\right\}.\ \lhd" display="block"><semantics><mrow><mrow><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo>{</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>}</mo></mrow></mrow></mrow><mo lspace="0em" rspace="0.322em">.</mo><mo>⊲</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\operatorname{Span}\left\{\left[\begin{array}[]{c}2\\
+1\\
+0\\
+0\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}1\\
+0\\
+-2\\
+1\\
+0\\
+\end{array}\right],\left[\begin{array}[]{c}-3\\
+0\\
+2\\
+0\\
+1\\
+\end{array}\right]\right\}.\ \lhd</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.33)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">Uma das importâncias teóricas do espaço nulo é</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Proposição 5.2.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Seja <math id="Thmprop1.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> uma matriz <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>. Então a aplicação linear <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="\vec{x}\mapsto A\vec{x}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">↦</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\vec{x}\mapsto A\vec{x}</annotation></semantics></math> é injetora se, e somente se, <math id="Thmprop1.p1.m4" class="ltx_Math" alttext="\operatorname{Nul}A=\{0\}." display="inline"><semantics><mrow><mrow><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A=\{0\}.</annotation></semantics></math></span></p>
+</div>
+</div>
+<div id="SS2.p3" class="ltx_para">
+<p class="ltx_p">Em outras palavras, caso o sistema linear homogêneo <math id="SS2.p3.m1" class="ltx_Math" alttext="A\vec{x}=\vec{0}" display="inline"><semantics><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mn>0</mn><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">A\vec{x}=\vec{0}</annotation></semantics></math> possua somente a solução trivial, podemos inferir que <math id="SS2.p3.m2" class="ltx_Math" alttext="A\vec{x}=\vec{b}" display="inline"><semantics><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><annotation encoding="application/x-tex">A\vec{x}=\vec{b}</annotation></semantics></math> possui no máximo uma solução, para qualquer <math id="SS2.p3.m3" class="ltx_Math" alttext="\vec{b}" display="inline"><semantics><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>!</p>
+</div>
+</div>
+</section>
+<section id="SS3" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">5.2.3</span> Espaço coluna</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">O <span class="ltx_text ltx_font_bold">espaço coluna</span> de uma matriz <math id="SS3.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> de ordem <math id="SS3.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math> é o espaço gerado pelas colunas de <math id="SS3.p1.m3" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>:</p>
+<div id="Ch5.E34" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E34.m1" class="ltx_Math" alttext="A=\left[\begin{array}[]{cccc}|&amp;|&amp;&amp;|\\
+\vec{a}_{1}&amp;\vec{a}_{2}&amp;\cdots&amp;\vec{a}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{array}\right]\rightsquigarrow\operatorname{Col}A=\operatorname{Span}\{%
+\vec{a}_{1},\vec{a}_{2},\dots,\vec{a}_{n}\}." display="block"><semantics><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr><mtr><mtd><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mtd><mtd><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mtd><mtd><mi mathvariant="normal">⋯</mi></mtd><mtd><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mtd></mtr><mtr><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd><mtd></mtd><mtd><mo fence="false" stretchy="false">|</mo></mtd></mtr></mtable><mo>]</mo></mrow><mo stretchy="false">↝</mo><mrow><mi>Col</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mi>Span</mi><mo>⁡</mo><mrow><mo stretchy="false">{</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub><mo>,</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">A=\left[\begin{array}[]{cccc}|&amp;|&amp;&amp;|\\
+\vec{a}_{1}&amp;\vec{a}_{2}&amp;\cdots&amp;\vec{a}_{n}\\
+|&amp;|&amp;&amp;|\\
+\end{array}\right]\rightsquigarrow\operatorname{Col}A=\operatorname{Span}\{%
+\vec{a}_{1},\vec{a}_{2},\dots,\vec{a}_{n}\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.34)</span>
+              
+              
+            
+</div>
+</div>
+<div id="SS3.p2" class="ltx_para">
+<span class="ltx_ERROR undefined">{Exercise}</span>
+<p class="ltx_p">Verificar que <math id="SS3.p2.m1" class="ltx_Math" alttext="\operatorname{Col}A" display="inline"><semantics><mrow><mi>Col</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Col}A</annotation></semantics></math> é um subespaço de <math id="SS3.p2.m2" class="ltx_Math" alttext="\mathbb{R}^{m}" display="inline"><semantics><msup><mi>ℝ</mi><mi>m</mi></msup><annotation encoding="application/x-tex">\mathbb{R}^{m}</annotation></semantics></math>.</p>
+</div>
+<div id="SS3.p3" class="ltx_para">
+<p class="ltx_p">Lembrando ainda que</p>
+<div id="Ch5.E35" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E35.m1" class="ltx_Math" alttext="x_{1}\vec{a}_{1}+x_{2}\vec{a}_{2}+\cdots+x_{n}\vec{a}_{n}=\vec{b}\iff A\vec{x}%
+=\vec{b}," display="block"><semantics><mrow><mrow><mrow><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>⁢</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mn>2</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>⁢</mo><msub><mover accent="true"><mi>a</mi><mo stretchy="false">→</mo></mover><mi>n</mi></msub></mrow></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">⇔</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">x_{1}\vec{a}_{1}+x_{2}\vec{a}_{2}+\cdots+x_{n}\vec{a}_{n}=\vec{b}\iff A\vec{x}%
+=\vec{b},</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.35)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">podemos reescrever a definição como</p>
+<div id="Ch5.E36" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch5.E36.m1" class="ltx_Math" alttext="\operatorname{Col}A=\{\vec{b}\in\mathbb{R}^{m}\ |\ \text{existe }\vec{x}\text{%
+ tal que }\vec{b}=A\vec{x}\}." display="block"><semantics><mrow><mrow><mrow><mi>Col</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><mo lspace="0em" rspace="0.600em">|</mo><mrow><mrow><mtext>existe </mtext><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo>⁢</mo><mtext> tal que </mtext><mo>⁢</mo><mover accent="true"><mi>b</mi><mo stretchy="false">→</mo></mover></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\operatorname{Col}A=\{\vec{b}\in\mathbb{R}^{m}\ |\ \text{existe }\vec{x}\text{%
+ tal que }\vec{b}=A\vec{x}\}.</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(5.36)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">O espaço coluna trata portanto de vetores na imagem da aplicação linear. Temos:</p>
+</div>
+<div id="Thmprop2" class="ltx_theorem ltx_theorem_prop">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Proposição 5.2.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmprop2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Seja <math id="Thmprop2.p1.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math> uma matriz <math id="Thmprop2.p1.m2" class="ltx_Math" alttext="m\times n" display="inline"><semantics><mrow><mi>m</mi><mo lspace="0.222em" rspace="0.222em">×</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">m\times n</annotation></semantics></math>. Então a aplicação linear <math id="Thmprop2.p1.m3" class="ltx_Math" alttext="\vec{x}\mapsto A\vec{x}" display="inline"><semantics><mrow><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">↦</mo><mrow><mi>A</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo stretchy="false">→</mo></mover></mrow></mrow><annotation encoding="application/x-tex">\vec{x}\mapsto A\vec{x}</annotation></semantics></math> é sobrejetora se, e somente se, <math id="Thmprop2.p1.m4" class="ltx_Math" alttext="\operatorname{Col}A=\mathbb{R}^{m}." display="inline"><semantics><mrow><mrow><mrow><mi>Col</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><mo>=</mo><msup><mi>ℝ</mi><mi>m</mi></msup></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\operatorname{Col}A=\mathbb{R}^{m}.</annotation></semantics></math></span></p>
+</div>
+</div>
+<div id="SS3.p4" class="ltx_para">
+<p class="ltx_p">A definição do espaço coluna já deixa claro um conjunto gerador (as colunas de <math id="SS3.p4.m1" class="ltx_Math" alttext="A" display="inline"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>!). Não precisamos fazer cálculos como fizemos para encontrar geradores para <math id="SS3.p4.m2" class="ltx_Math" alttext="\operatorname{Nul}A" display="inline"><semantics><mrow><mi>Nul</mi><mo lspace="0.167em">⁡</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\operatorname{Nul}A</annotation></semantics></math>.</p>
+</div>
+</div>
+</section>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch5.S1.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch5.S3.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>

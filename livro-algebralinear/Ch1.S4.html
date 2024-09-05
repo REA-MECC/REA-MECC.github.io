@@ -1,0 +1,676 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo</title>
+<!--Generated on Mon Aug 26 18:18:04 2024 by LaTeXML (version 0.8.8) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on 26 de agosto de 2024.-->
+<style>:root { --bml-ltx-font-size: 12; }</style>
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/style.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-table.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-search.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-bookdown.css" type="text/css">
+<link rel="stylesheet" href="bookml/gitbook/css/plugin-fontsettings.css" type="text/css">
+<link rel="stylesheet" href="ltx-book.css" type="text/css">
+<link rel="stylesheet" href="ltx-listings.css" type="text/css">
+<link rel="stylesheet" href="ltx-ulem.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6"></script>
+<link rel="up" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="up up" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="start" href="index.html" title="Álgebra Linear Um Livro Colaborativo">
+<link rel="prev" href="Ch1.S3.html" title="1.3 Algoritmo de escalonamento ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="next" href="Ch1.S5.html" title="1.5 Exercícios finais ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch1.S1.html" title="1.1 Sistemas Lineares ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch1.S2.html" title="1.2 Formas escalonadas e formas escalonadas reduzidas ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch1.S3.html" title="1.3 Algoritmo de escalonamento ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="section" href="Ch1.S5.html" title="1.5 Exercícios finais ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx1.html" title="Organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx2.html" title="Colaboradores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx3.html" title="Licença ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx4.html" title="Nota dos organizadores ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Chx5.html" title="Prefácio ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch1.html" title="Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch2.html" title="Capítulo 2 Semana 2 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch3.html" title="Capítulo 3 Semana 3 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch4.html" title="Capítulo 4 Semana 4 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch5.html" title="Capítulo 5 Semana 5 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch6.html" title="Capítulo 6 Semanas 6 e 7 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch7.html" title="Capítulo 7 Semana 9 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch8.html" title="Capítulo 8 Semana 10 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch9.html" title="Capítulo 9 Semana 11 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch10.html" title="Capítulo 10 Semana 12 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch11.html" title="Capítulo 11 Semana 13 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="chapter" href="Ch12.html" title="Capítulo 12 Semanas 14 e 15 ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="bibliography" href="bib.html" title="Referências ‣ Álgebra Linear Um Livro Colaborativo">
+<link rel="index" href="idx.html" title="Índice Remissivo ‣ Álgebra Linear Um Livro Colaborativo">
+</head>
+<body>
+<div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+<a href="#bml-main-content" tabindex="0" class="bml-skip-to-content">Skip to content.</a>
+<div class="book-summary"><nav class="ltx_page_navbar">
+<ul class="ltx_toclist summary">
+<li>
+<a href="index.html" title="" class="ltx_ref" rel="start"><span class="ltx_text" style="font-size:110%;">Álgebra Linear<span class="ltx_text"> </span></span>Um Livro Colaborativo</a>
+</li>
+<li class="divider">
+<li data-level="" data-path="Chx1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Organizadores</a></li>
+<li data-level="" data-path="Chx2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Colaboradores</a></li>
+<li data-level="" data-path="Chx3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Licença</a></li>
+<li data-level="" data-path="Chx4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Nota dos organizadores</a></li>
+<li data-level="" data-path="Chx5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Chx5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Prefácio</a></li>
+<li data-level="1" data-path="Ch1.html" class="ltx_tocentry ltx_tocentry_chapter  chapter ">
+<a href="Ch1.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1 </span></b>Semana 1</a>
+<ol class="ltx_toclist ltx_toclist_chapter">
+<li data-level="1.1" data-path="Ch1.S1.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch1.S1.html" title="In Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.1 </span></b>Sistemas Lineares</a></li>
+<li data-level="1.2" data-path="Ch1.S2.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch1.S2.html" title="In Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.2 </span></b>Formas escalonadas e formas escalonadas reduzidas</a></li>
+<li data-level="1.3" data-path="Ch1.S3.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch1.S3.html" title="In Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.3 </span></b>Algoritmo de escalonamento</a></li>
+<li data-level="1.4" data-path="" class="ltx_tocentry ltx_tocentry_section ltx_ref_self  chapter active">
+<a href="" title="In Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.4 </span></b>Existência e unicidade de solução</a>
+<ol class="ltx_toclist ltx_toclist_section">
+<li data-level="1.4.1" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS1" title="In 1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.4.1 </span></b>Sistemas que possuem apenas uma solução</a></li>
+<li data-level="1.4.2" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS2" title="In 1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.4.2 </span></b>Sistemas impossíveis ou inconsistentes</a></li>
+<li data-level="1.4.3" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS3" title="In 1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.4.3 </span></b>Sistemas com mais de uma solução</a></li>
+<li data-level="1.4.4" data-path="" class="ltx_tocentry ltx_tocentry_subsection  chapter "><a href="#SS4" title="In 1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.4.4 </span></b>Conclusões</a></li>
+</ol>
+</li>
+<li data-level="1.5" data-path="Ch1.S5.html" class="ltx_tocentry ltx_tocentry_section  chapter "><a href="Ch1.S5.html" title="In Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">1.5 </span></b>Exercícios finais</a></li>
+</ol>
+</li>
+<li data-level="2" data-path="Ch2.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch2.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">2 </span></b>Semana 2</a></li>
+<li data-level="3" data-path="Ch3.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch3.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">3 </span></b>Semana 3</a></li>
+<li data-level="4" data-path="Ch4.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch4.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">4 </span></b>Semana 4</a></li>
+<li data-level="5" data-path="Ch5.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch5.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">5 </span></b>Semana 5</a></li>
+<li data-level="6" data-path="Ch6.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch6.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">6 </span></b>Semanas 6 e 7</a></li>
+<li data-level="7" data-path="Ch7.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch7.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">7 </span></b>Semana 9</a></li>
+<li data-level="8" data-path="Ch8.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch8.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">8 </span></b>Semana 10</a></li>
+<li data-level="9" data-path="Ch9.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch9.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">9 </span></b>Semana 11</a></li>
+<li data-level="10" data-path="Ch10.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch10.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">10 </span></b>Semana 12</a></li>
+<li data-level="11" data-path="Ch11.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch11.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">11 </span></b>Semana 13</a></li>
+<li data-level="12" data-path="Ch12.html" class="ltx_tocentry ltx_tocentry_chapter  chapter "><a href="Ch12.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><b><span class="ltx_tag ltx_tag_ref">12 </span></b>Semanas 14 e 15</a></li>
+<li data-level="" data-path="bib.html" class="ltx_tocentry ltx_tocentry_bibliography  chapter "><a href="bib.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Referências</a></li>
+<li data-level="" data-path="idx.html" class="ltx_tocentry ltx_tocentry_index  chapter "><a href="idx.html" title="In Álgebra Linear Um Livro Colaborativo" class="ltx_ref">Índice Remissivo</a></li>
+</ul>
+</nav></div>
+<div class="ltx_page_main book-body fixed">
+<div class="body-inner">
+<div class="book-header fixed" role="navigation"><h1>Existência e unicidade de solução</h1></div>
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="ltx_page_content page-inner" id="bml-main-content">
+<section class="ltx_section normal" lang="pt-BR">
+<div class="section level1">
+
+<h1 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section header-section-number">1.4</span> Existência e unicidade de solução</h1>
+
+<section id="SS1" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">1.4.1</span> Sistemas que possuem apenas uma solução</h2>
+
+<div id="SS1.p1" class="ltx_para">
+<p class="ltx_p">Os sistemas que vimos até agora possuíam apenas uma solução. Esta propriedade, como veremos, nem sempre é válida. No entanto, é fácil de identificar quando um sistema possui solução única analisando a forma escalonada da matriz associada: <span class="ltx_text ltx_font_bold">quando todas as colunas referentes às variáveis da equação possuírem posição de pivô</span>. Por exemplo,</p>
+<div id="Ch1.E45" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E45.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|c}1&amp;3&amp;1\\
+0&amp;-7&amp;-4\end{array}\right],\left[\begin{array}[]{ccc|c}1&amp;2&amp;1&amp;12\\
+0&amp;-5&amp;4&amp;-11\\
+0&amp;0&amp;-3&amp;-3\end{array}\right],\left[\begin{array}[]{cccc|c}2&amp;0&amp;0&amp;0&amp;10\\
+0&amp;1&amp;0&amp;0&amp;-12\\
+0&amp;0&amp;2&amp;0&amp;6\\
+0&amp;0&amp;0&amp;1&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>3</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>7</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>12</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd class="ltx_border_r"><mn>4</mn></mtd><mtd><mrow><mo>−</mo><mn>11</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>2</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>10</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>12</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|c}1&amp;3&amp;1\\
+0&amp;-7&amp;-4\end{array}\right],\left[\begin{array}[]{ccc|c}1&amp;2&amp;1&amp;12\\
+0&amp;-5&amp;4&amp;-11\\
+0&amp;0&amp;-3&amp;-3\end{array}\right],\left[\begin{array}[]{cccc|c}2&amp;0&amp;0&amp;0&amp;10\\
+0&amp;1&amp;0&amp;0&amp;-12\\
+0&amp;0&amp;2&amp;0&amp;6\\
+0&amp;0&amp;0&amp;1&amp;1\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.45)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">De fato, todas as matrizes com esta propriedade tem em sua forma escalonada reduzida a matriz identidade do lado esquerdo da barra que separa as variáveis e os valores do lado direito da igualdade do sistema:</p>
+<div id="Ch1.E46" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E46.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|c}1&amp;0&amp;-5/7\\
+0&amp;1&amp;4/7\end{array}\right],\left[\begin{array}[]{ccc|c}1&amp;0&amp;0&amp;5\\
+0&amp;1&amp;0&amp;3\\
+0&amp;0&amp;1&amp;1\end{array}\right],\left[\begin{array}[]{cccc|c}1&amp;0&amp;0&amp;0&amp;5\\
+0&amp;1&amp;0&amp;0&amp;-12\\
+0&amp;0&amp;1&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mrow><mn>5</mn><mo>/</mo><mn>7</mn></mrow></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mn>4</mn><mo>/</mo><mn>7</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>5</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>12</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>3</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|c}1&amp;0&amp;-5/7\\
+0&amp;1&amp;4/7\end{array}\right],\left[\begin{array}[]{ccc|c}1&amp;0&amp;0&amp;5\\
+0&amp;1&amp;0&amp;3\\
+0&amp;0&amp;1&amp;1\end{array}\right],\left[\begin{array}[]{cccc|c}1&amp;0&amp;0&amp;0&amp;5\\
+0&amp;1&amp;0&amp;0&amp;-12\\
+0&amp;0&amp;1&amp;0&amp;3\\
+0&amp;0&amp;0&amp;1&amp;1\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.46)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Escrevendo o sistema associado as estas últimas matrizes, é fácil de ver que a solução será única.</p>
+</div>
+</div>
+</section>
+<section id="SS2" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">1.4.2</span> Sistemas impossíveis ou inconsistentes</h2>
+
+<div id="SS2.p1" class="ltx_para">
+<p class="ltx_p">Nem todo sistema linear possui solução. Um exemplo simples deste fato é</p>
+<div id="Ch1.E47" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E47.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{ll}x+y=1\\
+x+y=2\end{array}\right.." display="block"><semantics><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>1</mn></mrow></mtd><mtd></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>=</mo><mn>2</mn></mrow></mtd><mtd></mtd></mtr></mtable><mi></mi></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{ll}x+y=1\\
+x+y=2\end{array}\right..</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.47)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">É claro que <math id="SS2.p1.m1" class="ltx_Math" alttext="x+y" display="inline"><semantics><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x+y</annotation></semantics></math> não pode ser ao mesmo tempo igual a 1 e igual a 2; portanto, o sistema não possui solução. O fato de o sistema não possuir solução – ser <span class="ltx_text ltx_font_bold">inconsistente</span> – nem sempre é tão fácil de ser identificado apenas olhando para o sistema. Mas esta propriedade salta aos olhos quando analisamos a forma escalonada da matriz associada ao sistema. De fato, na matriz escalonada de um sistema inconsistente aparece uma linha da forma</p>
+<div id="Ch1.E48" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E48.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc|c}0&amp;0&amp;0&amp;0&amp;0&amp;a\end{array}\right]," display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mi>a</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc|c}0&amp;0&amp;0&amp;0&amp;0&amp;a\end{array}\right],</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.48)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">com uma constante <math id="SS2.p1.m2" class="ltx_Math" alttext="a\neq 0" display="inline"><semantics><mrow><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">a\neq 0</annotation></semantics></math>. Esta linha representa no sistema uma equação do tipo <math id="SS2.p1.m3" class="ltx_Math" alttext="0=a\neq 0" display="inline"><semantics><mrow><mn>0</mn><mo>=</mo><mi>a</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">0=a\neq 0</annotation></semantics></math>, que é impossível de ser satisfeita.</p>
+</div>
+<div id="SS2.p2" class="ltx_para">
+<p class="ltx_p">No sistema da fórmula (<a href="#Ch1.E47" title="In 1.4.2 Sistemas impossíveis ou inconsistentes ‣ 1.4 Existência e unicidade de solução ‣ Capítulo 1 Semana 1 ‣ Álgebra Linear Um Livro Colaborativo" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1.47</span></a>) acima, temos a matriz aumentada</p>
+<div id="Ch1.E49" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E49.m1" class="ltx_math_unparsed" alttext="\left[\begin{array}[]{cc|c}1&amp;1&amp;1\\
+1&amp;1&amp;2\end{array}\right]\xrightarrow{-\ell_{1}+\ell_{2}\text{ em }\ell_{2}}%
+\quad\left[\begin{array}[]{cc|c}1&amp;1&amp;1\\
+0&amp;0&amp;1\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mo>−</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|c}1&amp;1&amp;1\\
+1&amp;1&amp;2\end{array}\right]\xrightarrow{-\ell_{1}+\ell_{2}\text{ em }\ell_{2}}%
+\quad\left[\begin{array}[]{cc|c}1&amp;1&amp;1\\
+0&amp;0&amp;1\end{array}\right].</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.49)</span>
+              
+              
+            
+</div>
+<p class="ltx_p">Logo, nosso sistema é equivalente ao sistema impossível</p>
+<div id="Ch1.E50" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E50.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{rl}x+y&amp;=1\\
+0&amp;=1\end{array}\right.." display="block"><semantics><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mn>0</mn></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mi></mi><mo>=</mo><mn>1</mn></mrow></mtd></mtr></mtable><mi></mi></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{rl}x+y&amp;=1\\
+0&amp;=1\end{array}\right..</annotation></semantics></math></span>
+              <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.50)</span>
+              
+              
+            
+</div>
+</div>
+</div>
+</section>
+<section id="SS3" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">1.4.3</span> Sistemas com mais de uma solução</h2>
+
+<div id="SS3.p1" class="ltx_para">
+<p class="ltx_p">Com exceção da subseção anterior, todos os sistemas que resolvemos anteriormente possuíam apenas uma solução. Vejamos um exemplo onde este não é o caso.</p>
+</div>
+<div id="Thmex1" class="ltx_theorem ltx_theorem_ex">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">Exemplo 1.4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmex1.p1" class="ltx_para">
+<p class="ltx_p">Resolver</p>
+<div id="Ch1.E51" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E51.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{rrrrrrl}&amp;3x_{2}&amp;-6x_{3}&amp;+6x_{4}&amp;+4x_{5}&amp;=&amp;-5\\
+3x_{1}&amp;-7x_{2}&amp;+8x_{3}&amp;-5x_{4}&amp;+8x_{5}&amp;=&amp;9\\
+3x_{1}&amp;-9x_{2}&amp;+12x_{3}&amp;-9x_{4}&amp;+6x_{5}&amp;=&amp;15\end{array}\right.." display="block"><semantics><mrow><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>−</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>−</mo><mrow><mn>7</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>−</mo><mrow><mn>5</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>8</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mn>9</mn></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>1</mn></msub></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>x</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>−</mo><mrow><mn>9</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msub><mi>x</mi><mn>5</mn></msub></mrow></mrow></mtd><mtd class="ltx_align_right" columnalign="right"><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mn>15</mn></mtd></mtr></mtable><mi></mi></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{rrrrrrl}&amp;3x_{2}&amp;-6x_{3}&amp;+6x_{4}&amp;+4x_{5}&amp;=&amp;-5\\
+3x_{1}&amp;-7x_{2}&amp;+8x_{3}&amp;-5x_{4}&amp;+8x_{5}&amp;=&amp;9\\
+3x_{1}&amp;-9x_{2}&amp;+12x_{3}&amp;-9x_{4}&amp;+6x_{5}&amp;=&amp;15\end{array}\right..</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.51)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">A matriz aumentada associada a este sistema é</p>
+<div id="Ch1.E52" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E52.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc|c}0&amp;3&amp;-6&amp;6&amp;4&amp;-5\\
+3&amp;-7&amp;8&amp;-5&amp;8&amp;9\\
+3&amp;-9&amp;12&amp;-9&amp;6&amp;15\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>0</mn></mtd><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>6</mn></mrow></mtd><mtd><mn>6</mn></mtd><mtd class="ltx_border_r"><mn>4</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd><mtd><mn>8</mn></mtd><mtd><mrow><mo>−</mo><mn>5</mn></mrow></mtd><mtd class="ltx_border_r"><mn>8</mn></mtd><mtd><mn>9</mn></mtd></mtr><mtr><mtd><mn>3</mn></mtd><mtd><mrow><mo>−</mo><mn>9</mn></mrow></mtd><mtd><mn>12</mn></mtd><mtd><mrow><mo>−</mo><mn>9</mn></mrow></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>15</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc|c}0&amp;3&amp;-6&amp;6&amp;4&amp;-5\\
+3&amp;-7&amp;8&amp;-5&amp;8&amp;9\\
+3&amp;-9&amp;12&amp;-9&amp;6&amp;15\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.52)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Transformando esta matriz em sua forma escalonada reduzida (faça todos os cálculos!), obtemos</p>
+<div id="Ch1.E53" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E53.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc|c}1&amp;0&amp;-2&amp;3&amp;0&amp;-24\\
+0&amp;1&amp;-2&amp;2&amp;0&amp;-7\\
+0&amp;0&amp;0&amp;0&amp;1&amp;4\end{array}\right]," display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>3</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>24</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mn>2</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>4</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo>,</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc|c}1&amp;0&amp;-2&amp;3&amp;0&amp;-24\\
+0&amp;1&amp;-2&amp;2&amp;0&amp;-7\\
+0&amp;0&amp;0&amp;0&amp;1&amp;4\end{array}\right],</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.53)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">que é equivalente ao sistema linear</p>
+<div id="Ch1.E54" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E54.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{rcl}x_{1}-2x_{3}+3x_{4}&amp;=&amp;-24\\
+x_{2}-2x_{3}+2x_{4}&amp;=&amp;-7\\
+x_{5}&amp;=&amp;4\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow></mtd><mtd><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mn>24</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><mrow><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow></mrow></mtd><mtd><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mrow><mo>−</mo><mn>7</mn></mrow></mtd></mtr><mtr><mtd class="ltx_align_right" columnalign="right"><msub><mi>x</mi><mn>5</mn></msub></mtd><mtd><mo>=</mo></mtd><mtd class="ltx_align_left" columnalign="left"><mn>4</mn></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{rcl}x_{1}-2x_{3}+3x_{4}&amp;=&amp;-24\\
+x_{2}-2x_{3}+2x_{4}&amp;=&amp;-7\\
+x_{5}&amp;=&amp;4\end{array}\right.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.54)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Neste sistema <math id="Thmex1.p1.m1" class="ltx_Math" alttext="x_{5}" display="inline"><semantics><msub><mi>x</mi><mn>5</mn></msub><annotation encoding="application/x-tex">x_{5}</annotation></semantics></math> possui um valor fixo igual a 4, mas as outras variáveis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para <math id="Thmex1.p1.m2" class="ltx_Math" alttext="x_{3}" display="inline"><semantics><msub><mi>x</mi><mn>3</mn></msub><annotation encoding="application/x-tex">x_{3}</annotation></semantics></math> e <math id="Thmex1.p1.m3" class="ltx_Math" alttext="x_{4}" display="inline"><semantics><msub><mi>x</mi><mn>4</mn></msub><annotation encoding="application/x-tex">x_{4}</annotation></semantics></math>, obtemos os valores de <math id="Thmex1.p1.m4" class="ltx_Math" alttext="x_{1}" display="inline"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_{1}</annotation></semantics></math> e <math id="Thmex1.p1.m5" class="ltx_Math" alttext="x_{2}" display="inline"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_{2}</annotation></semantics></math> pelas duas primeiras equações acima e temos uma solução do sistema. Diferentes escolhas dos parâmetros <math id="Thmex1.p1.m6" class="ltx_Math" alttext="x_{3}" display="inline"><semantics><msub><mi>x</mi><mn>3</mn></msub><annotation encoding="application/x-tex">x_{3}</annotation></semantics></math> e <math id="Thmex1.p1.m7" class="ltx_Math" alttext="x_{4}" display="inline"><semantics><msub><mi>x</mi><mn>4</mn></msub><annotation encoding="application/x-tex">x_{4}</annotation></semantics></math> geram soluções diferentes.</p>
+</div>
+<div id="Thmex1.p2" class="ltx_para">
+<p class="ltx_p">Uma forma sistemática de analisar a situação é a seguinte: As variáveis correspondentes a colunas que possuem posição de pivô são chamadas de <span class="ltx_text ltx_font_bold">variáveis dependentes</span> e as demais são chamadas de <span class="ltx_text ltx_font_bold">variáveis livres</span>. Assim, podemos escrever:</p>
+<div id="Ch1.E55" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E55.m1" class="ltx_Math" alttext="\left\{\begin{array}[]{l}x_{1}=2x_{3}-3x_{4}-24\\
+x_{2}=2x_{3}-2x_{4}-7\\
+x_{3},x_{4}\text{ livres }\\
+x_{5}=4\end{array}\right." display="block"><semantics><mrow><mo>{</mo><mtable displaystyle="true" rowspacing="6.0pt"><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>−</mo><mrow><mn>3</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><mo>−</mo><mn>24</mn></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>3</mn></msub></mrow><mo>−</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>4</mn></msub></mrow><mo>−</mo><mn>7</mn></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>,</mo><mrow><msub><mi>x</mi><mn>4</mn></msub><mo>⁢</mo><mtext> livres </mtext></mrow></mrow></mtd></mtr><mtr><mtd class="ltx_align_left" columnalign="left"><mrow><msub><mi>x</mi><mn>5</mn></msub><mo>=</mo><mn>4</mn></mrow></mtd></mtr></mtable><mi></mi></mrow><annotation encoding="application/x-tex">\left\{\begin{array}[]{l}x_{1}=2x_{3}-3x_{4}-24\\
+x_{2}=2x_{3}-2x_{4}-7\\
+x_{3},x_{4}\text{ livres }\\
+x_{5}=4\end{array}\right.</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.55)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">e o sistema possui infinitas soluções.<math id="Thmex1.p2.m1" class="ltx_Math" alttext="\lhd" display="inline"><semantics><mo>⊲</mo><annotation encoding="application/x-tex">\lhd</annotation></semantics></math></p>
+</div>
+</div>
+</div>
+</section>
+<section id="SS4" class="ltx_subsection ltx_indent_first normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection header-section-number">1.4.4</span> Conclusões</h2>
+
+<div id="SS4.p1" class="ltx_para">
+<p class="ltx_p">Ao analisar a matriz aumentada associada a um sistema linear, concluiremos <span class="ltx_text ltx_font_italic">inevitavelmente</span> que uma das seguintes situações é válida:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i1.p1" class="ltx_para">​<p class="ltx_p">Todas as colunas referentes às variáveis do sistema possuem posição de pivô, <span class="ltx_text ltx_font_bold">e.g</span>,</p>
+<div id="Ch1.E56" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E56.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc|c}1&amp;3&amp;-6&amp;6\\
+0&amp;-8&amp;11&amp;\pi\\
+0&amp;0&amp;12&amp;-9.\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>6</mn></mrow></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd class="ltx_border_r"><mn>11</mn></mtd><mtd><mi>π</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>12</mn></mtd><mtd><mrow><mrow><mo>−</mo><mn>9</mn></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|c}1&amp;3&amp;-6&amp;6\\
+0&amp;-8&amp;11&amp;\pi\\
+0&amp;0&amp;12&amp;-9.\end{array}\right]</annotation></semantics></math></span>
+                    <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.56)</span>
+                    
+                    
+                  
+</div>
+<p class="ltx_p">Neste caso, vimos que o sistema possui <span class="ltx_text ltx_font_bold">apenas uma solução</span>. Nota que <span class="ltx_text ltx_font_italic">esta possibilidade apenas é possível se tivermos um sistema com o número de equações igual ao número de variáveis</span>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span><div id="I1.i2.p1" class="ltx_para">​<p class="ltx_p">Caso a coluna referentes à alguma variável do sistema não possua posição de pivô, teremos duas possibilidades</p>
+<ol id="I1.i2.I1" class="ltx_enumerate">
+<li id="I1.i2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i2.I1.i1.m1" class="ltx_Math" alttext="(i)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(i)</annotation></semantics></math></span><div id="I1.i2.I1.i1.p1" class="ltx_para">​<p class="ltx_p">Alguma coluna não é coluna pivô mas não existem linhas inconsistentes, <span class="ltx_text ltx_font_bold">e.g</span>,</p>
+<div id="Ch1.E57" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E57.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc|c}1&amp;3&amp;2&amp;-6&amp;2&amp;6\\
+0&amp;-8&amp;4&amp;11&amp;-1&amp;-3\\
+0&amp;0&amp;0&amp;12&amp;1&amp;-9.\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>6</mn></mrow></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd><mn>4</mn></mtd><mtd><mn>11</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>12</mn></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mrow><mrow><mo>−</mo><mn>9</mn></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc|c}1&amp;3&amp;2&amp;-6&amp;2&amp;6\\
+0&amp;-8&amp;4&amp;11&amp;-1&amp;-3\\
+0&amp;0&amp;0&amp;12&amp;1&amp;-9.\end{array}\right]</annotation></semantics></math></span>
+                          <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.57)</span>
+                          
+                          
+                        
+</div>
+<p class="ltx_p">Neste caso, as variáveis referentes a colunas que não são pivô (na matriz acima, colunas 3 e 5) podem ser consideradas variáveis livres e o sistema <span class="ltx_text ltx_font_bold">possui infinitas soluções</span>.</p>
+</div>
+</li>
+<li id="I1.i2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item"><math id="I1.i2.I1.i2.m1" class="ltx_Math" alttext="(ii)" display="inline"><semantics><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(ii)</annotation></semantics></math></span><div id="I1.i2.I1.i2.p1" class="ltx_para">​<p class="ltx_p">Alguma coluna não é coluna pivô mas existem linhas que são inconsistentes, <span class="ltx_text ltx_font_bold">e.g</span>,</p>
+<div id="Ch1.E58" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E58.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccccc|c}1&amp;3&amp;2&amp;-6&amp;2&amp;6\\
+0&amp;-8&amp;4&amp;11&amp;-1&amp;1\\
+0&amp;0&amp;0&amp;0&amp;0&amp;-9.\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>3</mn></mtd><mtd><mn>2</mn></mtd><mtd><mrow><mo>−</mo><mn>6</mn></mrow></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>6</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd><mn>4</mn></mtd><mtd><mn>11</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>1</mn></mrow></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mrow><mrow><mo>−</mo><mn>9</mn></mrow><mo lspace="0em">.</mo></mrow></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccccc|c}1&amp;3&amp;2&amp;-6&amp;2&amp;6\\
+0&amp;-8&amp;4&amp;11&amp;-1&amp;1\\
+0&amp;0&amp;0&amp;0&amp;0&amp;-9.\end{array}\right]</annotation></semantics></math></span>
+                          <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.58)</span>
+                          
+                          
+                        
+</div>
+<p class="ltx_p">Neste caso, <span class="ltx_text ltx_font_bold">não existem soluções</span> para o sistema, pois uma das equações é impossível de ser satisfeita.</p>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ul>
+</div>
+<div id="SS4.p2" class="ltx_para">
+<p class="ltx_p">Concluímos assim que <span class="ltx_text ltx_font_italic">um sistema linear ou não possui solução, ou tem apenas uma solução ou então possui infinitas soluções</span>. São estes três todos os casos possíveis e podemos decidir em qual estamos apenas olhando para a forma escalonada da matriz aumentada associada ao sistema.</p>
+</div>
+</div>
+</section>
+<section id="SSx1" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios resolvidos</h2>
+
+<div id="SSx1.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios resolvidos. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmexeresol1" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 1.4.1</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol1.p1" class="ltx_para">
+<p class="ltx_p">Faça o escalonamento da seguinte matriz e diga se o sistema possui infinitas soluções, uma solução ou se ele é impossível .</p>
+<div id="Ch1.E59" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E59.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+-2&amp;-8&amp;2&amp;4\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right]" display="block"><semantics><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+-2&amp;-8&amp;2&amp;4\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.59)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p2" class="ltx_para">
+<p class="ltx_p">Para começar, vamos</p>
+<div id="Ch1.E60" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E60.m1" class="ltx_math_unparsed" alttext="\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+-2&amp;-8&amp;2&amp;4\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right]\quad\xrightarrow{2\ell_{1}+\ell_{2}\text{ em }\ell_%
+{2}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;0&amp;14&amp;20\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right].\quad\xrightarrow{4\ell_{1}+\ell_{3}\text{ em }\ell%
+_{3}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;0&amp;14&amp;20\\
+0&amp;14&amp;25&amp;32\\
+0&amp;1&amp;-3&amp;2\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>8</mn></mrow></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>14</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>4</mn></mrow></mtd><mtd><mrow><mo>−</mo><mn>2</mn></mrow></mtd><mtd class="ltx_border_r"><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo><mspace width="1.367em"></mspace><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mn>4</mn><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>3</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>3</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>14</mn></mtd><mtd><mn>20</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>14</mn></mtd><mtd class="ltx_border_r"><mn>25</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+-2&amp;-8&amp;2&amp;4\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right]\quad\xrightarrow{2\ell_{1}+\ell_{2}\text{ em }\ell_%
+{2}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;0&amp;14&amp;20\\
+-4&amp;-2&amp;1&amp;0\\
+0&amp;1&amp;-3&amp;2\end{array}\right].\quad\xrightarrow{4\ell_{1}+\ell_{3}\text{ em }\ell%
+_{3}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;0&amp;14&amp;20\\
+0&amp;14&amp;25&amp;32\\
+0&amp;1&amp;-3&amp;2\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.60)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Percebemos então que não há mais nenhum elemento abaixo do primeiro elemento da primeira coluna, então trocamos de lugar a linha 2 com a linha 4 (assim facilitará os cálculos), continuamos com o resto das operações elementares necessárias e obtemos:</p>
+<div id="Ch1.E61" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E61.m1" class="ltx_Math" alttext="\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;14&amp;25&amp;32\\
+0&amp;0&amp;14&amp;20\end{array}\right]\quad\xrightarrow{-14\ell_{2}+\ell_{3}\text{ em }%
+\ell_{3}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;0&amp;67&amp;4\\
+0&amp;0&amp;14&amp;20\end{array}\right]\quad\xrightarrow{\frac{-14}{67}\ell_{3}+\ell_{4}%
+\text{ em }\ell_{4}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;0&amp;67&amp;4\\
+0&amp;0&amp;0&amp;\frac{1284}{67}\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>14</mn></mtd><mtd class="ltx_border_r"><mn>25</mn></mtd><mtd><mn>32</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>14</mn></mtd><mtd><mn>20</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mo>−</mo><mrow><mn>14</mn><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>3</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>3</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>67</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>14</mn></mtd><mtd><mn>20</mn></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mfrac><mrow><mo>−</mo><mn>14</mn></mrow><mn>67</mn></mfrac><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>3</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>4</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>4</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd><mn>4</mn></mtd><mtd class="ltx_border_r"><mn>6</mn></mtd><mtd><mn>8</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>67</mn></mtd><mtd><mn>4</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mn>0</mn></mtd><mtd><mstyle displaystyle="false"><mfrac><mn>1284</mn><mn>67</mn></mfrac></mstyle></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;14&amp;25&amp;32\\
+0&amp;0&amp;14&amp;20\end{array}\right]\quad\xrightarrow{-14\ell_{2}+\ell_{3}\text{ em }%
+\ell_{3}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;0&amp;67&amp;4\\
+0&amp;0&amp;14&amp;20\end{array}\right]\quad\xrightarrow{\frac{-14}{67}\ell_{3}+\ell_{4}%
+\text{ em }\ell_{4}}\quad\left[\begin{array}[]{ccc|c}1&amp;4&amp;6&amp;8\\
+0&amp;1&amp;-3&amp;2\\
+0&amp;0&amp;67&amp;4\\
+0&amp;0&amp;0&amp;\frac{1284}{67}\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.61)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Observamos que na última linha há uma inconsistência do tipo <math id="SSx1.p2.m1" class="ltx_Math" alttext="0=\frac{1284}{67}" display="inline"><semantics><mrow><mn>0</mn><mo>=</mo><mfrac><mn>1284</mn><mn>67</mn></mfrac></mrow><annotation encoding="application/x-tex">0=\frac{1284}{67}</annotation></semantics></math> e, portanto, o sistema é impossível <math id="SSx1.p2.m2" class="ltx_Math" alttext="\lhd" display="inline"><semantics><mo>⊲</mo><annotation encoding="application/x-tex">\lhd</annotation></semantics></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmexeresol2" class="ltx_theorem ltx_theorem_exeresol">
+
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem header-section-number"><span class="ltx_text ltx_font_bold">ER 1.4.2</span></span><span class="ltx_text ltx_font_bold">.</span>
+</h6>
+<div id="Thmexeresol2.p1" class="ltx_para">
+<p class="ltx_p">Determine o(s) valor(es) de <math id="Thmexeresol2.p1.m1" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math> que fazem com que a matriz seja a matriz de um sistema linear com solução.</p>
+<div id="Ch1.E62" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E62.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+-3&amp;k&amp;-1\end{array}\right]." display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd class="ltx_border_r"><mi>k</mi></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo lspace="0em">.</mo></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+-3&amp;k&amp;-1\end{array}\right].</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.62)</span>
+                
+                
+              
+</div>
+</div>
+</div>
+<div class="ltx_proof">
+
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_proof">Solução.</h6>
+<div id="SSx1.p3" class="ltx_para">
+<p class="ltx_p">Fazendo uma operação elementar para simplificar, obtemos:</p>
+<div id="Ch1.E63" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E63.m1" class="ltx_Math" alttext="\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+-3&amp;k&amp;-1\end{array}\right]\quad\xrightarrow{3\ell_{1}+\ell_{2}\text{ em }\ell_{%
+2}}\quad\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+0&amp;k+6&amp;5\end{array}\right]" display="block"><semantics><mrow><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mrow><mo>−</mo><mn>3</mn></mrow></mtd><mtd class="ltx_border_r"><mi>k</mi></mtd><mtd><mrow><mo>−</mo><mn>1</mn></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mspace width="1.2em"></mspace><mover accent="true"><mo stretchy="false">→</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub><mo>⁢</mo><mtext> em </mtext><mo>⁢</mo><msub><mi mathvariant="normal">ℓ</mi><mn>2</mn></msub></mrow></mrow></mover><mspace width="1.2em"></mspace><mrow><mo>[</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="6.0pt"><mtr><mtd><mn>1</mn></mtd><mtd class="ltx_border_r"><mn>2</mn></mtd><mtd><mn>2</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd class="ltx_border_r"><mrow><mi>k</mi><mo>+</mo><mn>6</mn></mrow></mtd><mtd><mn>5</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><annotation encoding="application/x-tex">\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+-3&amp;k&amp;-1\end{array}\right]\quad\xrightarrow{3\ell_{1}+\ell_{2}\text{ em }\ell_{%
+2}}\quad\left[\begin{array}[]{cc|c}1&amp;2&amp;2\\
+0&amp;k+6&amp;5\end{array}\right]</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.63)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Assim, para que o sistema possua solução não podemos ter a inconsistência já mencionada, nesse caso de <math id="SSx1.p3.m1" class="ltx_Math" alttext="5=0" display="inline"><semantics><mrow><mn>5</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">5=0</annotation></semantics></math>. Logo, temos que:</p>
+<div id="Ch1.E64" class="ltx_equation ltx_eqn_div">
+<span><math id="Ch1.E64.m1" class="ltx_Math" alttext="k+6\neq 0\implies k\neq-6" display="block"><semantics><mrow><mrow><mi>k</mi><mo>+</mo><mn>6</mn></mrow><mo>≠</mo><mn>0</mn><mo stretchy="false">⟹</mo><mi>k</mi><mo>≠</mo><mrow><mo>−</mo><mn>6</mn></mrow></mrow><annotation encoding="application/x-tex">k+6\neq 0\implies k\neq-6</annotation></semantics></math></span>
+                <span class="ltx_tag ltx_tag_equation ltx_align_right">(1.64)</span>
+                
+                
+              
+</div>
+<p class="ltx_p">Isso significa que para qualquer valor de <math id="SSx1.p3.m2" class="ltx_Math" alttext="k" display="inline"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>, exceto o <math id="SSx1.p3.m3" class="ltx_Math" alttext="-6" display="inline"><semantics><mrow><mo>−</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">-6</annotation></semantics></math>, o sistema tem solução <math id="SSx1.p3.m4" class="ltx_Math" alttext="\lhd" display="inline"><semantics><mo>⊲</mo><annotation encoding="application/x-tex">\lhd</annotation></semantics></math>.
+∎</p>
+</div>
+</div>
+</div>
+</section>
+<section id="SSx2" class="ltx_subsection ltx_indentfirst normal">
+<div class="section level2">
+
+<h2 class="ltx_title ltx_title_subsection">Exercícios</h2>
+
+<div id="SSx2.p1" class="ltx_para">
+<div class="bml-overflow-wrapper">
+<table class="ltx_tabular ltx_centering ltx_align_middle">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r ltx_border_t" style="padding-top:3pt;padding-bottom:3pt;">Esta seção carece de exercícios. Participe da sua escrita.</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;">Veja como em:</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_center ltx_border_b ltx_border_l ltx_border_r" style="padding-top:3pt;padding-bottom:3pt;"><a href="https://www.ufrgs.br/reamat/participe.html" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://www.ufrgs.br/reamat/participe.html</a></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+<a href="Ch1.S3.html" class="navigation navigation-prev" aria-label="Previous page"><i class="fa fa-angle-left"></i></a><a href="Ch1.S5.html" class="navigation navigation-next" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+</div>
+</div>
+<script src="bookml/gitbook/js/app.min.js"></script>
+<script src="bookml/gitbook/js/jquery.highlight.js"></script>
+<script src="bookml/gitbook/js/plugin-search.js"></script>
+<script src="bookml/gitbook/js/plugin-fontsettings.js"></script>
+<script src="bookml/gitbook/js/plugin-bookdown.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script>
+        MathJax = {
+          startup: {
+            ready() {
+              // do not process equations disabled with \bmlDisableMathJax (code suggested by Davide P. Cervone)
+              class bmlFindMathML extends MathJax._.input.mathml.FindMathML.FindMathML {
+                processMath(set) {
+                  const adaptor = this.adaptor;
+                  for (const node of set.values()) {
+                    if (adaptor.hasClass(node, 'bml_disable_mathjax')) {
+                      set.delete(node);
+                    }
+                  }
+                  return super.processMath(set);
+                }
+              }
+
+              MathJax._.components.global.combineDefaults(MathJax.config, 'mml', {FindMathML: new bmlFindMathML()});
+
+              MathJax.startup.defaultReady();
+
+              // preproces MathML to make MathJax aware of certain LaTeXML and BookML additional info
+              const mmlFilters = MathJax.startup.input[0].mmlFilters;
+
+              // convert the LaTeXML calligraphic (chancery) annotation to a form MathJax understands
+              // since the corresponding Unicode characters render as script (rounded)
+              const script2latin = {
+                '𝒜': 'A', 'ℬ': 'B', '𝒞': 'C', '𝒟': 'D', 'ℰ': 'E', 'ℱ': 'F', '𝒢': 'G',
+                'ℋ': 'H', 'ℐ': 'I', '𝒥': 'J', '𝒦': 'K', 'ℒ': 'L', 'ℳ': 'M', '𝒩': 'N',
+                '𝒪': 'O', '𝒫': 'P', '𝒬': 'Q', 'ℛ': 'R', '𝒮': 'S', '𝒯': 'T', '𝒰': 'U',
+                '𝒱': 'V', '𝒲': 'W', '𝒳': 'X', '𝒴': 'Y', '𝒵': 'Z',
+              };
+
+              mmlFilters.add((args) => {
+                for (const n of args.data.getElementsByClassName('ltx_font_mathcaligraphic')) {
+                  n.classList.add('MJX-tex-calligraphic');
+                  const letter = script2latin[n.textContent];
+                  if (letter !== undefined) { n.textContent = letter; }
+                }
+              });
+
+              // adjust characters based on Unicode variation sequences
+              const replacements = {
+                // MathJax renders the empty set as the U+FE00 variant, so the plain character needs adjusting
+                '∅': { variant: 'variant' },
+                // MathJax renders script characters in rounded style, which is fine for no variation and U+FE00
+                '𝒜\xFE00': { text: 'A', variant: 'tex-calligraphic' },
+                'ℬ\xFE00': { text: 'B', variant: 'tex-calligraphic' },
+                '𝒞\xFE00': { text: 'C', variant: 'tex-calligraphic' },
+                '𝒟\xFE00': { text: 'D', variant: 'tex-calligraphic' },
+                'ℰ\xFE00': { text: 'E', variant: 'tex-calligraphic' },
+                'ℱ\xFE00': { text: 'F', variant: 'tex-calligraphic' },
+                '𝒢\xFE00': { text: 'G', variant: 'tex-calligraphic' },
+                'ℋ\xFE00': { text: 'H', variant: 'tex-calligraphic' },
+                'ℐ\xFE00': { text: 'I', variant: 'tex-calligraphic' },
+                '𝒥\xFE00': { text: 'J', variant: 'tex-calligraphic' },
+                '𝒦\xFE00': { text: 'K', variant: 'tex-calligraphic' },
+                'ℒ\xFE00': { text: 'L', variant: 'tex-calligraphic' },
+                'ℳ\xFE00': { text: 'M', variant: 'tex-calligraphic' },
+                '𝒩\xFE00': { text: 'N', variant: 'tex-calligraphic' },
+                '𝒪\xFE00': { text: 'O', variant: 'tex-calligraphic' },
+                '𝒫\xFE00': { text: 'P', variant: 'tex-calligraphic' },
+                '𝒬\xFE00': { text: 'Q', variant: 'tex-calligraphic' },
+                'ℛ\xFE00': { text: 'R', variant: 'tex-calligraphic' },
+                '𝒮\xFE00': { text: 'S', variant: 'tex-calligraphic' },
+                '𝒯\xFE00': { text: 'T', variant: 'tex-calligraphic' },
+                '𝒰\xFE00': { text: 'U', variant: 'tex-calligraphic' },
+                '𝒱\xFE00': { text: 'V', variant: 'tex-calligraphic' },
+                '𝒲\xFE00': { text: 'W', variant: 'tex-calligraphic' },
+                '𝒳\xFE00': { text: 'X', variant: 'tex-calligraphic' },
+                '𝒴\xFE00': { text: 'Y', variant: 'tex-calligraphic' },
+                '𝒵\xFE00': { text: 'Z', variant: 'tex-calligraphic' }
+              };
+
+              mmlFilters.add((args) => {
+                let nodes = document.evaluate('.//m:mi | .//m:mn | .//m:mo | .//m:ms', args.data,
+                  () => 'http://www.w3.org/1998/Math/MathML', XPathResult.UNORDERED_NODE_SNAPSHOT_TYPE);
+                for (let i = 0; i < nodes.snapshotLength; i++) {
+                  const n = nodes.snapshotItem(i);
+                  const repl = replacements[n.innerHTML];
+                  if (repl !== undefined) {
+                    const variant = repl['variant'];
+                    const text = repl['text'];
+                    if (variant !== undefined) { n.classList.add('MJX-' + variant); n.removeAttribute('mathvariant'); }
+                    if (text !== undefined) { n.innerHTML = text; }
+                  }
+                }
+              });
+            }
+          }
+        };
+      </script>
+<script id="MathJax-script" async="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+<script type="text/javascript">
+                gitbook.require(["gitbook"], function(gitbook) {
+                gitbook.start({
+                  "fontsettings": {
+                    "theme": "white",
+                    "family": "sans",
+                    "size": 2
+                  },
+                  "download": [ [ "livro.pdf", "PDF" ], ],
+                  "search": {
+                    "engine": "fuse"
+                  },
+                  "toc": {
+                    "collapse": "none"
+                  }
+                });
+              });
+            </script>
+</body>
+
+</html>
